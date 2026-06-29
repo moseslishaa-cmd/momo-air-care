@@ -185,7 +185,7 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
   }, [cameraZ, planeSize, speed]);
 
   return (
-    <div ref={containerRef} style={{ position: 'relative', width, height, background: '#F9A800' }}>
+    <div ref={containerRef} style={{ position: 'relative', width, height: isMobile ? 'auto' : height, minHeight: isMobile ? '100vh' : undefined, background: '#F9A800' }}>
       <canvas ref={canvasRef} style={{ position: 'absolute', top: 0, right: 0, bottom: 0, left: 0, zIndex: 1 }} />
 
       {/* Sparkles layer */}
@@ -241,18 +241,21 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
         </a>
       </nav>
 
-      {/* Hero content — bottom-anchored layout */}
+      {/* Hero content — bottom-anchored on desktop, top-anchored flow on mobile */}
       <div style={{
-        position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 4,
-        display: 'flex', flexDirection: 'column', justifyContent: 'flex-end',
-        padding: isMobile ? '0 20px 32px' : '0 72px 48px',
+        position: isMobile ? 'relative' : 'absolute',
+        top: 0, left: 0, right: 0, bottom: 0, zIndex: 4,
+        minHeight: isMobile ? '100vh' : undefined,
+        display: 'flex', flexDirection: 'column', justifyContent: isMobile ? 'flex-start' : 'flex-end',
+        padding: isMobile ? '92px 20px 40px' : '0 72px 48px',
       }}>
 
         {/* Big centered brand title */}
+        {!isMobile && (
         <div style={{
           position: 'absolute', top: 0, left: 0, right: 0,
           display: 'flex', justifyContent: 'center', alignItems: 'center',
-          paddingTop: isMobile ? '88px' : '120px',
+          paddingTop: '120px',
           pointerEvents: 'none',
         }}>
           <h2 style={{
@@ -271,11 +274,23 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
             MOMO Air Care
           </h2>
         </div>
+        )}
 
-        <div style={{ display: 'flex', alignItems: 'flex-end', gap: '0', width: '100%' }}>
+        <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', alignItems: isMobile ? 'center' : 'flex-end', gap: '0', width: '100%' }}>
+
+        {/* Mobile-only mascot — centered above text */}
+        {isMobile && (
+          <div style={{ width: '210px', maxWidth: '62%', marginBottom: '2px', display: 'flex', justifyContent: 'center', flexShrink: 0 }}>
+            <img
+              src="/momo-giraffe.png"
+              alt="Momo mascot"
+              style={{ width: '100%', objectFit: 'contain', filter: 'drop-shadow(0 18px 36px rgba(0,0,0,0.32))' }}
+            />
+          </div>
+        )}
 
         {/* LEFT: text content */}
-        <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', paddingBottom: '8px' }}>
+        <div style={{ flex: isMobile ? 'none' : 1, width: isMobile ? '100%' : 'auto', minWidth: 0, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', paddingBottom: '8px' }}>
 
           {/* Big headline — dominant */}
           <h1 style={{
