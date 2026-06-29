@@ -1,7 +1,9 @@
 import { useEffect } from 'react';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
+import { useIsMobile } from './useIsMobile';
 
 export function GiraffeMascot() {
+  const isMobile = useIsMobile();
   const rawX = useMotionValue(-300);
   const rawY = useMotionValue(-300);
 
@@ -9,13 +11,16 @@ export function GiraffeMascot() {
   const y = useSpring(rawY, { stiffness: 120, damping: 18, mass: 0.8 });
 
   useEffect(() => {
+    if (isMobile) return;
     const move = (e) => {
       rawX.set(e.clientX - 80);
       rawY.set(e.clientY - 220);
     };
     window.addEventListener('mousemove', move, { passive: true });
     return () => window.removeEventListener('mousemove', move);
-  }, []);
+  }, [isMobile]);
+
+  if (isMobile) return null;
 
   return (
     <motion.img

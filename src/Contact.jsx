@@ -1,5 +1,6 @@
 import { GlowCard } from './GlowCard';
 import { SparklesCore } from './SparklesCore';
+import { useIsMobile } from './useIsMobile';
 
 const inputStyle = {
   width: '100%',
@@ -29,6 +30,7 @@ const labelStyle = {
 };
 
 export function Contact() {
+  const isMobile = useIsMobile();
   return (
     <section
       style={{ background: '#F9A800', fontFamily: "'Inter', sans-serif", position: 'relative' }}
@@ -83,21 +85,26 @@ export function Contact() {
           </p>
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'flex-end', gap: '0px', marginLeft: '-110px' }}>
+        <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', alignItems: isMobile ? 'center' : 'flex-end', gap: '0px', marginLeft: isMobile ? 0 : '-110px' }}>
 
           <img
             src="/momo-giraffe.png"
             alt="Momo mascot"
             style={{
-              width: '200px',
+              width: isMobile ? '200px' : '200px',
+              maxWidth: '60%',
+              order: isMobile ? 2 : 0,
               flexShrink: 0,
               objectFit: 'contain',
-              marginBottom: '-6px',
+              objectPosition: 'bottom',
+              marginBottom: isMobile ? '-2px' : '-6px',
+              marginTop: isMobile ? '8px' : 0,
+              filter: isMobile ? 'drop-shadow(0 12px 24px rgba(0,0,0,0.2))' : undefined,
             }}
           />
 
         {/* Contact form card */}
-        <div style={{ flex: 1 }}>
+        <div style={{ flex: 1, width: isMobile ? '100%' : 'auto', order: isMobile ? 1 : 0 }}>
         <GlowCard glowColor="blue" className="flex flex-col gap-6" width="100%">
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

@@ -97,8 +97,8 @@ export function DidYouKnowPopup({ triggerRef }) {
               {/* LEFT — mascot */}
               <div style={{
                 flex: isMobile ? '0 0 auto' : '0 0 42%',
-                height: isMobile ? '170px' : 'auto',
-                background: 'linear-gradient(135deg, #F9A800 0%, #e06b00 100%)',
+                height: isMobile ? '250px' : 'auto',
+                background: '#F9A800',
                 display: 'flex', alignItems: 'flex-end', justifyContent: 'center',
                 position: 'relative', overflow: 'hidden',
               }}>
@@ -115,7 +115,7 @@ export function DidYouKnowPopup({ triggerRef }) {
                     width: '100%',
                     height: '100%',
                     objectFit: 'cover',
-                    objectPosition: 'center top',
+                    objectPosition: isMobile ? 'center 12%' : 'center top',
                     zIndex: 1,
                   }}
                 />

@@ -247,7 +247,7 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
         top: 0, left: 0, right: 0, bottom: 0, zIndex: 4,
         minHeight: isMobile ? '100vh' : undefined,
         display: 'flex', flexDirection: 'column', justifyContent: isMobile ? 'flex-start' : 'flex-end',
-        padding: isMobile ? '92px 20px 40px' : '0 72px 48px',
+        padding: isMobile ? '88px 20px 0' : '0 72px 48px',
       }}>
 
         {/* Big centered brand title */}
@@ -276,18 +276,7 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
         </div>
         )}
 
-        <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', alignItems: isMobile ? 'center' : 'flex-end', gap: '0', width: '100%' }}>
-
-        {/* Mobile-only mascot — centered above text */}
-        {isMobile && (
-          <div style={{ width: '210px', maxWidth: '62%', marginBottom: '2px', display: 'flex', justifyContent: 'center', flexShrink: 0 }}>
-            <img
-              src="/momo-giraffe.png"
-              alt="Momo mascot"
-              style={{ width: '100%', objectFit: 'contain', filter: 'drop-shadow(0 18px 36px rgba(0,0,0,0.32))' }}
-            />
-          </div>
-        )}
+        <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', alignItems: isMobile ? 'center' : 'flex-end', justifyContent: isMobile ? 'space-between' : undefined, flex: isMobile ? 1 : undefined, gap: '0', width: '100%' }}>
 
         {/* LEFT: text content */}
         <div style={{ flex: isMobile ? 'none' : 1, width: isMobile ? '100%' : 'auto', minWidth: 0, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', paddingBottom: '8px' }}>
@@ -373,6 +362,17 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
 
         </div>
 
+        {/* Mobile mascot — large, bottom-anchored, emerging from the hero base */}
+        {isMobile && (
+        <div style={{ width: '300px', maxWidth: '84%', marginTop: '14px', display: 'flex', alignItems: 'flex-end', justifyContent: 'center', flexShrink: 0 }}>
+          <img
+            src="/momo-giraffe.png"
+            alt="Momo mascot"
+            style={{ width: '100%', objectFit: 'contain', objectPosition: 'bottom', display: 'block', filter: 'drop-shadow(0 12px 28px rgba(0,0,0,0.22))' }}
+          />
+        </div>
+        )}
+
         {/* RIGHT: mascot — tall, bottom-anchored */}
         {!isMobile && (
         <div style={{ flexShrink: 0, width: '460px', display: 'flex', alignItems: 'flex-end', justifyContent: 'center' }}>
@@ -388,6 +388,7 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
       </div>
 
       {/* Scroll indicator */}
+      {!isMobile && (
       <div style={{
         position: 'absolute', bottom: '24px', left: '50%', transform: 'translateX(-50%)',
         zIndex: 11, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px',
@@ -397,6 +398,7 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
         <span>Scroll</span>
         <div style={{ width: '1px', height: '28px', background: 'linear-gradient(180deg, rgba(255,255,255,0.5), transparent)' }} />
       </div>
+      )}
 
     </div>
   );
