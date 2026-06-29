@@ -1,0 +1,228 @@
+import { GlowCard } from './GlowCard';
+import { SparklesCore } from './SparklesCore';
+
+const inputStyle = {
+  width: '100%',
+  padding: '14px 16px',
+  borderRadius: '10px',
+  border: '1.5px solid hsl(0 0% 100% / 0.35)',
+  background: 'hsl(0 0% 100% / 0.15)',
+  backdropFilter: 'blur(8px)',
+  color: '#1a1a1a',
+  fontFamily: "'Inter', sans-serif",
+  fontSize: '0.9rem',
+  fontWeight: 400,
+  outline: 'none',
+  boxSizing: 'border-box',
+  transition: 'border-color 0.2s',
+};
+
+const labelStyle = {
+  display: 'block',
+  fontFamily: "'Inter', sans-serif",
+  fontSize: '0.75rem',
+  fontWeight: 700,
+  letterSpacing: '0.1em',
+  textTransform: 'uppercase',
+  color: '#1a1a1a',
+  marginBottom: '6px',
+};
+
+export function Contact() {
+  return (
+    <section
+      style={{ background: '#F9A800', fontFamily: "'Inter', sans-serif", position: 'relative' }}
+      className="px-6 pb-0 pt-4"
+    >
+      <div style={{ position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none', overflow: 'hidden' }}>
+        <SparklesCore background="transparent" particleColor="#ffffff" particleDensity={60} minSize={0.5} maxSize={1.8} speed={0.7} />
+      </div>
+      <div style={{ position: 'relative', zIndex: 1 }} className="max-w-5xl mx-auto">
+
+        {/* Header */}
+        <div className="text-center mb-10">
+          <p className="text-xs font-semibold tracking-[0.25em] uppercase text-white/60 mb-3">
+            Let's Get Started
+          </p>
+          <h2 className="text-3xl md:text-5xl font-black text-white leading-tight mb-4">
+            Ready to Breathe<br />Cleaner Air?
+          </h2>
+          <p className="text-xs font-semibold tracking-[0.25em] uppercase text-white/60">
+            Get your free quote today — same day service available
+          </p>
+        </div>
+
+        {/* Big phone CTA */}
+        <div className="text-center mb-10">
+          <a
+            href="tel:+14252005790"
+            style={{
+              display: 'inline-block',
+              fontFamily: "'Oswald', sans-serif",
+              fontWeight: 600,
+              fontSize: 'clamp(2.2rem, 6vw, 3.5rem)',
+              letterSpacing: '0.05em',
+              color: '#ffffff',
+              textShadow: `
+                1px 1px 0 #ccc,
+                2px 2px 0 #bbb,
+                3px 3px 0 #aaa,
+                4px 4px 0 #999,
+                5px 5px 0 #888,
+                6px 6px 0 #777,
+                7px 7px 12px rgba(0,0,0,0.3)
+              `,
+              textDecoration: 'none',
+              lineHeight: 1,
+            }}
+          >
+            (425) 200-5790
+          </a>
+          <p style={{ marginTop: '8px', fontSize: '0.78rem', fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)' }}>
+            Tap to call · Available 7 days a week
+          </p>
+        </div>
+
+        <div style={{ display: 'flex', alignItems: 'flex-end', gap: '0px', marginLeft: '-110px' }}>
+
+          <img
+            src="/momo-giraffe.png"
+            alt="Momo mascot"
+            style={{
+              width: '200px',
+              flexShrink: 0,
+              objectFit: 'contain',
+              marginBottom: '-6px',
+            }}
+          />
+
+        {/* Contact form card */}
+        <div style={{ flex: 1 }}>
+        <GlowCard glowColor="blue" className="flex flex-col gap-6" width="100%">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label style={labelStyle}>Name</label>
+              <input type="text" placeholder="John Smith" style={inputStyle} />
+            </div>
+            <div>
+              <label style={labelStyle}>Phone</label>
+              <input type="tel" placeholder="(425) 000-0000" style={inputStyle} />
+            </div>
+          </div>
+
+          <div>
+            <label style={labelStyle}>Email</label>
+            <input type="email" placeholder="you@email.com" style={inputStyle} />
+          </div>
+
+          <div>
+            <label style={labelStyle}>Message</label>
+            <textarea
+              placeholder="Tell us about your home and what service you need..."
+              rows={4}
+              style={{ ...inputStyle, resize: 'none', lineHeight: 1.6 }}
+            />
+          </div>
+
+          <button
+            style={{
+              width: '100%',
+              padding: '18px',
+              borderRadius: '12px',
+              border: 'none',
+              background: 'linear-gradient(135deg, #1a1a1a 0%, #333 100%)',
+              color: '#F9A800',
+              fontFamily: "'Oswald', sans-serif",
+              fontWeight: 600,
+              fontSize: '1.1rem',
+              letterSpacing: '0.12em',
+              textTransform: 'uppercase',
+              cursor: 'pointer',
+              boxShadow: '0 4px 20px rgba(0,0,0,0.25)',
+              transition: 'transform 0.15s, box-shadow 0.15s',
+            }}
+            onMouseEnter={e => { e.target.style.transform = 'translateY(-2px)'; e.target.style.boxShadow = '0 8px 28px rgba(0,0,0,0.3)'; }}
+            onMouseLeave={e => { e.target.style.transform = 'translateY(0)'; e.target.style.boxShadow = '0 4px 20px rgba(0,0,0,0.25)'; }}
+          >
+            Get Free Quote
+          </button>
+
+        </GlowCard>
+        </div>
+
+        </div>
+
+      </div>
+
+      {/* Footer */}
+      <footer style={{ marginTop: '80px', paddingBottom: '40px', textAlign: 'center' }}>
+        <div style={{
+          height: '1px',
+          background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent)',
+          marginBottom: '24px',
+        }} />
+
+        <a
+          href="mailto:info@momoaircare.com"
+          style={{
+            display: 'inline-block',
+            marginBottom: '20px',
+            fontFamily: "'Inter', sans-serif",
+            fontSize: '0.85rem',
+            fontWeight: 400,
+            color: 'rgba(255,255,255,0.6)',
+            textDecoration: 'none',
+            letterSpacing: '0.03em',
+            borderBottom: '1px solid rgba(255,255,255,0.25)',
+            paddingBottom: '1px',
+            transition: 'color 0.2s',
+          }}
+          onMouseEnter={e => e.target.style.color = '#fff'}
+          onMouseLeave={e => e.target.style.color = 'rgba(255,255,255,0.6)'}
+        >
+          info@momoaircare.com
+        </a>
+
+        <div style={{
+          height: '1px',
+          background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent)',
+          marginBottom: '20px',
+        }} />
+
+        <div style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: '16px 32px',
+          fontFamily: "'Inter', sans-serif",
+          fontSize: '0.78rem',
+          color: 'rgba(255,255,255,0.55)',
+          letterSpacing: '0.05em',
+        }}>
+          <span>© 2025 Momo Air Care · All Rights Reserved</span>
+          <div style={{ display: 'flex', gap: '20px' }}>
+            {['Services', 'About', 'Contact'].map(link => (
+              <a key={link} href="#" style={{
+                color: 'rgba(255,255,255,0.65)',
+                textDecoration: 'none',
+                fontWeight: 600,
+                letterSpacing: '0.1em',
+                textTransform: 'uppercase',
+                fontSize: '0.72rem',
+                transition: 'color 0.2s',
+              }}
+                onMouseEnter={e => e.target.style.color = '#fff'}
+                onMouseLeave={e => e.target.style.color = 'rgba(255,255,255,0.65)'}
+              >
+                {link}
+              </a>
+            ))}
+          </div>
+        </div>
+      </footer>
+
+    </section>
+  );
+}
