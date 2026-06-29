@@ -12,7 +12,8 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <style>
       *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-      html, body { background: #F9A800; font-family: 'Inter', sans-serif; }
+      html, body { background: #F9A800; font-family: 'Inter', sans-serif; overflow-x: hidden; max-width: 100%; }
+      img { max-width: 100%; }
       @keyframes glow-pulse {
         0%, 100% { box-shadow: 0 0 18px 4px rgba(249,168,0,0.55), 0 0 40px 8px rgba(249,168,0,0.3), 0 4px 24px rgba(0,0,0,0.18); }
         50% { box-shadow: 0 0 28px 8px rgba(249,168,0,0.85), 0 0 60px 16px rgba(249,168,0,0.5), 0 4px 32px rgba(0,0,0,0.22); }

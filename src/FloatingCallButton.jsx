@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useIsMobile } from './useIsMobile';
 
 export function FloatingCallButton() {
   const [visible, setVisible] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const onScroll = () => setVisible(window.scrollY > window.innerHeight * 0.6);
@@ -23,14 +25,15 @@ export function FloatingCallButton() {
           transition={{ type: 'spring', stiffness: 260, damping: 24 }}
           style={{
             position: 'fixed',
-            right: '24px',
-            top: '50%',
-            marginTop: '-28px',
+            right: isMobile ? '14px' : '24px',
+            top: isMobile ? 'auto' : '50%',
+            bottom: isMobile ? '16px' : 'auto',
+            marginTop: isMobile ? 0 : '-28px',
             zIndex: 1000,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            padding: '14px 22px',
+            padding: isMobile ? '12px 18px' : '14px 22px',
             border: '1.5px solid rgba(255,230,50,0.9)',
             borderRadius: '14px',
             background: 'linear-gradient(135deg, #fffbe0 0%, #FFE566 40%, #FFF9C4 60%, #F9A800 100%)',

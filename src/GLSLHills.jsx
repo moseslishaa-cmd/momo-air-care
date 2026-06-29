@@ -2,11 +2,13 @@ import { useEffect, useRef } from 'react';
 import { GlowingShadow } from './GlowingShadow';
 import { AnimatedText } from './AnimatedText';
 import { SparklesCore } from './SparklesCore';
+import { useIsMobile } from './useIsMobile';
 import * as THREE from 'three';
 
 const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize = 256, speed = 0.5 }) => {
   const canvasRef = useRef(null);
   const containerRef = useRef(null);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     class Plane {
@@ -203,14 +205,15 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
       <nav style={{
         position: 'absolute', top: 0, left: 0, right: 0, zIndex: 11,
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-        padding: '22px 48px',
+        padding: isMobile ? '14px 18px' : '22px 48px',
         background: 'rgba(0,0,0,0.08)',
         backdropFilter: 'blur(12px)',
         borderBottom: '1px solid rgba(255,255,255,0.12)',
       }}>
-        <div style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 700, fontSize: '1.4rem', letterSpacing: '0.15em', color: '#fff', textTransform: 'uppercase' }}>
+        <div style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 700, fontSize: isMobile ? '1.05rem' : '1.4rem', letterSpacing: '0.12em', color: '#fff', textTransform: 'uppercase' }}>
           Momo <span style={{ color: '#FFE566' }}>Air Care</span>
         </div>
+        {!isMobile && (
         <div style={{ display: 'flex', gap: '36px', fontFamily: "'Inter', sans-serif", fontSize: '0.78rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
           {[
             { label: 'Services', href: '#services' },
@@ -224,11 +227,12 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
             >{l.label}</a>
           ))}
         </div>
+        )}
         <a href="tel:+14252005790" style={{
-          fontFamily: "'Oswald', sans-serif", fontWeight: 600, fontSize: '0.95rem',
-          letterSpacing: '0.08em', color: '#F9A800', textDecoration: 'none',
-          background: '#1a1a1a', padding: '11px 22px', borderRadius: '8px',
-          boxShadow: '0 2px 12px rgba(0,0,0,0.25)', transition: 'background 0.2s, transform 0.15s',
+          fontFamily: "'Oswald', sans-serif", fontWeight: 600, fontSize: isMobile ? '0.82rem' : '0.95rem',
+          letterSpacing: '0.06em', color: '#F9A800', textDecoration: 'none',
+          background: '#1a1a1a', padding: isMobile ? '9px 14px' : '11px 22px', borderRadius: '8px',
+          boxShadow: '0 2px 12px rgba(0,0,0,0.25)', transition: 'background 0.2s, transform 0.15s', whiteSpace: 'nowrap',
         }}
           onMouseEnter={e => { e.currentTarget.style.background = '#333'; e.currentTarget.style.transform = 'translateY(-1px)'; }}
           onMouseLeave={e => { e.currentTarget.style.background = '#1a1a1a'; e.currentTarget.style.transform = 'translateY(0)'; }}
@@ -241,19 +245,19 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
       <div style={{
         position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 4,
         display: 'flex', flexDirection: 'column', justifyContent: 'flex-end',
-        padding: '0 72px 48px',
+        padding: isMobile ? '0 20px 32px' : '0 72px 48px',
       }}>
 
         {/* Big centered brand title */}
         <div style={{
           position: 'absolute', top: 0, left: 0, right: 0,
           display: 'flex', justifyContent: 'center', alignItems: 'center',
-          paddingTop: '120px',
+          paddingTop: isMobile ? '88px' : '120px',
           pointerEvents: 'none',
         }}>
           <h2 style={{
             fontFamily: "'Bebas Neue', sans-serif",
-            fontSize: 'clamp(3rem, 8vw, 7rem)',
+            fontSize: 'clamp(2rem, 9vw, 7rem)',
             fontWeight: 400,
             letterSpacing: '0.1em',
             textTransform: 'uppercase',
@@ -271,13 +275,13 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
         <div style={{ display: 'flex', alignItems: 'flex-end', gap: '0', width: '100%' }}>
 
         {/* LEFT: text content */}
-        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', paddingBottom: '8px' }}>
+        <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', paddingBottom: '8px' }}>
 
           {/* Big headline — dominant */}
           <h1 style={{
             margin: '0 0 16px',
             fontFamily: "'Inter', sans-serif",
-            fontSize: 'clamp(2.6rem, 5vw, 4.2rem)',
+            fontSize: isMobile ? 'clamp(2rem, 9vw, 2.6rem)' : 'clamp(2.6rem, 5vw, 4.2rem)',
             fontWeight: 900, color: '#ffffff', lineHeight: 1.05,
             textShadow: '0 2px 24px rgba(0,0,0,0.2)',
           }}>
@@ -306,7 +310,7 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
           </p>
 
           {/* CTAs + promo */}
-          <div style={{ display: 'flex', alignItems: 'flex-end', gap: '16px', marginBottom: '24px' }}>
+          <div style={{ display: 'flex', alignItems: 'flex-end', gap: isMobile ? '10px' : '16px', marginBottom: '24px', flexWrap: 'wrap' }}>
             <a href="tel:+14252005790" style={{
               display: 'inline-flex', alignItems: 'center', gap: '8px', textDecoration: 'none',
               fontFamily: "'Oswald', sans-serif", fontWeight: 600, fontSize: '1rem',
@@ -339,7 +343,7 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
           </div>
 
           {/* Trust strip */}
-          <div style={{ display: 'flex', gap: '6px' }}>
+          <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
             {['✓ Same-Day Service', '✓ 100% Satisfaction', '✓ No Hidden Fees'].map(t => (
               <div key={t} style={{
                 padding: '6px 12px',
@@ -355,6 +359,7 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
         </div>
 
         {/* RIGHT: mascot — tall, bottom-anchored */}
+        {!isMobile && (
         <div style={{ flexShrink: 0, width: '460px', display: 'flex', alignItems: 'flex-end', justifyContent: 'center' }}>
           <img
             src="/momo-giraffe.png"
@@ -362,6 +367,7 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
             style={{ width: '100%', objectFit: 'contain', filter: 'drop-shadow(0 24px 48px rgba(0,0,0,0.3))' }}
           />
         </div>
+        )}
 
         </div>
       </div>

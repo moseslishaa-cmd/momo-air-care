@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { GlowCard } from './GlowCard';
 import { SparklesCore } from './SparklesCore';
+import { useIsMobile } from './useIsMobile';
 
 const faqs = [
   {
@@ -115,6 +116,7 @@ const dividerStyle = {
 
 export function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
+  const isMobile = useIsMobile();
 
   const toggle = (i) => setOpenIndex(openIndex === i ? null : i);
 
@@ -139,6 +141,7 @@ export function FAQ() {
 
         <div style={{ display: 'flex', alignItems: 'flex-end', gap: '0px' }}>
 
+          {!isMobile && (
           <img
             src="/momo-faq-left.png"
             alt="Momo mascot"
@@ -149,8 +152,9 @@ export function FAQ() {
               marginBottom: '-6px',
             }}
           />
+          )}
 
-          <div style={{ flex: 1 }}>
+          <div style={{ flex: 1, minWidth: 0 }}>
             <GlowCard glowColor="blue" className="flex flex-col" width="100%">
               {faqs.map((item, i) => (
                 <div key={item.q}>
@@ -166,6 +170,7 @@ export function FAQ() {
             </GlowCard>
           </div>
 
+          {!isMobile && (
           <img
             src="/momo-faq.png"
             alt="Momo mascot"
@@ -176,6 +181,7 @@ export function FAQ() {
               marginBottom: '-6px',
             }}
           />
+          )}
 
         </div>
 

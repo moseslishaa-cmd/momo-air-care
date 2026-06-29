@@ -1,9 +1,11 @@
 import { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useIsMobile } from './useIsMobile';
 
 export function DidYouKnowPopup({ triggerRef }) {
   const [visible, setVisible] = useState(false);
   const shown = useRef(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     if (!triggerRef?.current) return;
@@ -54,11 +56,12 @@ export function DidYouKnowPopup({ triggerRef }) {
             transition={{ type: 'spring', stiffness: 260, damping: 26 }}
             style={{
               pointerEvents: 'all',
-              width: '65vw',
-              maxWidth: '860px',
-              minWidth: '320px',
+              width: isMobile ? '92vw' : '65vw',
+              maxWidth: isMobile ? '92vw' : '860px',
+              maxHeight: isMobile ? '90vh' : 'none',
+              overflowY: isMobile ? 'auto' : 'visible',
               background: '#111',
-              borderRadius: '28px',
+              borderRadius: isMobile ? '20px' : '28px',
               overflow: 'hidden',
               boxShadow: '0 0 0 1.5px rgba(249,168,0,0.35), 0 40px 100px rgba(0,0,0,0.8)',
               fontFamily: "'Inter', sans-serif",
@@ -89,11 +92,12 @@ export function DidYouKnowPopup({ triggerRef }) {
             </div>
 
             {/* Main body — two columns */}
-            <div style={{ display: 'flex', alignItems: 'stretch', minHeight: '360px' }}>
+            <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', alignItems: 'stretch', minHeight: isMobile ? 'auto' : '360px' }}>
 
               {/* LEFT — mascot */}
               <div style={{
-                flex: '0 0 42%',
+                flex: isMobile ? '0 0 auto' : '0 0 42%',
+                height: isMobile ? '170px' : 'auto',
                 background: 'linear-gradient(135deg, #F9A800 0%, #e06b00 100%)',
                 display: 'flex', alignItems: 'flex-end', justifyContent: 'center',
                 position: 'relative', overflow: 'hidden',
@@ -119,15 +123,15 @@ export function DidYouKnowPopup({ triggerRef }) {
 
               {/* RIGHT — content */}
               <div style={{
-                flex: 1, padding: '40px 36px',
-                display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '20px',
+                flex: 1, padding: isMobile ? '24px 22px 28px' : '40px 36px',
+                display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: isMobile ? '16px' : '20px',
               }}>
 
                 {/* Big stat */}
                 <div>
                   <div style={{
                     fontFamily: "'Oswald', sans-serif", fontWeight: 700,
-                    fontSize: '5.2rem', lineHeight: 1, color: '#F9A800',
+                    fontSize: isMobile ? '3.4rem' : '5.2rem', lineHeight: 1, color: '#F9A800',
                     letterSpacing: '-0.02em',
                   }}>5,970</div>
                   <div style={{
@@ -162,13 +166,13 @@ export function DidYouKnowPopup({ triggerRef }) {
                   style={{
                     display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
                     background: '#F9A800', color: '#111',
-                    borderRadius: '12px', padding: '16px 28px',
+                    borderRadius: '12px', padding: isMobile ? '15px 20px' : '16px 28px',
                     fontFamily: "'Oswald', sans-serif", fontWeight: 700,
-                    fontSize: '1rem', letterSpacing: '0.12em', textTransform: 'uppercase',
-                    textDecoration: 'none',
+                    fontSize: isMobile ? '0.85rem' : '1rem', letterSpacing: '0.08em', textTransform: 'uppercase',
+                    textDecoration: 'none', textAlign: 'center',
                     boxShadow: '0 6px 24px rgba(249,168,0,0.4)',
                     transition: 'transform 0.15s, box-shadow 0.15s',
-                    alignSelf: 'flex-start',
+                    alignSelf: isMobile ? 'stretch' : 'flex-start',
                   }}
                   onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 10px 32px rgba(249,168,0,0.55)'; }}
                   onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 6px 24px rgba(249,168,0,0.4)'; }}
