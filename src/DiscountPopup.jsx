@@ -73,12 +73,13 @@ export function DiscountPopup({ triggerRef }) {
               <span style={{
                 fontFamily: "'Oswald', sans-serif",
                 fontWeight: 700,
-                fontSize: '0.78rem',
-                letterSpacing: '0.22em',
+                fontSize: '0.62rem',
+                letterSpacing: '0.18em',
                 textTransform: 'uppercase',
                 color: '#111',
+                whiteSpace: 'nowrap',
               }}>
-                Limited Time Offer
+                Limited Offer
               </span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="2.5" strokeLinecap="round">
                 <circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/>
@@ -88,79 +89,47 @@ export function DiscountPopup({ triggerRef }) {
               </svg>
             </div>
 
-            {/* Main content */}
-            <div style={{ padding: '4px 8px 4px' }}>
+            {/* Main content — compact */}
+            <div style={{ padding: '8px 8px' }}>
 
-              {/* Headline */}
-              <div style={{ textAlign: 'center', marginBottom: '4px' }}>
-                <p style={{
+              {/* 20% OFF */}
+              <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'center', gap: '4px', marginBottom: '7px' }}>
+                <span style={{
                   fontFamily: "'Oswald', sans-serif",
                   fontWeight: 700,
-                  fontSize: '0.65rem',
-                  letterSpacing: '0.28em',
-                  textTransform: 'uppercase',
+                  fontSize: '1.55rem',
+                  lineHeight: 1,
                   color: '#F9A800',
-                  margin: '0 0 4px',
-                }}>
-                  MOMO Discount
-                </p>
-                <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'center', gap: '4px' }}>
-                  <span style={{
-                    fontFamily: "'Oswald', sans-serif",
-                    fontWeight: 700,
-                    fontSize: '1.4rem',
-                    lineHeight: 1,
-                    color: '#F9A800',
-                    letterSpacing: '-0.02em',
-                  }}>20%</span>
-                  <span style={{
-                    fontFamily: "'Inter', sans-serif",
-                    fontWeight: 800,
-                    fontSize: '0.95rem',
-                    color: '#fff',
-                    letterSpacing: '0.04em',
-                    textTransform: 'uppercase',
-                  }}>OFF</span>
-                </div>
-                <p style={{
-                  fontWeight: 400,
-                  fontSize: '0.78rem',
-                  color: 'rgba(255,255,255,0.55)',
-                  margin: '2px 0 0',
-                }}>
-                  Your first air duct or dryer vent cleaning
-                </p>
+                  letterSpacing: '-0.02em',
+                }}>20%</span>
+                <span style={{
+                  fontFamily: "'Inter', sans-serif",
+                  fontWeight: 800,
+                  fontSize: '1rem',
+                  color: '#fff',
+                  letterSpacing: '0.04em',
+                  textTransform: 'uppercase',
+                }}>OFF</span>
               </div>
 
-              {/* Divider */}
-              <div style={{
-                height: '1px',
-                background: 'linear-gradient(90deg, transparent, rgba(249,168,0,0.3), transparent)',
-                marginBottom: '4px',
-              }} />
-
               {/* Code box */}
-              <p style={{ fontSize: '0.65rem', fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)', textAlign: 'center', margin: '0 0 4px' }}>
-                Use code at checkout
-              </p>
               <button
                 onClick={copy}
                 style={{
                   display: 'block', width: '100%',
                   background: 'transparent',
                   border: '1.5px dashed rgba(249,168,0,0.6)',
-                  borderRadius: '12px',
-                  padding: '5px',
+                  borderRadius: '10px',
+                  padding: '6px',
                   textAlign: 'center',
                   fontFamily: "'Oswald', sans-serif",
                   fontWeight: 700,
-                  fontSize: '0.7rem',
-                  letterSpacing: '0.25em',
+                  fontSize: '0.78rem',
+                  letterSpacing: '0.22em',
                   color: '#F9A800',
                   cursor: 'pointer',
-                  marginBottom: '4px',
+                  marginBottom: '6px',
                   transition: 'background 0.2s, border-color 0.2s',
-                  position: 'relative',
                 }}
                 onMouseEnter={e => { e.currentTarget.style.background = 'rgba(249,168,0,0.08)'; }}
                 onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; }}
@@ -175,39 +144,23 @@ export function DiscountPopup({ triggerRef }) {
                   display: 'block', width: '100%',
                   background: '#F9A800',
                   color: '#111',
-                  borderRadius: '12px',
-                  padding: '7px',
+                  borderRadius: '10px',
+                  padding: '9px',
                   textAlign: 'center',
                   fontFamily: "'Oswald', sans-serif",
                   fontWeight: 700,
-                  fontSize: '0.88rem',
-                  letterSpacing: '0.12em',
+                  fontSize: '0.92rem',
+                  letterSpacing: '0.1em',
                   textTransform: 'uppercase',
                   textDecoration: 'none',
                   boxShadow: '0 4px 20px rgba(249,168,0,0.35)',
                   transition: 'transform 0.15s, box-shadow 0.15s',
-                  marginBottom: '6px',
                 }}
                 onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 8px 28px rgba(249,168,0,0.5)'; }}
                 onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 4px 20px rgba(249,168,0,0.35)'; }}
               >
-                Call Now — Claim Your Discount
+                Call Now
               </a>
-
-              <button
-                onClick={close}
-                style={{
-                  display: 'block', width: '100%',
-                  background: 'transparent', border: 'none',
-                  fontFamily: "'Inter', sans-serif",
-                  fontSize: '0.75rem', fontWeight: 500,
-                  color: 'rgba(255,255,255,0.28)',
-                  cursor: 'pointer', padding: '4px',
-                  letterSpacing: '0.04em',
-                }}
-              >
-                No thanks, I'll pay full price
-              </button>
             </div>
 
             {/* Close X */}
