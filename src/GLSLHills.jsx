@@ -246,8 +246,8 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
         position: isMobile ? 'relative' : 'absolute',
         top: 0, left: 0, right: 0, bottom: 0, zIndex: 4,
         minHeight: isMobile ? '100vh' : undefined,
-        display: 'flex', flexDirection: 'column', justifyContent: isMobile ? 'flex-start' : 'flex-end',
-        padding: isMobile ? '88px 20px 0' : '0 72px 48px',
+        display: 'flex', flexDirection: 'column', justifyContent: isMobile ? 'center' : 'flex-end',
+        padding: isMobile ? '96px 20px 56px' : '0 72px 48px',
       }}>
 
         {/* Big centered brand title */}
@@ -276,7 +276,7 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
         </div>
         )}
 
-        <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', alignItems: isMobile ? 'center' : 'flex-end', justifyContent: isMobile ? 'space-between' : undefined, flex: isMobile ? 1 : undefined, gap: '0', width: '100%' }}>
+        <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', alignItems: isMobile ? 'flex-start' : 'flex-end', gap: '0', width: '100%' }}>
 
         {/* LEFT: text content */}
         <div style={{ flex: isMobile ? 'none' : 1, width: isMobile ? '100%' : 'auto', minWidth: 0, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', paddingBottom: '8px' }}>
@@ -361,17 +361,6 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
           </div>
 
         </div>
-
-        {/* Mobile mascot — bottom-anchored, emerging from the hero base */}
-        {isMobile && (
-        <div style={{ width: '200px', maxWidth: '56%', marginTop: '14px', display: 'flex', alignItems: 'flex-end', justifyContent: 'center', flexShrink: 0 }}>
-          <img
-            src="/momo-giraffe.png"
-            alt="Momo mascot"
-            style={{ width: '100%', objectFit: 'contain', objectPosition: 'bottom', display: 'block', filter: 'drop-shadow(0 12px 28px rgba(0,0,0,0.22))' }}
-          />
-        </div>
-        )}
 
         {/* RIGHT: mascot — tall, bottom-anchored */}
         {!isMobile && (

@@ -1,10 +1,12 @@
 import { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useIsMobile } from './useIsMobile';
 
 export function DiscountPopup({ triggerRef }) {
   const [visible, setVisible] = useState(false);
   const [copied, setCopied] = useState(false);
   const shown = useRef(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     if (!triggerRef?.current) return;
@@ -46,13 +48,13 @@ export function DiscountPopup({ triggerRef }) {
             transition={{ type: 'spring', stiffness: 280, damping: 26 }}
             style={{
               position: 'fixed',
-              top: '57%', right: '8px',
-              transform: 'translateY(-50%)',
+              top: isMobile ? '20%' : '57%', right: '8px',
+              transform: isMobile ? 'none' : 'translateY(-50%)',
               zIndex: 9001,
               width: '100%',
-              maxWidth: '180px',
+              maxWidth: isMobile ? '146px' : '180px',
               background: '#111',
-              borderRadius: '18px',
+              borderRadius: '16px',
               overflow: 'hidden',
               boxShadow: '0 0 0 1px rgba(249,168,0,0.3), 0 32px 80px rgba(0,0,0,0.7), 0 0 60px rgba(249,168,0,0.1)',
               fontFamily: "'Inter', sans-serif",

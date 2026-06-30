@@ -97,14 +97,14 @@ export function DidYouKnowPopup({ triggerRef }) {
               {/* LEFT — mascot */}
               <div style={{
                 flex: isMobile ? '0 0 auto' : '0 0 42%',
-                height: isMobile ? '250px' : 'auto',
-                background: '#F9A800',
+                height: isMobile ? '240px' : 'auto',
+                background: '#FEC401',
                 display: 'flex', alignItems: 'flex-end', justifyContent: 'center',
                 position: 'relative', overflow: 'hidden',
               }}>
-                {/* Decorative rings */}
-                <div style={{ position: 'absolute', width: '320px', height: '320px', borderRadius: '50%', border: '1px solid rgba(255,255,255,0.12)', top: '50%', left: '50%', transform: 'translate(-50%,-50%)' }} />
-                <div style={{ position: 'absolute', width: '220px', height: '220px', borderRadius: '50%', border: '1px solid rgba(255,255,255,0.1)', top: '50%', left: '50%', transform: 'translate(-50%,-50%)' }} />
+                {/* Decorative rings (desktop only) */}
+                {!isMobile && <div style={{ position: 'absolute', width: '320px', height: '320px', borderRadius: '50%', border: '1px solid rgba(255,255,255,0.12)', top: '50%', left: '50%', transform: 'translate(-50%,-50%)' }} />}
+                {!isMobile && <div style={{ position: 'absolute', width: '220px', height: '220px', borderRadius: '50%', border: '1px solid rgba(255,255,255,0.1)', top: '50%', left: '50%', transform: 'translate(-50%,-50%)' }} />}
 
                 <img
                   src="/momo-lightbulb.jpeg"
@@ -114,8 +114,8 @@ export function DidYouKnowPopup({ triggerRef }) {
                     inset: 0,
                     width: '100%',
                     height: '100%',
-                    objectFit: 'cover',
-                    objectPosition: isMobile ? 'center 12%' : 'center top',
+                    objectFit: isMobile ? 'contain' : 'cover',
+                    objectPosition: isMobile ? 'center bottom' : 'center top',
                     zIndex: 1,
                   }}
                 />
