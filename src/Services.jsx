@@ -122,7 +122,7 @@ export function Services() {
             </h3>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)', gap: isMobile ? '12px' : '24px' }}>
             {[
               { step: '01', title: 'Book a Free Quote', desc: 'Call or fill out our form. We assess your home and give you a clear, upfront price — no surprises.' },
               { step: '02', title: 'We Come to You', desc: 'Our certified technicians arrive on time with professional equipment and handle everything from start to finish.' },
@@ -133,9 +133,13 @@ export function Services() {
                 backdropFilter: 'blur(8px)',
                 border: '1px solid rgba(255,255,255,0.2)',
                 borderRadius: '16px',
-                padding: '28px 24px',
+                padding: isMobile ? '18px 18px' : '28px 24px',
                 position: 'relative',
+                display: isMobile ? 'flex' : 'block',
+                alignItems: isMobile ? 'center' : undefined,
+                gap: isMobile ? '16px' : undefined,
               }}>
+                {!isMobile && (
                 <div style={{
                   fontFamily: "'Oswald', sans-serif", fontWeight: 700,
                   fontSize: '3rem', color: 'rgba(255,255,255,0.1)',
@@ -144,21 +148,24 @@ export function Services() {
                 }}>
                   {item.step}
                 </div>
+                )}
                 <div style={{
-                  width: '36px', height: '36px', borderRadius: '50%',
+                  width: isMobile ? '44px' : '36px', height: isMobile ? '44px' : '36px', borderRadius: '50%',
                   background: '#1a1a1a', display: 'flex', alignItems: 'center',
-                  justifyContent: 'center', marginBottom: '16px',
+                  justifyContent: 'center', marginBottom: isMobile ? 0 : '16px', flexShrink: 0,
                   fontFamily: "'Oswald', sans-serif", fontWeight: 700,
-                  fontSize: '0.85rem', color: '#F9A800',
+                  fontSize: isMobile ? '1.05rem' : '0.85rem', color: '#F9A800',
                 }}>
                   {i + 1}
                 </div>
-                <h4 style={{ fontFamily: "'Inter', sans-serif", fontWeight: 800, fontSize: '1rem', color: '#fff', margin: '0 0 10px' }}>
-                  {item.title}
-                </h4>
-                <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '0.85rem', fontWeight: 300, color: 'rgba(255,255,255,0.75)', lineHeight: 1.7, margin: 0 }}>
-                  {item.desc}
-                </p>
+                <div style={{ minWidth: 0 }}>
+                  <h4 style={{ fontFamily: "'Inter', sans-serif", fontWeight: 800, fontSize: '1rem', color: '#fff', margin: isMobile ? '0 0 4px' : '0 0 10px' }}>
+                    {item.title}
+                  </h4>
+                  <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '0.85rem', fontWeight: 300, color: 'rgba(255,255,255,0.75)', lineHeight: 1.6, margin: 0 }}>
+                    {item.desc}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
