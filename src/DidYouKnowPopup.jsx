@@ -107,7 +107,7 @@ export function DidYouKnowPopup({ triggerRef }) {
                 position: 'relative', overflow: 'hidden',
               }}>
                 <img
-                  src="/momo-faq-gold.png"
+                  src="/momo-popup-mascot.png"
                   alt="MOMO mascot"
                   style={{
                     position: 'absolute',
