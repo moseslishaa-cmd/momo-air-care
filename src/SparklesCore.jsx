@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { useIsMobile } from './useIsMobile';
 
 export function SparklesCore({
   className = '',
@@ -10,8 +11,10 @@ export function SparklesCore({
   speed = 1,
 }) {
   const canvasRef = useRef(null);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
+    if (isMobile) return;
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
     let rafId;
@@ -87,7 +90,9 @@ export function SparklesCore({
       cancelAnimationFrame(rafId);
       ro.disconnect();
     };
-  }, [background, particleColor, particleDensity, minSize, maxSize, speed]);
+  }, [background, particleColor, particleDensity, minSize, maxSize, speed, isMobile]);
+
+  if (isMobile) return null;
 
   return (
     <canvas

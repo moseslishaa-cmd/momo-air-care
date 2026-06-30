@@ -162,11 +162,14 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
       renderer.setSize(window.innerWidth, window.innerHeight);
     };
 
+    let running = false;
     const renderLoop = () => {
       plane.render(clock.getDelta());
       renderer.render(scene, camera);
       rafId = requestAnimationFrame(renderLoop);
     };
+    const start = () => { if (!running) { running = true; clock.getDelta(); renderLoop(); } };
+    const stop = () => { if (running) { running = false; cancelAnimationFrame(rafId); } };
 
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setClearColor(0x000000, 0);
@@ -175,10 +178,18 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
     scene.add(plane.mesh);
     window.addEventListener('resize', resize);
     resize();
-    renderLoop();
+
+    // Only animate while the hero is on-screen — saves GPU while scrolling the rest of the page
+    const io = new IntersectionObserver(
+      ([entry]) => { entry.isIntersecting ? start() : stop(); },
+      { threshold: 0 }
+    );
+    if (containerRef.current) io.observe(containerRef.current);
+    start();
 
     return () => {
-      cancelAnimationFrame(rafId);
+      stop();
+      io.disconnect();
       window.removeEventListener('resize', resize);
       renderer.dispose();
     };
