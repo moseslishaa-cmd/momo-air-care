@@ -4,7 +4,7 @@ import { SparklesCore } from './SparklesCore';
 import { useIsMobile } from './useIsMobile';
 
 // Free, no-backend email delivery. Submissions are emailed here.
-const NOTIFY_EMAIL = 'info@momoaircare.com';
+const NOTIFY_EMAIL = 'moses.lishaa@gmail.com';
 
 const inputStyle = {
   width: '100%',
