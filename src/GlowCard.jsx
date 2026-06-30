@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { useIsMobile } from './useIsMobile';
 
 const glowColorMap = {
   blue:   { base: 220, spread: 200 },
@@ -63,8 +64,10 @@ const beforeAfterStyles = `
 
 export function GlowCard({ children, className = '', glowColor = 'blue', width, height }) {
   const cardRef = useRef(null);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
+    if (isMobile) return;
     const el = cardRef.current;
     if (!el) return;
     const syncPointer = (e) => {
@@ -76,7 +79,7 @@ export function GlowCard({ children, className = '', glowColor = 'blue', width, 
     };
     el.addEventListener('pointermove', syncPointer, { passive: true });
     return () => el.removeEventListener('pointermove', syncPointer);
-  }, []);
+  }, [isMobile]);
 
   const { base, spread } = glowColorMap[glowColor];
 
@@ -103,7 +106,7 @@ export function GlowCard({ children, className = '', glowColor = 'blue', width, 
     backgroundColor: 'var(--backdrop, transparent)',
     border: 'var(--border-size) solid var(--backup-border)',
     position: 'relative',
-    touchAction: 'none',
+    touchAction: isMobile ? 'pan-y' : 'none',
     willChange: 'background-image',
     ...(width !== undefined  ? { width:  typeof width  === 'number' ? `${width}px`  : width  } : {}),
     ...(height !== undefined ? { height: typeof height === 'number' ? `${height}px` : height } : {}),
@@ -116,7 +119,7 @@ export function GlowCard({ children, className = '', glowColor = 'blue', width, 
         ref={cardRef}
         data-glow
         style={inlineStyles}
-        className={`rounded-2xl relative shadow-[0_8px_32px_rgba(0,0,0,0.15)] p-6 backdrop-blur-[12px] transition-transform duration-150 hover:-translate-y-2 ${className}`}
+        className={`rounded-2xl relative shadow-[0_8px_32px_rgba(0,0,0,0.15)] p-6 backdrop-blur-[12px] transition-transform duration-150 ${isMobile ? '' : 'hover:-translate-y-2'} ${className}`}
       >
         <div data-glow />
         {children}

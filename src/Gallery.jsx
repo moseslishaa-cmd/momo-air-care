@@ -1,4 +1,5 @@
 import { SparklesCore } from './SparklesCore';
+import { useIsMobile } from './useIsMobile';
 
 const images = [
   {
@@ -41,6 +42,7 @@ const images = [
 
 function GalleryCard({ type, image, label, tag, gradient, emoji }) {
   const isBefore = type === 'before';
+  const isMobile = useIsMobile();
   return (
     <div
       style={{
@@ -52,11 +54,11 @@ function GalleryCard({ type, image, label, tag, gradient, emoji }) {
         boxShadow: '0 4px 20px rgba(0,0,0,0.18)',
         background: gradient || '#111',
       }}
-      onMouseEnter={e => {
+      onMouseEnter={isMobile ? undefined : e => {
         e.currentTarget.style.transform = 'translateY(-4px)';
         e.currentTarget.style.boxShadow = '0 14px 36px rgba(0,0,0,0.28)';
       }}
-      onMouseLeave={e => {
+      onMouseLeave={isMobile ? undefined : e => {
         e.currentTarget.style.transform = 'translateY(0)';
         e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.18)';
       }}

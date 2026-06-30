@@ -8,7 +8,6 @@ const CITIES = [
   { name: 'Monroe',     lat: 47.855, lng: -121.972, dir: 'right', major: false },
   { name: 'Duvall',     lat: 47.742, lng: -121.985, dir: 'right', major: false },
   { name: 'Seattle',    lat: 47.606, lng: -122.332, dir: 'left',  major: true  },
-  { name: 'Snoqualmie', lat: 47.527, lng: -121.825, dir: 'right', major: false },
   { name: 'North Bend', lat: 47.492, lng: -121.787, dir: 'bottom',major: false },
   { name: 'Tacoma',     lat: 47.252, lng: -122.444, dir: 'left',  major: false },
   { name: 'Lacey',      lat: 47.034, lng: -122.822, dir: 'right', major: false },
@@ -34,16 +33,17 @@ const I5_ROUTE = [
   [47.03, -122.90],
 ];
 
-// Rough service corridor polygon (buffer around I-5)
+// Service area boundary — wraps around every city marker with padding
 const SERVICE_AREA = [
-  [48.22, -121.90], [48.22, -122.38],
-  [48.05, -122.45], [47.98, -122.48],
-  [47.82, -122.56], [47.61, -122.60],
-  [47.47, -122.58], [47.25, -122.72],
-  [47.15, -122.80], [47.00, -123.05],
-  [47.00, -122.70], [47.18, -122.35],
-  [47.32, -122.10], [47.61, -122.05],
-  [47.98, -121.95], [48.22, -121.90],
+  [48.36, -122.22],   // top, N of Arlington
+  [48.22, -121.82],   // NE
+  [47.62, -121.55],   // E, right of North Bend
+  [47.38, -121.62],   // SE, below North Bend
+  [46.92, -122.55],   // S, below Tacoma
+  [46.88, -123.08],   // SW, below/west of Olympia
+  [47.42, -122.86],   // W, west of Lacey/Olympia
+  [48.02, -122.42],   // NW, west of Everett
+  [48.36, -122.22],   // close
 ];
 
 const CITY_CHIPS = [
@@ -91,11 +91,22 @@ function LeafletMap() {
     const L = window.L;
     if (!L || !containerRef.current || mapRef.current) return;
 
+    // On touch devices, make the map static so finger gestures scroll the page
+    // instead of getting "stuck" panning the map.
+    const isTouch = window.matchMedia('(max-width: 768px)').matches
+      || ('ontouchstart' in window && navigator.maxTouchPoints > 0);
+
     const map = L.map(containerRef.current, {
       center: [47.62, -122.45],
       zoom: 8,
       scrollWheelZoom: false,
-      zoomControl: true,
+      zoomControl: !isTouch,
+      dragging: !isTouch,
+      touchZoom: !isTouch,
+      doubleClickZoom: !isTouch,
+      boxZoom: !isTouch,
+      keyboard: !isTouch,
+      tap: !isTouch,
     });
 
     // OpenStreetMap standard — vibrant blue water, green terrain
@@ -179,6 +190,7 @@ function LeafletMap() {
         borderRadius: '20px',
         overflow: 'hidden',
         boxShadow: '0 8px 48px rgba(0,0,0,0.22)',
+        touchAction: 'pan-y',
       }}
     />
   );

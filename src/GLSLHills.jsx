@@ -349,8 +349,8 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
               padding: '15px 28px', borderRadius: '10px',
               transition: 'background 0.15s, transform 0.15s', whiteSpace: 'nowrap',
             }}
-              onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.25)'; e.currentTarget.style.transform = 'translateY(-3px)'; }}
-              onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.15)'; e.currentTarget.style.transform = 'translateY(0)'; }}
+              onMouseEnter={isMobile ? undefined : e => { e.currentTarget.style.background = 'rgba(255,255,255,0.25)'; e.currentTarget.style.transform = 'translateY(-3px)'; }}
+              onMouseLeave={isMobile ? undefined : e => { e.currentTarget.style.background = 'rgba(255,255,255,0.15)'; e.currentTarget.style.transform = 'translateY(0)'; }}
             >
               Our Services →
             </a>

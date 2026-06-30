@@ -149,8 +149,8 @@ export function Contact() {
               boxShadow: '0 4px 20px rgba(0,0,0,0.25)',
               transition: 'transform 0.15s, box-shadow 0.15s',
             }}
-            onMouseEnter={e => { e.target.style.transform = 'translateY(-2px)'; e.target.style.boxShadow = '0 8px 28px rgba(0,0,0,0.3)'; }}
-            onMouseLeave={e => { e.target.style.transform = 'translateY(0)'; e.target.style.boxShadow = '0 4px 20px rgba(0,0,0,0.25)'; }}
+            onMouseEnter={isMobile ? undefined : e => { e.target.style.transform = 'translateY(-2px)'; e.target.style.boxShadow = '0 8px 28px rgba(0,0,0,0.3)'; }}
+            onMouseLeave={isMobile ? undefined : e => { e.target.style.transform = 'translateY(0)'; e.target.style.boxShadow = '0 4px 20px rgba(0,0,0,0.25)'; }}
           >
             Get Free Quote
           </button>
