@@ -48,7 +48,9 @@ export function DiscountPopup({ triggerRef }) {
             transition={{ type: 'spring', stiffness: 280, damping: 26 }}
             style={{
               position: 'fixed',
-              top: isMobile ? '20%' : '57%', right: '8px',
+              top: isMobile ? 'auto' : '57%',
+              bottom: isMobile ? '84px' : 'auto',
+              right: '8px',
               transform: isMobile ? 'none' : 'translateY(-50%)',
               zIndex: 9001,
               width: '100%',

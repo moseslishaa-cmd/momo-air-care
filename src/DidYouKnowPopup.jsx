@@ -94,28 +94,30 @@ export function DidYouKnowPopup({ triggerRef }) {
             {/* Main body — two columns */}
             <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', alignItems: 'stretch', minHeight: isMobile ? 'auto' : '360px' }}>
 
-              {/* LEFT — mascot */}
+              {/* LEFT — mascot on black/yellow hazard stripes */}
               <div style={{
                 flex: isMobile ? '0 0 auto' : '0 0 42%',
-                height: isMobile ? '240px' : 'auto',
-                background: '#FEC401',
+                height: isMobile ? '244px' : 'auto',
+                background: `
+                  radial-gradient(circle at 50% 40%, rgba(249,168,0,0.45) 0%, rgba(249,168,0,0) 60%),
+                  linear-gradient(180deg, rgba(0,0,0,0.42), rgba(0,0,0,0.60)),
+                  repeating-linear-gradient(45deg, #F9A800 0px, #F9A800 26px, #141414 26px, #141414 52px)
+                `,
                 display: 'flex', alignItems: 'flex-end', justifyContent: 'center',
                 position: 'relative', overflow: 'hidden',
               }}>
-                {/* Decorative rings (desktop only) */}
-                {!isMobile && <div style={{ position: 'absolute', width: '320px', height: '320px', borderRadius: '50%', border: '1px solid rgba(255,255,255,0.12)', top: '50%', left: '50%', transform: 'translate(-50%,-50%)' }} />}
-                {!isMobile && <div style={{ position: 'absolute', width: '220px', height: '220px', borderRadius: '50%', border: '1px solid rgba(255,255,255,0.1)', top: '50%', left: '50%', transform: 'translate(-50%,-50%)' }} />}
-
                 <img
-                  src="/momo-lightbulb.jpeg"
+                  src="/momo-faq.png"
                   alt="MOMO mascot"
                   style={{
                     position: 'absolute',
                     inset: 0,
                     width: '100%',
                     height: '100%',
-                    objectFit: isMobile ? 'contain' : 'cover',
-                    objectPosition: isMobile ? 'center bottom' : 'center top',
+                    objectFit: 'contain',
+                    objectPosition: 'center bottom',
+                    padding: isMobile ? '14px 0 0' : '20px 0 0',
+                    filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.5))',
                     zIndex: 1,
                   }}
                 />
