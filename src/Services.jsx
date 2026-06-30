@@ -1,6 +1,7 @@
 import { GlowCard } from './GlowCard';
 import { SparklesCore } from './SparklesCore';
 import { Gallery } from './Gallery';
+import { useIsMobile } from './useIsMobile';
 
 const shineStyle = {
   background: 'linear-gradient(105deg, #bbb 0%, #888 20%, #ffffff 45%, #f0f0f0 50%, #ffffff 55%, #999 80%, #aaa 100%)',
@@ -39,6 +40,7 @@ const services = [
 ];
 
 export function Services() {
+  const isMobile = useIsMobile();
   return (
     <>
     <section style={{ fontFamily: "'Inter', sans-serif", position: 'relative' }}>
@@ -171,10 +173,11 @@ export function Services() {
           borderRadius: '16px',
           overflow: 'hidden',
           display: 'flex',
-          alignItems: 'stretch',
+          flexDirection: isMobile ? 'column' : 'row',
+          alignItems: isMobile ? 'center' : 'stretch',
         }}>
-          <div style={{ flex: 1, padding: '28px 32px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: '24px' }}>
-            <div style={{ display: 'flex', gap: '40px', flexWrap: 'wrap' }}>
+          <div style={{ flex: 1, width: isMobile ? '100%' : 'auto', padding: isMobile ? '24px 22px 8px' : '28px 32px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: isMobile ? '20px' : '24px' }}>
+            <div style={{ display: 'flex', gap: isMobile ? '20px 28px' : '40px', flexWrap: 'wrap' }}>
               {[
                 { num: '2,500+', label: 'Homes Served' },
                 { num: '10+', label: 'Years Experience' },
@@ -229,8 +232,25 @@ export function Services() {
             </a>
           </div>
 
-          <div style={{ width: '200px', flexShrink: 0, overflow: 'hidden' }}>
-            <img src="/stats-image.png" alt="Duct cleaning result" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+          <div style={{
+            width: isMobile ? '170px' : '200px',
+            flexShrink: 0,
+            overflow: 'hidden',
+            display: 'flex',
+            alignItems: 'flex-end',
+            justifyContent: 'center',
+            paddingTop: isMobile ? '8px' : 0,
+          }}>
+            <img
+              src="/stats-image.png"
+              alt="Momo mascot — it's so easy"
+              style={{
+                width: '100%',
+                height: isMobile ? 'auto' : '100%',
+                objectFit: isMobile ? 'contain' : 'cover',
+                display: 'block',
+              }}
+            />
           </div>
         </div>
 

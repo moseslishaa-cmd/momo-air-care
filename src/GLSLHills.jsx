@@ -362,9 +362,9 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
 
         </div>
 
-        {/* Mobile mascot — large, bottom-anchored, emerging from the hero base */}
+        {/* Mobile mascot — bottom-anchored, emerging from the hero base */}
         {isMobile && (
-        <div style={{ width: '300px', maxWidth: '84%', marginTop: '14px', display: 'flex', alignItems: 'flex-end', justifyContent: 'center', flexShrink: 0 }}>
+        <div style={{ width: '200px', maxWidth: '56%', marginTop: '14px', display: 'flex', alignItems: 'flex-end', justifyContent: 'center', flexShrink: 0 }}>
           <img
             src="/momo-giraffe.png"
             alt="Momo mascot"

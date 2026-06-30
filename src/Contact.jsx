@@ -91,15 +91,15 @@ export function Contact() {
             src="/momo-giraffe.png"
             alt="Momo mascot"
             style={{
-              width: isMobile ? '200px' : '200px',
-              maxWidth: '60%',
+              width: isMobile ? '150px' : '200px',
+              maxWidth: '45%',
               order: isMobile ? 2 : 0,
               flexShrink: 0,
               objectFit: 'contain',
               objectPosition: 'bottom',
               marginBottom: isMobile ? '-2px' : '-6px',
-              marginTop: isMobile ? '8px' : 0,
-              filter: isMobile ? 'drop-shadow(0 12px 24px rgba(0,0,0,0.2))' : undefined,
+              marginTop: isMobile ? '6px' : 0,
+              filter: isMobile ? 'drop-shadow(0 10px 20px rgba(0,0,0,0.2))' : undefined,
             }}
           />
 
