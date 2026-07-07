@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import ReactDOM from 'react-dom/client';
 import { GLSLHills } from './GLSLHills';
 import { Services } from './Services';
+import { DryerDanger } from './DryerDanger';
 import { Testimonials } from './Testimonials';
 import { WhyMomo } from './WhyMomo';
 import { FAQ } from './FAQ';
@@ -36,6 +37,7 @@ function App() {
         <div id="services" ref={servicesRef}>
           <Services />
         </div>
+        <DryerDanger />
         <div id="testimonials" ref={testimonialsRef}>
           <Testimonials />
         </div>
