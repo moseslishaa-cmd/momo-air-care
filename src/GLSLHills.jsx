@@ -196,33 +196,42 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
   }, [cameraZ, planeSize, speed]);
 
   return (
-    <div ref={containerRef} style={{ position: 'relative', width, height: isMobile ? 'auto' : height, minHeight: isMobile ? '100vh' : undefined, background: 'radial-gradient(ellipse 90% 65% at 50% 0%, #241a04 0%, #131313 62%)' }}>
-      <canvas ref={canvasRef} style={{ position: 'absolute', top: 0, right: 0, bottom: 0, left: 0, zIndex: 1 }} />
+    <div ref={containerRef} style={{ position: 'relative', width, height: 'auto', background: '#ffffff' }}>
+      <canvas ref={canvasRef} style={{ display: 'none' }} />
 
-      {/* Sparkles layer */}
-      <div style={{ position: 'absolute', inset: 0, zIndex: 2, pointerEvents: 'none' }}>
-        <SparklesCore background="transparent" particleColor="#ffffff" particleDensity={60} minSize={0.5} maxSize={1.8} speed={0.7} />
-      </div>
-
-      {/* Dark gradient overlay for depth */}
+      {/* Black utility bar */}
       <div style={{
-        position: 'absolute', inset: 0, zIndex: 3,
-        background: 'linear-gradient(160deg, rgba(0,0,0,0.18) 0%, transparent 50%, rgba(0,0,0,0.1) 100%)',
-        pointerEvents: 'none',
-      }} />
+        background: '#0d0d0d',
+        padding: isMobile ? '12px 16px' : '14px 24px',
+        display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '3px',
+      }}>
+        <a href="tel:+14252005790" style={{
+          fontFamily: "'Oswald', sans-serif", fontWeight: 700,
+          fontSize: isMobile ? '1.05rem' : '1.15rem', letterSpacing: '0.08em',
+          color: '#fff', textDecoration: 'none',
+        }}>
+          (425) 200-5790
+        </a>
+        <span style={{
+          fontFamily: "'Inter', sans-serif", fontWeight: 700,
+          fontSize: '0.66rem', letterSpacing: '0.22em', textTransform: 'uppercase',
+          color: '#F9A800',
+        }}>
+          Call for a free quote
+        </span>
+      </div>
 
 
       {/* Navbar */}
       <nav style={{
-        position: 'absolute', top: 0, left: 0, right: 0, zIndex: 11,
+        position: 'relative', zIndex: 11,
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-        padding: isMobile ? '14px 18px' : '22px 48px',
-        background: 'rgba(0,0,0,0.08)',
-        backdropFilter: 'blur(12px)',
-        borderBottom: '1px solid rgba(255,255,255,0.12)',
+        padding: isMobile ? '14px 18px' : '18px 48px',
+        background: '#ffffff',
+        borderBottom: '1px solid #ececec',
       }}>
-        <div style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 700, fontSize: isMobile ? '1.05rem' : '1.4rem', letterSpacing: '0.12em', color: '#fff', textTransform: 'uppercase' }}>
-          Momo <span style={{ color: '#FFE566' }}>Air Care</span>
+        <div style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 700, fontSize: isMobile ? '1.05rem' : '1.4rem', letterSpacing: '0.12em', color: '#111', textTransform: 'uppercase' }}>
+          Momo <span style={{ color: '#D98F00' }}>Air Care</span>
         </div>
         {!isMobile && (
         <div style={{ display: 'flex', gap: '36px', fontFamily: "'Inter', sans-serif", fontSize: '0.78rem', fontWeight: 600, letterSpacing: '0.1em', textTransform: 'uppercase' }}>
@@ -232,60 +241,35 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
             { label: 'FAQ', href: '#faq' },
             { label: 'Contact', href: '#contact' },
           ].map(l => (
-            <a key={l.label} href={l.href} style={{ color: 'rgba(255,255,255,0.75)', textDecoration: 'none', transition: 'color 0.2s' }}
-              onMouseEnter={e => e.target.style.color = '#fff'}
-              onMouseLeave={e => e.target.style.color = 'rgba(255,255,255,0.75)'}
+            <a key={l.label} href={l.href} style={{ color: '#555', textDecoration: 'none', transition: 'color 0.2s' }}
+              onMouseEnter={e => e.target.style.color = '#000'}
+              onMouseLeave={e => e.target.style.color = '#555'}
             >{l.label}</a>
           ))}
         </div>
         )}
         <a href="tel:+14252005790" style={{
           fontFamily: "'Oswald', sans-serif", fontWeight: 600, fontSize: isMobile ? '0.82rem' : '0.95rem',
-          letterSpacing: '0.06em', color: '#F9A800', textDecoration: 'none',
-          background: '#1a1a1a', padding: isMobile ? '9px 14px' : '11px 22px', borderRadius: '8px',
-          boxShadow: '0 2px 12px rgba(0,0,0,0.25)', transition: 'background 0.2s, transform 0.15s', whiteSpace: 'nowrap',
+          letterSpacing: '0.06em', color: '#111', textDecoration: 'none',
+          background: '#F9A800', padding: isMobile ? '9px 14px' : '11px 22px', borderRadius: '6px',
+          boxShadow: '0 2px 10px rgba(249,168,0,0.3)', transition: 'filter 0.2s, transform 0.15s', whiteSpace: 'nowrap',
         }}
-          onMouseEnter={e => { e.currentTarget.style.background = '#333'; e.currentTarget.style.transform = 'translateY(-1px)'; }}
-          onMouseLeave={e => { e.currentTarget.style.background = '#1a1a1a'; e.currentTarget.style.transform = 'translateY(0)'; }}
+          onMouseEnter={e => { e.currentTarget.style.filter = 'brightness(1.06)'; e.currentTarget.style.transform = 'translateY(-1px)'; }}
+          onMouseLeave={e => { e.currentTarget.style.filter = 'none'; e.currentTarget.style.transform = 'translateY(0)'; }}
         >
           (425) 200-5790
         </a>
       </nav>
 
-      {/* Hero content — bottom-anchored on desktop, top-anchored flow on mobile */}
+      {/* Hero content — clean editorial flow */}
       <div style={{
-        position: isMobile ? 'relative' : 'absolute',
-        top: 0, left: 0, right: 0, bottom: 0, zIndex: 4,
-        minHeight: isMobile ? '100vh' : undefined,
-        display: 'flex', flexDirection: 'column', justifyContent: isMobile ? 'center' : 'flex-end',
-        padding: isMobile ? '96px 20px 56px' : '0 72px 48px',
+        position: 'relative',
+        zIndex: 4,
+        display: 'flex', flexDirection: 'column', justifyContent: 'flex-start',
+        padding: isMobile ? '34px 20px 0' : '56px 72px 0',
+        maxWidth: '1180px', margin: '0 auto', width: '100%',
       }}>
 
-        {/* Big centered brand title */}
-        {!isMobile && (
-        <div style={{
-          position: 'absolute', top: 0, left: 0, right: 0,
-          display: 'flex', justifyContent: 'center', alignItems: 'center',
-          paddingTop: '120px',
-          pointerEvents: 'none',
-        }}>
-          <h2 style={{
-            fontFamily: "'Bebas Neue', sans-serif",
-            fontSize: 'clamp(2rem, 9vw, 7rem)',
-            fontWeight: 400,
-            letterSpacing: '0.1em',
-            textTransform: 'uppercase',
-            color: 'rgba(255,255,255,0.1)',
-            margin: 0,
-            lineHeight: 1,
-            userSelect: 'none',
-            whiteSpace: 'nowrap',
-            textShadow: '0 0 60px rgba(249,168,0,0.12)',
-          }}>
-            MOMO Air Care
-          </h2>
-        </div>
-        )}
 
         <div style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', alignItems: isMobile ? 'flex-start' : 'flex-end', gap: '0', width: '100%' }}>
 
@@ -314,10 +298,9 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
           {/* Big headline — dominant */}
           <h1 style={{
             margin: '0 0 16px',
-            fontFamily: "'Inter', sans-serif",
-            fontSize: isMobile ? 'clamp(2rem, 9vw, 2.6rem)' : 'clamp(2.6rem, 5vw, 4.2rem)',
-            fontWeight: 900, color: '#ffffff', lineHeight: 1.05,
-            textShadow: '0 2px 24px rgba(0,0,0,0.2)',
+            fontFamily: "'Fraunces', serif",
+            fontSize: isMobile ? 'clamp(2.1rem, 9.6vw, 2.8rem)' : 'clamp(2.8rem, 5vw, 4.4rem)',
+            fontWeight: 900, color: '#111111', lineHeight: 1.06,
           }}>
             There's Clean.<br />Then There's MOMO.
           </h1>
@@ -325,20 +308,20 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
           {/* Brand + meta row */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px', flexWrap: 'wrap' }}>
             <AnimatedText>
-              <span style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 700, fontSize: '0.85rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.6)' }}>Momo Air Care</span>
+              <span style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 700, fontSize: '0.85rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#999' }}>Momo Air Care</span>
             </AnimatedText>
-            <span style={{ width: '1px', height: '14px', background: 'rgba(255,255,255,0.2)' }} />
-            <span style={{ color: '#FFE566', fontSize: '0.8rem' }}>★★★★★</span>
-            <span style={{ fontSize: '0.68rem', fontWeight: 600, color: 'rgba(255,255,255,0.55)' }}>5.0 · 200+ Reviews</span>
-            <span style={{ width: '1px', height: '14px', background: 'rgba(255,255,255,0.2)' }} />
-            <span style={{ fontSize: '0.68rem', fontWeight: 600, color: 'rgba(255,255,255,0.55)' }}>📍 Greater Seattle</span>
+            <span style={{ width: '1px', height: '14px', background: '#ddd' }} />
+            <span style={{ color: '#E9A800', fontSize: '0.8rem' }}>★★★★★</span>
+            <span style={{ fontSize: '0.68rem', fontWeight: 600, color: '#666' }}>5.0 · 200+ Reviews</span>
+            <span style={{ width: '1px', height: '14px', background: '#ddd' }} />
+            <span style={{ fontSize: '0.68rem', fontWeight: 600, color: '#666' }}>📍 Greater Seattle</span>
           </div>
 
           {/* Description */}
           <p style={{
             margin: '0 0 28px',
-            fontSize: '0.92rem', fontWeight: 400, color: 'rgba(255,255,255,0.7)',
-            maxWidth: '400px', lineHeight: 1.7, fontFamily: "'Inter', sans-serif",
+            fontSize: '0.95rem', fontWeight: 400, color: '#555',
+            maxWidth: '440px', lineHeight: 1.75, fontFamily: "'Inter', sans-serif",
           }}>
             Professional duct & dryer vent cleaning for healthier air, lower energy bills, and total peace of mind.
           </p>
@@ -363,13 +346,13 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
               display: 'inline-flex', alignItems: 'center', textDecoration: 'none',
               fontFamily: "'Oswald', sans-serif", fontWeight: 600, fontSize: '1rem',
               letterSpacing: '0.1em', textTransform: 'uppercase',
-              background: 'rgba(255,255,255,0.15)', color: '#fff',
-              border: '1.5px solid rgba(255,255,255,0.4)', backdropFilter: 'blur(8px)',
-              padding: '15px 28px', borderRadius: '10px',
+              background: '#ffffff', color: '#111',
+              border: '1.5px solid #1a1a1a',
+              padding: '15px 28px', borderRadius: '6px',
               transition: 'background 0.15s, transform 0.15s', whiteSpace: 'nowrap',
             }}
-              onMouseEnter={isMobile ? undefined : e => { e.currentTarget.style.background = 'rgba(255,255,255,0.25)'; e.currentTarget.style.transform = 'translateY(-3px)'; }}
-              onMouseLeave={isMobile ? undefined : e => { e.currentTarget.style.background = 'rgba(255,255,255,0.15)'; e.currentTarget.style.transform = 'translateY(0)'; }}
+              onMouseEnter={isMobile ? undefined : e => { e.currentTarget.style.background = '#f5f5f3'; e.currentTarget.style.transform = 'translateY(-3px)'; }}
+              onMouseLeave={isMobile ? undefined : e => { e.currentTarget.style.background = '#ffffff'; e.currentTarget.style.transform = 'translateY(0)'; }}
             >
               Our Services →
             </a>
@@ -381,10 +364,10 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
             {['✓ Same-Day Service', '✓ 100% Satisfaction', '✓ No Hidden Fees'].map(t => (
               <div key={t} style={{
                 padding: '6px 12px',
-                background: 'rgba(255,255,255,0.07)', backdropFilter: 'blur(8px)',
-                border: '1px solid rgba(255,255,255,0.15)', borderRadius: '999px',
+                background: '#F6F6F3',
+                border: '1px solid #e5e5e2', borderRadius: '999px',
                 fontFamily: "'Inter', sans-serif", fontSize: '0.63rem', fontWeight: 700,
-                letterSpacing: '0.06em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.75)',
+                letterSpacing: '0.06em', textTransform: 'uppercase', color: '#555',
                 whiteSpace: 'nowrap',
               }}>{t}</div>
             ))}
@@ -406,18 +389,6 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      {!isMobile && (
-      <div style={{
-        position: 'absolute', bottom: '24px', left: '50%', transform: 'translateX(-50%)',
-        zIndex: 11, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px',
-        fontFamily: "'Inter', sans-serif", fontSize: '0.65rem', fontWeight: 600,
-        letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)',
-      }}>
-        <span>Scroll</span>
-        <div style={{ width: '1px', height: '28px', background: 'linear-gradient(180deg, rgba(255,255,255,0.5), transparent)' }} />
-      </div>
-      )}
 
     </div>
   );

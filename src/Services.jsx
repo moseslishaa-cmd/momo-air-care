@@ -4,7 +4,7 @@ import { Gallery } from './Gallery';
 import { useIsMobile } from './useIsMobile';
 
 const shineStyle = {
-  background: 'linear-gradient(105deg, #bbb 0%, #888 20%, #ffffff 45%, #f0f0f0 50%, #ffffff 55%, #999 80%, #aaa 100%)',
+  background: 'linear-gradient(105deg, #8a5f00 0%, #b57e00 20%, #F9A800 45%, #FFD34d 50%, #F9A800 55%, #b57e00 80%, #8a5f00 100%)',
   backgroundSize: '250% 100%',
   WebkitBackgroundClip: 'text',
   WebkitTextFillColor: 'transparent',
@@ -46,7 +46,7 @@ export function Services() {
     <section style={{ fontFamily: "'Inter', sans-serif", position: 'relative' }}>
       <div style={{ position: 'relative', zIndex: 1 }}>
       <div style={{
-        background: '#131313',
+        background: '#ffffff',
         paddingTop: '60px',
         paddingBottom: '80px',
         paddingLeft: '24px',
@@ -61,16 +61,16 @@ export function Services() {
         <div className="text-center mb-12">
           <div style={{
             display: 'inline-flex', alignItems: 'center',
-            background: 'rgba(255,255,255,0.07)', backdropFilter: 'blur(8px)',
-            border: '1px solid rgba(255,255,255,0.25)',
+            background: '#F6F6F3', backdropFilter: 'blur(8px)',
+            border: '1px solid #e5e5e2',
             borderRadius: '999px', padding: '5px 16px', marginBottom: '14px',
             fontFamily: "'Inter', sans-serif", fontSize: '0.68rem',
             fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase',
-            color: 'rgba(255,255,255,0.85)',
+            color: '#666',
           }}>
             What We Do
           </div>
-          <h2 className="text-3xl md:text-4xl font-black text-white leading-tight">
+          <h2 className="text-3xl md:text-4xl font-black leading-tight" style={{ color: '#111', fontFamily: "'Fraunces', serif" }}>
             Our Services
           </h2>
         </div>
@@ -82,8 +82,8 @@ export function Services() {
                 <span style={{ ...shineStyle, fontSize: '1.5rem' }}>MOMO</span>
                 <span style={{ ...shineStyle, fontSize: '0.75rem', letterSpacing: '0.2em', marginTop: '2px' }}>AIR CARE</span>
               </div>
-              <h3 className="text-base font-black leading-snug" style={{ color: '#ffffff' }}>{s.title}</h3>
-              <p className="text-sm leading-relaxed font-light" style={{ color: 'rgba(255,255,255,0.65)' }}>{s.description}</p>
+              <h3 className="text-base font-black leading-snug" style={{ color: '#111111' }}>{s.title}</h3>
+              <p className="text-sm leading-relaxed font-light" style={{ color: '#555555' }}>{s.description}</p>
             </GlowCard>
           ))}
         </div>
@@ -97,7 +97,7 @@ export function Services() {
 
         <section style={{ fontFamily: "'Inter', sans-serif", position: 'relative' }}>
         <div style={{ position: 'relative', zIndex: 1 }}>
-        <div style={{ background: '#131313', paddingBottom: '80px', paddingLeft: '24px', paddingRight: '24px', position: 'relative' }}>
+        <div style={{ background: '#ffffff', paddingBottom: '80px', paddingLeft: '24px', paddingRight: '24px', position: 'relative' }}>
         <div style={{ position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none', overflow: 'hidden' }}>
           <SparklesCore background="transparent" particleColor="#ffffff" particleDensity={60} minSize={0.5} maxSize={1.8} speed={0.7} />
         </div>
@@ -117,7 +117,7 @@ export function Services() {
             }}>
               How It Works
             </div>
-            <h3 style={{ fontFamily: "'Inter', sans-serif", fontSize: '1.8rem', fontWeight: 900, color: '#fff', margin: 0 }}>
+            <h3 style={{ fontFamily: "'Fraunces', serif", fontSize: '1.8rem', fontWeight: 900, color: '#111', margin: 0 }}>
               Simple. Fast. Guaranteed.
             </h3>
           </div>
@@ -129,10 +129,10 @@ export function Services() {
               { step: '03', title: 'Breathe Cleaner Air', desc: 'Within hours your ducts are spotless. Notice fresher air, quieter airflow, and lower energy costs immediately.' },
             ].map((item, i) => (
               <div key={item.step} style={{
-                background: 'rgba(255,255,255,0.06)',
-                backdropFilter: 'blur(8px)',
-                border: '1px solid rgba(255,255,255,0.2)',
-                borderRadius: '16px',
+                background: '#ffffff',
+                border: '1px solid #e7e7e4',
+                boxShadow: '0 4px 16px rgba(0,0,0,0.06)',
+                borderRadius: '10px',
                 padding: isMobile ? '18px 18px' : '28px 24px',
                 position: 'relative',
                 display: isMobile ? 'flex' : 'block',
@@ -142,7 +142,7 @@ export function Services() {
                 {!isMobile && (
                 <div style={{
                   fontFamily: "'Oswald', sans-serif", fontWeight: 700,
-                  fontSize: '3rem', color: 'rgba(255,255,255,0.1)',
+                  fontSize: '3rem', color: 'rgba(0,0,0,0.06)',
                   lineHeight: 1, marginBottom: '12px',
                   position: 'absolute', top: '16px', right: '20px',
                 }}>
@@ -159,10 +159,10 @@ export function Services() {
                   {i + 1}
                 </div>
                 <div style={{ minWidth: 0 }}>
-                  <h4 style={{ fontFamily: "'Inter', sans-serif", fontWeight: 800, fontSize: '1rem', color: '#fff', margin: isMobile ? '0 0 4px' : '0 0 10px' }}>
+                  <h4 style={{ fontFamily: "'Inter', sans-serif", fontWeight: 800, fontSize: '1rem', color: '#111', margin: isMobile ? '0 0 4px' : '0 0 10px' }}>
                     {item.title}
                   </h4>
-                  <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '0.85rem', fontWeight: 300, color: 'rgba(255,255,255,0.75)', lineHeight: 1.6, margin: 0 }}>
+                  <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '0.85rem', fontWeight: 300, color: '#555', lineHeight: 1.6, margin: 0 }}>
                     {item.desc}
                   </p>
                 </div>
@@ -174,10 +174,9 @@ export function Services() {
         {/* Stats + CTA strip */}
         <div style={{
           marginTop: '48px',
-          background: 'rgba(255,255,255,0.06)',
-          backdropFilter: 'blur(8px)',
-          border: '1px solid rgba(255,255,255,0.15)',
-          borderRadius: '16px',
+          background: '#141414',
+          border: '1px solid rgba(249,168,0,0.3)',
+          borderRadius: '12px',
           overflow: 'hidden',
           display: 'flex',
           flexDirection: isMobile ? 'column' : 'row',
@@ -226,9 +225,9 @@ export function Services() {
               textDecoration: 'none', alignSelf: 'flex-start',
               fontFamily: "'Oswald', sans-serif", fontWeight: 600, fontSize: '1rem',
               letterSpacing: '0.1em', textTransform: 'uppercase',
-              background: '#1a1a1a', color: '#F9A800',
-              padding: '14px 28px', borderRadius: '10px',
-              boxShadow: '0 4px 20px rgba(0,0,0,0.3)',
+              background: '#F9A800', color: '#111',
+              padding: '14px 28px', borderRadius: '6px',
+              boxShadow: '0 4px 20px rgba(249,168,0,0.3)',
               transition: 'transform 0.15s, box-shadow 0.15s',
               whiteSpace: 'nowrap',
             }}

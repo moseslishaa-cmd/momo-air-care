@@ -130,7 +130,7 @@ function ServiceCard({ icon, title, subtitle, bullets }) {
 export function Gallery() {
   return (
     <section
-      style={{ background: '#131313', fontFamily: "'Inter', sans-serif", position: 'relative' }}
+      style={{ background: '#ffffff', fontFamily: "'Inter', sans-serif", position: 'relative' }}
       className="px-6 pb-24 pt-4"
     >
       <div style={{ position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none', overflow: 'hidden' }}>
@@ -141,8 +141,8 @@ export function Gallery() {
 
         {/* Header */}
         <div className="text-center mb-12">
-          <p className="text-xs font-semibold tracking-[0.25em] uppercase text-white/60 mb-3">Real Results</p>
-          <h2 className="text-3xl md:text-4xl font-black text-white leading-tight">See the Difference</h2>
+          <p className="text-xs font-semibold tracking-[0.25em] uppercase mb-3" style={{ color: '#999' }}>Real Results</p>
+          <h2 className="text-3xl md:text-4xl font-black leading-tight" style={{ color: '#111', fontFamily: "'Fraunces', serif" }}>See the Difference</h2>
         </div>
 
         {/* 6-image grid: 3 rows × 2 columns */}
@@ -154,7 +154,7 @@ export function Gallery() {
               fontFamily: "'Oswald', sans-serif", fontWeight: 700,
               fontSize: '2rem', letterSpacing: '0.22em',
               textTransform: 'uppercase',
-              color: 'rgba(255,255,255,0.6)',
+              color: '#c9c9c4',
               textAlign: 'center',
               marginBottom: '12px',
             }}>Duct Cleaning</p>
@@ -170,7 +170,7 @@ export function Gallery() {
               fontFamily: "'Oswald', sans-serif", fontWeight: 700,
               fontSize: '2rem', letterSpacing: '0.22em',
               textTransform: 'uppercase',
-              color: 'rgba(255,255,255,0.6)',
+              color: '#c9c9c4',
               textAlign: 'center',
               marginBottom: '12px',
             }}>Return Duct Cleaning</p>
@@ -186,7 +186,7 @@ export function Gallery() {
               fontFamily: "'Oswald', sans-serif", fontWeight: 700,
               fontSize: '2rem', letterSpacing: '0.22em',
               textTransform: 'uppercase',
-              color: 'rgba(255,255,255,0.6)',
+              color: '#c9c9c4',
               textAlign: 'center',
               marginBottom: '12px',
             }}>Blower Cleaning</p>

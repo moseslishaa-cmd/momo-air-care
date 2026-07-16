@@ -21,12 +21,7 @@ function App() {
   const contactRef = useRef(null);
 
   return (
-    <div style={{ position: 'relative', minHeight: '100vh', width: '100%', background: '#131313' }}>
-      {/* Soft golden radial glow overlay */}
-      <div style={{
-        position: 'fixed', inset: 0, zIndex: 0, pointerEvents: 'none',
-        backgroundImage: 'radial-gradient(circle at 50% 20%, rgba(249,168,0,0.10) 0%, transparent 65%)',
-      }} />
+    <div style={{ position: 'relative', minHeight: '100vh', width: '100%', background: '#ffffff' }}>
       {/* Global sparkles layer */}
       <div style={{ position: 'fixed', inset: 0, zIndex: 0, pointerEvents: 'none' }}>
         <SparklesCore background="transparent" particleColor="#ffffff" particleDensity={60} minSize={0.5} maxSize={1.8} speed={0.7} />

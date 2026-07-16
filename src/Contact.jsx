@@ -10,10 +10,9 @@ const inputStyle = {
   width: '100%',
   padding: '14px 16px',
   borderRadius: '10px',
-  border: '1.5px solid hsl(0 0% 100% / 0.22)',
-  background: 'hsl(0 0% 100% / 0.08)',
-  backdropFilter: 'blur(8px)',
-  color: '#ffffff',
+  border: '1.5px solid #dcdcd7',
+  background: '#ffffff',
+  color: '#111111',
   fontFamily: "'Inter', sans-serif",
   fontSize: '0.9rem',
   fontWeight: 400,
@@ -29,7 +28,7 @@ const labelStyle = {
   fontWeight: 700,
   letterSpacing: '0.1em',
   textTransform: 'uppercase',
-  color: 'rgba(255,255,255,0.85)',
+  color: '#333333',
   marginBottom: '6px',
 };
 
@@ -66,7 +65,7 @@ export function Contact() {
 
   return (
     <section
-      style={{ background: '#131313', fontFamily: "'Inter', sans-serif", position: 'relative' }}
+      style={{ background: '#F6F6F3', fontFamily: "'Inter', sans-serif", position: 'relative' }}
       className="px-6 pb-0 pt-4"
     >
       <div style={{ position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none', overflow: 'hidden' }}>
@@ -86,10 +85,10 @@ export function Contact() {
               Let's Get Started
             </span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-black text-white leading-tight mb-4">
+          <h2 className="text-3xl md:text-5xl font-black leading-tight mb-4" style={{ color: '#111', fontFamily: "'Fraunces', serif" }}>
             Ready to Breathe<br />Cleaner Air?
           </h2>
-          <p className="text-xs font-semibold tracking-[0.25em] uppercase text-white/60">
+          <p className="text-xs font-semibold tracking-[0.25em] uppercase" style={{ color: '#888' }}>
             Get your free quote today — same day service available
           </p>
         </div>
@@ -104,23 +103,15 @@ export function Contact() {
               fontWeight: 600,
               fontSize: 'clamp(2.2rem, 6vw, 3.5rem)',
               letterSpacing: '0.05em',
-              color: '#ffffff',
-              textShadow: `
-                1px 1px 0 #ccc,
-                2px 2px 0 #bbb,
-                3px 3px 0 #aaa,
-                4px 4px 0 #999,
-                5px 5px 0 #888,
-                6px 6px 0 #777,
-                7px 7px 12px rgba(0,0,0,0.3)
-              `,
+              color: '#111111',
+              textShadow: '0 3px 0 #F9A800, 0 8px 22px rgba(0,0,0,0.15)',
               textDecoration: 'none',
               lineHeight: 1,
             }}
           >
             (425) 200-5790
           </a>
-          <p style={{ marginTop: '8px', fontSize: '0.78rem', fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)' }}>
+          <p style={{ marginTop: '10px', fontSize: '0.78rem', fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#888' }}>
             Tap to call · Available 7 days a week
           </p>
         </div>
@@ -150,11 +141,11 @@ export function Contact() {
           {status === 'success' ? (
             <div style={{ textAlign: 'center', padding: '24px 8px' }}>
               <div style={{ fontSize: '2.6rem', marginBottom: '10px' }}>✅</div>
-              <h4 style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 700, fontSize: '1.4rem', color: '#ffffff', margin: '0 0 8px', letterSpacing: '0.04em' }}>
+              <h4 style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 700, fontSize: '1.4rem', color: '#111111', margin: '0 0 8px', letterSpacing: '0.04em' }}>
                 Thank You!
               </h4>
-              <p style={{ fontSize: '0.95rem', color: 'rgba(255,255,255,0.75)', lineHeight: 1.6, margin: 0 }}>
-                We got your request and will reach out shortly. Need it now? Call <a href="tel:+14252005790" style={{ color: '#F9A800', fontWeight: 800 }}>(425) 200-5790</a>.
+              <p style={{ fontSize: '0.95rem', color: '#555555', lineHeight: 1.6, margin: 0 }}>
+                We got your request and will reach out shortly. Need it now? Call <a href="tel:+14252005790" style={{ color: '#C98700', fontWeight: 800 }}>(425) 200-5790</a>.
               </p>
             </div>
           ) : (
@@ -187,7 +178,7 @@ export function Contact() {
           </div>
 
           {status === 'error' && (
-            <p style={{ margin: 0, fontSize: '0.85rem', fontWeight: 700, color: '#ff9d7a', textAlign: 'center' }}>
+            <p style={{ margin: 0, fontSize: '0.85rem', fontWeight: 700, color: '#b3261e', textAlign: 'center' }}>
               Something went wrong. Please call us at (425) 200-5790.
             </p>
           )}
@@ -244,22 +235,22 @@ export function Contact() {
             fontFamily: "'Inter', sans-serif",
             fontSize: '0.85rem',
             fontWeight: 400,
-            color: 'rgba(255,255,255,0.6)',
+            color: '#666666',
             textDecoration: 'none',
             letterSpacing: '0.03em',
-            borderBottom: '1px solid rgba(255,255,255,0.25)',
+            borderBottom: '1px solid #d5d5d0',
             paddingBottom: '1px',
             transition: 'color 0.2s',
           }}
-          onMouseEnter={e => e.target.style.color = '#fff'}
-          onMouseLeave={e => e.target.style.color = 'rgba(255,255,255,0.6)'}
+          onMouseEnter={e => e.target.style.color = '#111'}
+          onMouseLeave={e => e.target.style.color = '#666666'}
         >
           info@momoaircare.com
         </a>
 
         <div style={{
           height: '1px',
-          background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent)',
+          background: 'linear-gradient(90deg, transparent, rgba(0,0,0,0.12), transparent)',
           marginBottom: '20px',
         }} />
 
@@ -271,14 +262,14 @@ export function Contact() {
           gap: '16px 32px',
           fontFamily: "'Inter', sans-serif",
           fontSize: '0.78rem',
-          color: 'rgba(255,255,255,0.55)',
+          color: '#888888',
           letterSpacing: '0.05em',
         }}>
           <span>© 2025 Momo Air Care · All Rights Reserved</span>
           <div style={{ display: 'flex', gap: '20px' }}>
             {['Services', 'About', 'Contact'].map(link => (
               <a key={link} href="#" style={{
-                color: 'rgba(255,255,255,0.65)',
+                color: '#666666',
                 textDecoration: 'none',
                 fontWeight: 600,
                 letterSpacing: '0.1em',
@@ -286,8 +277,8 @@ export function Contact() {
                 fontSize: '0.72rem',
                 transition: 'color 0.2s',
               }}
-                onMouseEnter={e => e.target.style.color = '#fff'}
-                onMouseLeave={e => e.target.style.color = 'rgba(255,255,255,0.65)'}
+                onMouseEnter={e => e.target.style.color = '#111'}
+                onMouseLeave={e => e.target.style.color = '#666666'}
               >
                 {link}
               </a>

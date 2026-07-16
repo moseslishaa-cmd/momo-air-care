@@ -199,7 +199,7 @@ function LeafletMap() {
 export function ServiceArea() {
   return (
     <section style={{
-      background: '#131313',
+      background: '#ffffff',
       position: 'relative',
       padding: '80px 24px 100px',
       fontFamily: "'Inter', sans-serif",
@@ -222,13 +222,13 @@ export function ServiceArea() {
               Where We Work
             </span>
           </div>
-          <h2 style={{ fontWeight: 900, fontSize: 'clamp(2rem, 4vw, 3rem)', color: '#fff', margin: '0 0 14px', lineHeight: 1.1 }}>
+          <h2 style={{ fontWeight: 900, fontSize: 'clamp(2rem, 4vw, 3rem)', color: '#111', fontFamily: "'Fraunces', serif", margin: '0 0 14px', lineHeight: 1.1 }}>
             Our Service Area
           </h2>
-          <p style={{ fontWeight: 600, fontSize: '1.05rem', color: 'rgba(255,255,255,0.9)', margin: '0 0 12px' }}>
+          <p style={{ fontWeight: 600, fontSize: '1.05rem', color: '#333', margin: '0 0 12px' }}>
             Proudly Serving Greater Puget Sound, Washington
           </p>
-          <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.72)', maxWidth: '580px', margin: '0 auto', lineHeight: 1.8 }}>
+          <p style={{ fontSize: '0.9rem', color: '#666', maxWidth: '580px', margin: '0 auto', lineHeight: 1.8 }}>
             From Olympia in the south to Arlington in the north — we provide professional air duct cleaning, dryer vent cleaning, duct insulation and HVAC services throughout the region.
           </p>
         </div>
@@ -242,32 +242,31 @@ export function ServiceArea() {
         <div style={{ display: 'flex', gap: '40px', flexWrap: 'wrap', justifyContent: 'center' }}>
 
           <div style={{ flex: 1, minWidth: '280px', maxWidth: '560px' }}>
-            <h3 style={{ fontWeight: 800, fontSize: '1.15rem', color: '#fff', margin: '0 0 16px' }}>
+            <h3 style={{ fontWeight: 800, fontSize: '1.15rem', color: '#111', margin: '0 0 16px' }}>
               Cities We Serve
             </h3>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
               {CITY_CHIPS.map(city => (
                 <div key={city} style={{
-                  background: 'rgba(255,255,255,0.18)',
-                  backdropFilter: 'blur(8px)',
-                  border: '1px solid rgba(255,255,255,0.35)',
+                  background: '#F6F6F3',
+                  border: '1px solid #e3e3e0',
                   borderRadius: '999px',
                   padding: '6px 15px',
                   fontWeight: 600,
                   fontSize: '0.78rem',
-                  color: '#fff',
+                  color: '#333',
                 }}>
                   {city}
                 </div>
               ))}
               <div style={{
-                background: 'rgba(255,255,255,0.1)',
-                border: '1px dashed rgba(255,255,255,0.3)',
+                background: '#fafaf8',
+                border: '1px dashed #d5d5d0',
                 borderRadius: '999px',
                 padding: '6px 15px',
                 fontStyle: 'italic',
                 fontSize: '0.78rem',
-                color: 'rgba(255,255,255,0.6)',
+                color: '#999',
               }}>
                 & surrounding communities
               </div>
@@ -275,29 +274,28 @@ export function ServiceArea() {
           </div>
 
           <div style={{ flex: 1, minWidth: '280px', maxWidth: '440px' }}>
-            <h3 style={{ fontWeight: 800, fontSize: '1.15rem', color: '#fff', margin: '0 0 16px' }}>
+            <h3 style={{ fontWeight: 800, fontSize: '1.15rem', color: '#111', margin: '0 0 16px' }}>
               What We Offer
             </h3>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
               {HIGHLIGHTS.map(h => (
                 <div key={h.label} style={{
                   display: 'flex', alignItems: 'center', gap: '14px',
-                  background: 'rgba(255,255,255,0.14)',
-                  backdropFilter: 'blur(10px)',
-                  border: '1px solid rgba(255,255,255,0.25)',
-                  borderRadius: '14px',
+                  background: '#F6F6F3',
+                  border: '1px solid #e7e7e4',
+                  borderRadius: '10px',
                   padding: '12px 18px',
                 }}>
                   <span style={{ flexShrink: 0, display: 'flex', alignItems: 'center' }}>{HIGHLIGHT_ICONS[h.icon]}</span>
-                  <span style={{ fontSize: '0.88rem', fontWeight: 600, color: '#fff' }}>{h.label}</span>
+                  <span style={{ fontSize: '0.88rem', fontWeight: 600, color: '#333' }}>{h.label}</span>
                 </div>
               ))}
               <div style={{
                 marginTop: '6px',
-                background: 'rgba(0,0,0,0.14)',
-                borderRadius: '12px',
+                background: '#141414',
+                borderRadius: '10px',
                 padding: '14px 18px',
-                border: '1px solid rgba(255,255,255,0.1)',
+                border: '1px solid rgba(249,168,0,0.3)',
               }}>
                 <p style={{ margin: '0 0 8px', fontSize: '0.8rem', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7 }}>
                   Not sure if we cover your area? Call us — we'll let you know right away.

@@ -43,15 +43,15 @@ const stats = [
 
 const dividerStyle = {
   height: '1px',
-  background: 'linear-gradient(90deg, transparent, hsl(0 0% 100% / 0.25), transparent)',
+  background: 'linear-gradient(90deg, transparent, rgba(0,0,0,0.10), transparent)',
   margin: '4px 0',
 };
 
 export function WhyMomo() {
   return (
     <section
-      style={{ background: '#131313', fontFamily: "'Inter', sans-serif", position: 'relative' }}
-      className="px-6 pb-24 pt-4"
+      style={{ background: '#F6F6F3', fontFamily: "'Inter', sans-serif", position: 'relative' }}
+      className="px-6 pb-24 pt-16"
     >
       <div style={{ position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none', overflow: 'hidden' }}>
         <SparklesCore background="transparent" particleColor="#ffffff" particleDensity={60} minSize={0.5} maxSize={1.8} speed={0.7} />
@@ -71,7 +71,7 @@ export function WhyMomo() {
               The Momo Difference
             </span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-black text-white leading-tight">
+          <h2 className="text-3xl md:text-4xl font-black leading-tight" style={{ color: '#111', fontFamily: "'Fraunces', serif" }}>
             Why Choose Momo Air Care?
           </h2>
         </div>
@@ -79,7 +79,7 @@ export function WhyMomo() {
         <GlowCard glowColor="blue" className="flex flex-col gap-0" width="100%">
 
           {/* Intro */}
-          <p className="text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.7)', marginBottom: '28px' }}>
+          <p className="text-sm leading-relaxed" style={{ color: '#444444', marginBottom: '28px' }}>
             At Momo Air Care, we believe clean air isn't a luxury — it's a right. We bring
             professional-grade duct and vent cleaning directly to your door, with the care and precision your home deserves. Here's what sets us apart:
           </p>
@@ -92,21 +92,21 @@ export function WhyMomo() {
                   <div
                     className="w-14 h-14 flex-shrink-0 flex items-center justify-center rounded-xl"
                     style={{
-                      background: 'hsl(0 0% 100% / 0.2)',
+                      background: '#1a1a1a',
                       fontFamily: "'Oswald', sans-serif",
                       fontWeight: 600,
                       fontSize: '0.7rem',
                       letterSpacing: '0.12em',
-                      color: 'rgba(255,255,255,0.85)',
+                      color: '#F9A800',
                     }}
                   >
                     {b.tag}
                   </div>
                   <div className="flex flex-col gap-1">
-                    <h3 className="text-base font-black leading-snug" style={{ color: '#ffffff' }}>
+                    <h3 className="text-base font-black leading-snug" style={{ color: '#111111' }}>
                       {b.title}
                     </h3>
-                    <p className="text-sm leading-relaxed font-light" style={{ color: 'rgba(255,255,255,0.62)' }}>
+                    <p className="text-sm leading-relaxed font-light" style={{ color: '#555555' }}>
                       {b.description}
                     </p>
                   </div>
@@ -126,7 +126,7 @@ export function WhyMomo() {
                     fontFamily: "'Oswald', sans-serif",
                     fontWeight: 600,
                     fontSize: '2rem',
-                    background: 'linear-gradient(135deg, #bbb 0%, #fff 45%, #bbb 100%)',
+                    background: 'linear-gradient(135deg, #6b4a00 0%, #E9A800 45%, #6b4a00 100%)',
                     backgroundSize: '200% 100%',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
@@ -136,7 +136,7 @@ export function WhyMomo() {
                 >
                   {s.number}
                 </span>
-                <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: 'rgba(255,255,255,0.55)' }}>
+                <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: '#777777' }}>
                   {s.label}
                 </span>
               </div>
@@ -145,7 +145,7 @@ export function WhyMomo() {
 
           {/* Closing line */}
           <div style={{ ...dividerStyle, margin: '28px 0 24px' }} />
-          <p className="text-xs text-center font-semibold tracking-widest uppercase" style={{ color: 'rgba(255,255,255,0.5)' }}>
+          <p className="text-xs text-center font-semibold tracking-widest uppercase" style={{ color: '#999999' }}>
             Licensed · Insured · Local · Trusted
           </p>
 

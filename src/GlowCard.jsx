@@ -88,8 +88,8 @@ export function GlowCard({ children, className = '', glowColor = 'blue', width, 
     '--spread': spread,
     '--radius': '16',
     '--border': '2',
-    '--backdrop': 'hsl(0 0% 100% / 0.12)',
-    '--backup-border': 'hsl(0 0% 100% / 0.25)',
+    '--backdrop': '#ffffff',
+    '--backup-border': 'rgba(0,0,0,0.10)',
     '--size': '260',
     '--outer': '1',
     '--saturation': '0',
@@ -119,7 +119,7 @@ export function GlowCard({ children, className = '', glowColor = 'blue', width, 
         ref={cardRef}
         data-glow
         style={inlineStyles}
-        className={`rounded-2xl relative shadow-[0_8px_32px_rgba(0,0,0,0.15)] p-6 backdrop-blur-[12px] transition-transform duration-150 ${isMobile ? '' : 'hover:-translate-y-2'} ${className}`}
+        className={`rounded-lg relative shadow-[0_4px_18px_rgba(0,0,0,0.07)] p-6 transition-transform duration-150 ${isMobile ? '' : 'hover:-translate-y-2'} ${className}`}
       >
         <div data-glow />
         {children}

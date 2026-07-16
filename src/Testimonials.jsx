@@ -41,17 +41,9 @@ const Stars = () => (
 export function Testimonials() {
   return (
     <section
-      style={{ background: '#141414', fontFamily: "'Inter', sans-serif", position: 'relative' }}
+      style={{ background: '#F6F6F3', fontFamily: "'Inter', sans-serif", position: 'relative' }}
       className="px-6 pb-24 pt-16"
     >
-      {/* Warm glow accents */}
-      <div style={{
-        position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none',
-        background: 'radial-gradient(ellipse 70% 45% at 50% 0%, rgba(249,168,0,0.14), transparent 70%)',
-      }} />
-      <div style={{ position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none', overflow: 'hidden' }}>
-        <SparklesCore background="transparent" particleColor="#F9A800" particleDensity={40} minSize={0.5} maxSize={1.6} speed={0.5} />
-      </div>
       <div style={{ position: 'relative', zIndex: 1 }} className="max-w-6xl mx-auto">
 
         <div className="text-center mb-12">
@@ -65,10 +57,10 @@ export function Testimonials() {
               What Our Customers Say
             </span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-black text-white leading-tight">
+          <h2 className="text-3xl md:text-4xl font-black leading-tight" style={{ color: '#111', fontFamily: "'Fraunces', serif" }}>
             Real Results. Real People.
           </h2>
-          <p style={{ marginTop: '10px', fontSize: '0.9rem', color: 'rgba(255,255,255,0.55)' }}>
+          <p style={{ marginTop: '10px', fontSize: '0.9rem', color: '#777' }}>
             5.0 average across 200+ verified local reviews
           </p>
         </div>
@@ -79,10 +71,10 @@ export function Testimonials() {
 
               <div className="flex items-start justify-between gap-4">
                 <div>
-                  <p className="font-black text-base leading-tight" style={{ color: '#ffffff' }}>
+                  <p className="font-black text-base leading-tight" style={{ color: '#111111' }}>
                     {r.name}
                   </p>
-                  <p className="text-xs font-light tracking-wide mt-0.5" style={{ color: 'rgba(255,255,255,0.5)' }}>
+                  <p className="text-xs font-light tracking-wide mt-0.5" style={{ color: '#888888' }}>
                     {r.city}
                   </p>
                 </div>
@@ -106,7 +98,7 @@ export function Testimonials() {
 
               <Stars />
 
-              <p className="text-sm leading-relaxed font-light" style={{ color: 'rgba(255,255,255,0.75)' }}>
+              <p className="text-sm leading-relaxed font-light" style={{ color: '#444444' }}>
                 "{r.text}"
               </p>
 

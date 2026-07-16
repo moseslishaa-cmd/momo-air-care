@@ -122,7 +122,7 @@ export function FAQ() {
 
   return (
     <section
-      style={{ background: '#FFF6E3', fontFamily: "'Inter', sans-serif", position: 'relative' }}
+      style={{ background: '#ffffff', fontFamily: "'Inter', sans-serif", position: 'relative' }}
       className="px-6 pb-24 pt-16"
     >
       <div style={{ position: 'relative', zIndex: 1 }} className="max-w-5xl mx-auto">
@@ -138,7 +138,7 @@ export function FAQ() {
               Got Questions?
             </span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-black leading-tight" style={{ color: '#1a1a1a' }}>
+          <h2 className="text-3xl md:text-4xl font-black leading-tight" style={{ color: '#111', fontFamily: "'Fraunces', serif" }}>
             Frequently Asked Questions
           </h2>
         </div>
