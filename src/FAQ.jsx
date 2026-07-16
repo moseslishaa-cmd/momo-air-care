@@ -67,7 +67,7 @@ function FAQItem({ item, index, isOpen, onToggle }) {
             width: '28px',
             height: '28px',
             borderRadius: '50%',
-            background: 'hsl(0 0% 100% / 0.3)',
+            background: 'rgba(0,0,0,0.08)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -111,7 +111,7 @@ function FAQItem({ item, index, isOpen, onToggle }) {
 
 const dividerStyle = {
   height: '1px',
-  background: 'linear-gradient(90deg, transparent, hsl(0 0% 100% / 0.3), transparent)',
+  background: 'linear-gradient(90deg, transparent, rgba(0,0,0,0.12), transparent)',
 };
 
 export function FAQ() {
@@ -122,19 +122,23 @@ export function FAQ() {
 
   return (
     <section
-      style={{ background: '#F9A800', fontFamily: "'Inter', sans-serif", position: 'relative' }}
-      className="px-6 pb-24 pt-4"
+      style={{ background: '#FFF6E3', fontFamily: "'Inter', sans-serif", position: 'relative' }}
+      className="px-6 pb-24 pt-16"
     >
-      <div style={{ position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none', overflow: 'hidden' }}>
-        <SparklesCore background="transparent" particleColor="#ffffff" particleDensity={60} minSize={0.5} maxSize={1.8} speed={0.7} />
-      </div>
       <div style={{ position: 'relative', zIndex: 1 }} className="max-w-5xl mx-auto">
 
         <div className="text-center mb-12">
-          <p className="text-xs font-semibold tracking-[0.25em] uppercase text-white/60 mb-3">
-            Got Questions?
-          </p>
-          <h2 className="text-3xl md:text-4xl font-black text-white leading-tight">
+          <div style={{
+            display: 'inline-flex', alignItems: 'center', gap: '8px',
+            background: '#1a1a1a', borderRadius: '999px',
+            padding: '7px 18px', marginBottom: '16px',
+          }}>
+            <span style={{ fontSize: '0.9rem' }}>💬</span>
+            <span style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 700, fontSize: '0.72rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#F9A800' }}>
+              Got Questions?
+            </span>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-black leading-tight" style={{ color: '#1a1a1a' }}>
             Frequently Asked Questions
           </h2>
         </div>

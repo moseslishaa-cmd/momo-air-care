@@ -61,9 +61,16 @@ export function WhyMomo() {
         <div>
 
         <div className="text-center mb-12">
-          <p className="text-xs font-semibold tracking-[0.25em] uppercase text-white/60 mb-3">
-            The Momo Difference
-          </p>
+          <div style={{
+            display: 'inline-flex', alignItems: 'center', gap: '8px',
+            background: '#1a1a1a', borderRadius: '999px',
+            padding: '7px 18px', marginBottom: '16px',
+          }}>
+            <span style={{ fontSize: '0.9rem' }}>🦒</span>
+            <span style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 700, fontSize: '0.72rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#F9A800' }}>
+              The Momo Difference
+            </span>
+          </div>
           <h2 className="text-3xl md:text-4xl font-black text-white leading-tight">
             Why Choose Momo Air Care?
           </h2>

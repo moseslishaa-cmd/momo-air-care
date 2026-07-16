@@ -212,9 +212,16 @@ export function ServiceArea() {
 
         {/* Header */}
         <div style={{ textAlign: 'center', marginBottom: '52px' }}>
-          <p style={{ fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.25em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.6)', margin: '0 0 12px' }}>
-            Where We Work
-          </p>
+          <div style={{
+            display: 'inline-flex', alignItems: 'center', gap: '8px',
+            background: '#1a1a1a', borderRadius: '999px',
+            padding: '7px 18px', marginBottom: '16px',
+          }}>
+            <span style={{ fontSize: '0.9rem' }}>📍</span>
+            <span style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 700, fontSize: '0.72rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#F9A800' }}>
+              Where We Work
+            </span>
+          </div>
           <h2 style={{ fontWeight: 900, fontSize: 'clamp(2rem, 4vw, 3rem)', color: '#fff', margin: '0 0 14px', lineHeight: 1.1 }}>
             Our Service Area
           </h2>

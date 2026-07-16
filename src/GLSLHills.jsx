@@ -292,6 +292,25 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
         {/* LEFT: text content */}
         <div style={{ flex: isMobile ? 'none' : 1, width: isMobile ? '100%' : 'auto', minWidth: 0, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', paddingBottom: '8px' }}>
 
+          {/* Offer chip — price anchor */}
+          <a href="tel:+14252005790" style={{
+            display: 'inline-flex', alignItems: 'center', gap: '8px',
+            background: '#1a1a1a', textDecoration: 'none',
+            borderRadius: '999px', padding: isMobile ? '7px 16px' : '8px 20px',
+            marginBottom: '16px',
+            border: '1.5px solid rgba(249,168,0,0.5)',
+            boxShadow: '0 4px 18px rgba(0,0,0,0.25)',
+          }}>
+            <span style={{ fontSize: '0.9rem' }}>🔥</span>
+            <span style={{
+              fontFamily: "'Oswald', sans-serif", fontWeight: 700,
+              fontSize: isMobile ? '0.72rem' : '0.8rem', letterSpacing: '0.14em',
+              textTransform: 'uppercase', color: '#F9A800',
+            }}>
+              $69 Dryer Vent Special
+            </span>
+          </a>
+
           {/* Big headline — dominant */}
           <h1 style={{
             margin: '0 0 16px',
