@@ -133,6 +133,74 @@ export function DryerDanger() {
           ))}
         </div>
 
+        {/* Video showcase */}
+        <div style={{ marginBottom: isMobile ? '40px' : '56px' }}>
+          <h3 style={{
+            textAlign: 'center', fontFamily: "'Inter', sans-serif", fontWeight: 900,
+            fontSize: isMobile ? '1.4rem' : '1.9rem', color: '#1a1a1a', margin: '0 0 6px',
+          }}>
+            Lint Builds Up While You're Not Looking
+          </h3>
+          <p style={{ textAlign: 'center', fontSize: '0.9rem', color: 'rgba(0,0,0,0.6)', margin: '0 0 24px' }}>
+            Every single load sheds lint — and it all has to go somewhere.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: isMobile ? '14px' : '20px' }}>
+            {[
+              { src: '/dryer-spin.mp4', tag: 'EVERY LOAD SHEDS LINT', caption: 'Inside your dryer, right now' },
+              { src: '/dryer-load.mp4', tag: 'WHERE DOES IT ALL GO?', caption: 'Straight into your vent line' },
+            ].map(v => (
+              <div key={v.src} style={{
+                position: 'relative', borderRadius: '20px', overflow: 'hidden',
+                boxShadow: '0 14px 40px rgba(0,0,0,0.25)',
+                border: '2px solid rgba(255,255,255,0.5)',
+                background: '#111',
+              }}>
+                <video
+                  src={v.src}
+                  autoPlay muted loop playsInline preload="metadata"
+                  style={{ width: '100%', display: 'block', aspectRatio: '16/9', objectFit: 'cover' }}
+                />
+                <div style={{
+                  position: 'absolute', left: 0, right: 0, bottom: 0,
+                  background: 'linear-gradient(180deg, transparent, rgba(0,0,0,0.78))',
+                  padding: '34px 16px 12px',
+                }}>
+                  <div style={{
+                    display: 'inline-block', background: '#F9A800', color: '#111',
+                    fontFamily: "'Oswald', sans-serif", fontWeight: 700,
+                    fontSize: '0.62rem', letterSpacing: '0.16em',
+                    padding: '3px 10px', borderRadius: '999px', marginBottom: '6px',
+                  }}>{v.tag}</div>
+                  <div style={{ color: '#fff', fontWeight: 700, fontSize: isMobile ? '0.92rem' : '1rem' }}>{v.caption}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Photo strip */}
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: isMobile ? '10px' : '20px', marginTop: isMobile ? '14px' : '20px' }}>
+            {[
+              { img: '/laundry-vent.jpg', caption: 'Your vent line hides behind the wall — out of sight, easy to forget' },
+              { img: '/laundromat-dryers.jpg', caption: 'Home or commercial — every dryer needs a clear vent to run safely' },
+            ].map(p => (
+              <div key={p.img} style={{
+                position: 'relative', borderRadius: '16px', overflow: 'hidden',
+                aspectRatio: isMobile ? '1/1' : '16/10',
+                boxShadow: '0 10px 30px rgba(0,0,0,0.22)',
+                border: '2px solid rgba(255,255,255,0.5)',
+              }}>
+                <img src={p.img} alt={p.caption} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                <div style={{
+                  position: 'absolute', left: 0, right: 0, bottom: 0,
+                  background: 'linear-gradient(180deg, transparent, rgba(0,0,0,0.8))',
+                  padding: '30px 14px 10px',
+                  color: '#fff', fontWeight: 600, fontSize: isMobile ? '0.72rem' : '0.85rem', lineHeight: 1.4,
+                }}>{p.caption}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Before / After */}
         <div style={{ marginBottom: isMobile ? '40px' : '56px' }}>
           <h3 style={{
