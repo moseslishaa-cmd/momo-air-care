@@ -199,7 +199,7 @@ function LeafletMap() {
 export function ServiceArea() {
   return (
     <section style={{
-      background: '#F9A800',
+      background: '#131313',
       position: 'relative',
       padding: '80px 24px 100px',
       fontFamily: "'Inter', sans-serif",

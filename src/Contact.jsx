@@ -10,10 +10,10 @@ const inputStyle = {
   width: '100%',
   padding: '14px 16px',
   borderRadius: '10px',
-  border: '1.5px solid hsl(0 0% 100% / 0.35)',
-  background: 'hsl(0 0% 100% / 0.15)',
+  border: '1.5px solid hsl(0 0% 100% / 0.22)',
+  background: 'hsl(0 0% 100% / 0.08)',
   backdropFilter: 'blur(8px)',
-  color: '#1a1a1a',
+  color: '#ffffff',
   fontFamily: "'Inter', sans-serif",
   fontSize: '0.9rem',
   fontWeight: 400,
@@ -29,7 +29,7 @@ const labelStyle = {
   fontWeight: 700,
   letterSpacing: '0.1em',
   textTransform: 'uppercase',
-  color: '#1a1a1a',
+  color: 'rgba(255,255,255,0.85)',
   marginBottom: '6px',
 };
 
@@ -66,7 +66,7 @@ export function Contact() {
 
   return (
     <section
-      style={{ background: '#F9A800', fontFamily: "'Inter', sans-serif", position: 'relative' }}
+      style={{ background: '#131313', fontFamily: "'Inter', sans-serif", position: 'relative' }}
       className="px-6 pb-0 pt-4"
     >
       <div style={{ position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none', overflow: 'hidden' }}>
@@ -150,11 +150,11 @@ export function Contact() {
           {status === 'success' ? (
             <div style={{ textAlign: 'center', padding: '24px 8px' }}>
               <div style={{ fontSize: '2.6rem', marginBottom: '10px' }}>✅</div>
-              <h4 style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 700, fontSize: '1.4rem', color: '#1a1a1a', margin: '0 0 8px', letterSpacing: '0.04em' }}>
+              <h4 style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 700, fontSize: '1.4rem', color: '#ffffff', margin: '0 0 8px', letterSpacing: '0.04em' }}>
                 Thank You!
               </h4>
-              <p style={{ fontSize: '0.95rem', color: '#1a1a1a', lineHeight: 1.6, margin: 0 }}>
-                We got your request and will reach out shortly. Need it now? Call <a href="tel:+14252005790" style={{ color: '#1a1a1a', fontWeight: 800 }}>(425) 200-5790</a>.
+              <p style={{ fontSize: '0.95rem', color: 'rgba(255,255,255,0.75)', lineHeight: 1.6, margin: 0 }}>
+                We got your request and will reach out shortly. Need it now? Call <a href="tel:+14252005790" style={{ color: '#F9A800', fontWeight: 800 }}>(425) 200-5790</a>.
               </p>
             </div>
           ) : (
@@ -187,7 +187,7 @@ export function Contact() {
           </div>
 
           {status === 'error' && (
-            <p style={{ margin: 0, fontSize: '0.85rem', fontWeight: 700, color: '#7a1500', textAlign: 'center' }}>
+            <p style={{ margin: 0, fontSize: '0.85rem', fontWeight: 700, color: '#ff9d7a', textAlign: 'center' }}>
               Something went wrong. Please call us at (425) 200-5790.
             </p>
           )}

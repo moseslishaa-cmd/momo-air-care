@@ -62,7 +62,7 @@ export function DryerDanger() {
 
   return (
     <section id="dryer" style={{
-      background: 'linear-gradient(180deg, #F9A800 0%, #f0a000 100%)',
+      background: 'linear-gradient(180deg, #131313 0%, #1a1508 55%, #131313 100%)',
       position: 'relative',
       padding: isMobile ? '64px 18px 72px' : '96px 24px 110px',
       fontFamily: "'Inter', sans-serif",
@@ -89,13 +89,13 @@ export function DryerDanger() {
           <h2 style={{
             fontFamily: "'Inter', sans-serif", fontWeight: 900,
             fontSize: isMobile ? 'clamp(1.9rem, 8vw, 2.4rem)' : 'clamp(2.4rem, 4vw, 3.4rem)',
-            color: '#1a1a1a', margin: '0 0 14px', lineHeight: 1.08,
+            color: '#ffffff', margin: '0 0 14px', lineHeight: 1.08,
           }}>
             Is Your Dryer a Fire<br />Waiting to Happen?
           </h2>
           <p style={{
             fontSize: isMobile ? '0.95rem' : '1.1rem', fontWeight: 500,
-            color: 'rgba(0,0,0,0.72)', maxWidth: '640px', margin: '0 auto', lineHeight: 1.7,
+            color: 'rgba(255,255,255,0.72)', maxWidth: '640px', margin: '0 auto', lineHeight: 1.7,
           }}>
             Every load of laundry leaves lint behind. Year after year it packs into your
             dryer vent — until airflow is choked and the heat has nowhere to go. That's how
@@ -137,11 +137,11 @@ export function DryerDanger() {
         <div style={{ marginBottom: isMobile ? '40px' : '56px' }}>
           <h3 style={{
             textAlign: 'center', fontFamily: "'Inter', sans-serif", fontWeight: 900,
-            fontSize: isMobile ? '1.4rem' : '1.9rem', color: '#1a1a1a', margin: '0 0 6px',
+            fontSize: isMobile ? '1.4rem' : '1.9rem', color: '#ffffff', margin: '0 0 6px',
           }}>
             Lint Builds Up While You're Not Looking
           </h3>
-          <p style={{ textAlign: 'center', fontSize: '0.9rem', color: 'rgba(0,0,0,0.6)', margin: '0 0 24px' }}>
+          <p style={{ textAlign: 'center', fontSize: '0.9rem', color: 'rgba(255,255,255,0.6)', margin: '0 0 24px' }}>
             Every single load sheds lint — and it all has to go somewhere.
           </p>
           <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: isMobile ? '14px' : '20px' }}>
@@ -205,11 +205,11 @@ export function DryerDanger() {
         <div style={{ marginBottom: isMobile ? '40px' : '56px' }}>
           <h3 style={{
             textAlign: 'center', fontFamily: "'Inter', sans-serif", fontWeight: 900,
-            fontSize: isMobile ? '1.4rem' : '1.9rem', color: '#1a1a1a', margin: '0 0 6px',
+            fontSize: isMobile ? '1.4rem' : '1.9rem', color: '#ffffff', margin: '0 0 6px',
           }}>
             See the Difference
           </h3>
-          <p style={{ textAlign: 'center', fontSize: '0.9rem', color: 'rgba(0,0,0,0.6)', margin: '0 0 24px' }}>
+          <p style={{ textAlign: 'center', fontSize: '0.9rem', color: 'rgba(255,255,255,0.6)', margin: '0 0 24px' }}>
             Real results from homes just like yours.
           </p>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: isMobile ? '10px' : '20px' }}>
@@ -239,18 +239,18 @@ export function DryerDanger() {
         <div style={{ marginBottom: isMobile ? '40px' : '56px' }}>
           <h3 style={{
             textAlign: 'center', fontFamily: "'Inter', sans-serif", fontWeight: 900,
-            fontSize: isMobile ? '1.4rem' : '1.9rem', color: '#1a1a1a', margin: '0 0 6px',
+            fontSize: isMobile ? '1.4rem' : '1.9rem', color: '#ffffff', margin: '0 0 6px',
           }}>
             6 Warning Signs to Watch For
           </h3>
-          <p style={{ textAlign: 'center', fontSize: '0.9rem', color: 'rgba(0,0,0,0.6)', margin: '0 0 24px' }}>
+          <p style={{ textAlign: 'center', fontSize: '0.9rem', color: 'rgba(255,255,255,0.6)', margin: '0 0 24px' }}>
             Notice any of these? It's time to call us.
           </p>
           <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)', gap: isMobile ? '12px' : '18px' }}>
             {WARNING_SIGNS.map(w => (
               <div key={w.title} style={{
-                background: 'rgba(255,255,255,0.22)',
-                border: '1px solid rgba(255,255,255,0.45)',
+                background: 'rgba(255,255,255,0.06)',
+                border: '1px solid rgba(255,255,255,0.14)',
                 borderRadius: '16px',
                 padding: isMobile ? '16px 18px' : '22px 20px',
                 display: 'flex', alignItems: 'flex-start', gap: '14px',
@@ -264,8 +264,8 @@ export function DryerDanger() {
                   </svg>
                 </div>
                 <div>
-                  <h4 style={{ fontFamily: "'Inter', sans-serif", fontWeight: 800, fontSize: '0.98rem', color: '#1a1a1a', margin: '0 0 4px' }}>{w.title}</h4>
-                  <p style={{ fontSize: '0.82rem', color: 'rgba(0,0,0,0.66)', lineHeight: 1.55, margin: 0 }}>{w.desc}</p>
+                  <h4 style={{ fontFamily: "'Inter', sans-serif", fontWeight: 800, fontSize: '0.98rem', color: '#ffffff', margin: '0 0 4px' }}>{w.title}</h4>
+                  <p style={{ fontSize: '0.82rem', color: 'rgba(255,255,255,0.62)', lineHeight: 1.55, margin: 0 }}>{w.desc}</p>
                 </div>
               </div>
             ))}
@@ -276,15 +276,15 @@ export function DryerDanger() {
         <div style={{ marginBottom: isMobile ? '38px' : '52px' }}>
           <h3 style={{
             textAlign: 'center', fontFamily: "'Inter', sans-serif", fontWeight: 900,
-            fontSize: isMobile ? '1.4rem' : '1.9rem', color: '#1a1a1a', margin: '0 0 24px',
+            fontSize: isMobile ? '1.4rem' : '1.9rem', color: '#ffffff', margin: '0 0 24px',
           }}>
             Why It's Worth It
           </h3>
           <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : 'repeat(2, 1fr)', gap: isMobile ? '10px' : '14px' }}>
             {BENEFITS.map(b => (
               <div key={b.title} style={{
-                background: 'rgba(0,0,0,0.06)',
-                border: '1px solid rgba(0,0,0,0.08)',
+                background: 'rgba(255,255,255,0.06)',
+                border: '1px solid rgba(255,255,255,0.10)',
                 borderRadius: '14px', padding: isMobile ? '14px 16px' : '18px 20px',
                 display: 'flex', alignItems: 'flex-start', gap: '12px',
               }}>
@@ -292,8 +292,8 @@ export function DryerDanger() {
                   <BenefitCheck />
                 </div>
                 <div>
-                  <h4 style={{ fontFamily: "'Inter', sans-serif", fontWeight: 800, fontSize: '0.95rem', color: '#1a1a1a', margin: '0 0 3px' }}>{b.title}</h4>
-                  <p style={{ fontSize: '0.82rem', color: 'rgba(0,0,0,0.66)', lineHeight: 1.5, margin: 0 }}>{b.desc}</p>
+                  <h4 style={{ fontFamily: "'Inter', sans-serif", fontWeight: 800, fontSize: '0.95rem', color: '#ffffff', margin: '0 0 3px' }}>{b.title}</h4>
+                  <p style={{ fontSize: '0.82rem', color: 'rgba(255,255,255,0.62)', lineHeight: 1.5, margin: 0 }}>{b.desc}</p>
                 </div>
               </div>
             ))}

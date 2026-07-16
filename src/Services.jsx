@@ -46,7 +46,7 @@ export function Services() {
     <section style={{ fontFamily: "'Inter', sans-serif", position: 'relative' }}>
       <div style={{ position: 'relative', zIndex: 1 }}>
       <div style={{
-        background: 'linear-gradient(180deg, #D08E00 0%, #F9A800 60px)',
+        background: '#131313',
         paddingTop: '60px',
         paddingBottom: '80px',
         paddingLeft: '24px',
@@ -61,7 +61,7 @@ export function Services() {
         <div className="text-center mb-12">
           <div style={{
             display: 'inline-flex', alignItems: 'center',
-            background: 'rgba(0,0,0,0.12)', backdropFilter: 'blur(8px)',
+            background: 'rgba(255,255,255,0.07)', backdropFilter: 'blur(8px)',
             border: '1px solid rgba(255,255,255,0.25)',
             borderRadius: '999px', padding: '5px 16px', marginBottom: '14px',
             fontFamily: "'Inter', sans-serif", fontSize: '0.68rem',
@@ -82,8 +82,8 @@ export function Services() {
                 <span style={{ ...shineStyle, fontSize: '1.5rem' }}>MOMO</span>
                 <span style={{ ...shineStyle, fontSize: '0.75rem', letterSpacing: '0.2em', marginTop: '2px' }}>AIR CARE</span>
               </div>
-              <h3 className="text-base font-black text-gray-900 leading-snug">{s.title}</h3>
-              <p className="text-sm text-gray-500 leading-relaxed font-light">{s.description}</p>
+              <h3 className="text-base font-black leading-snug" style={{ color: '#ffffff' }}>{s.title}</h3>
+              <p className="text-sm leading-relaxed font-light" style={{ color: 'rgba(255,255,255,0.65)' }}>{s.description}</p>
             </GlowCard>
           ))}
         </div>
@@ -97,7 +97,7 @@ export function Services() {
 
         <section style={{ fontFamily: "'Inter', sans-serif", position: 'relative' }}>
         <div style={{ position: 'relative', zIndex: 1 }}>
-        <div style={{ background: '#F9A800', paddingBottom: '80px', paddingLeft: '24px', paddingRight: '24px', position: 'relative' }}>
+        <div style={{ background: '#131313', paddingBottom: '80px', paddingLeft: '24px', paddingRight: '24px', position: 'relative' }}>
         <div style={{ position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none', overflow: 'hidden' }}>
           <SparklesCore background="transparent" particleColor="#ffffff" particleDensity={60} minSize={0.5} maxSize={1.8} speed={0.7} />
         </div>
@@ -108,7 +108,7 @@ export function Services() {
           <div className="text-center mb-10">
             <div style={{
               display: 'inline-flex', alignItems: 'center',
-              background: 'rgba(0,0,0,0.12)', backdropFilter: 'blur(8px)',
+              background: 'rgba(255,255,255,0.07)', backdropFilter: 'blur(8px)',
               border: '1px solid rgba(255,255,255,0.25)',
               borderRadius: '999px', padding: '5px 16px', marginBottom: '14px',
               fontFamily: "'Inter', sans-serif", fontSize: '0.68rem',
@@ -129,7 +129,7 @@ export function Services() {
               { step: '03', title: 'Breathe Cleaner Air', desc: 'Within hours your ducts are spotless. Notice fresher air, quieter airflow, and lower energy costs immediately.' },
             ].map((item, i) => (
               <div key={item.step} style={{
-                background: 'rgba(0,0,0,0.12)',
+                background: 'rgba(255,255,255,0.06)',
                 backdropFilter: 'blur(8px)',
                 border: '1px solid rgba(255,255,255,0.2)',
                 borderRadius: '16px',
@@ -174,7 +174,7 @@ export function Services() {
         {/* Stats + CTA strip */}
         <div style={{
           marginTop: '48px',
-          background: 'rgba(0,0,0,0.15)',
+          background: 'rgba(255,255,255,0.06)',
           backdropFilter: 'blur(8px)',
           border: '1px solid rgba(255,255,255,0.15)',
           borderRadius: '16px',

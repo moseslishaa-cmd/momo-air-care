@@ -50,7 +50,7 @@ const dividerStyle = {
 export function WhyMomo() {
   return (
     <section
-      style={{ background: '#F9A800', fontFamily: "'Inter', sans-serif", position: 'relative' }}
+      style={{ background: '#131313', fontFamily: "'Inter', sans-serif", position: 'relative' }}
       className="px-6 pb-24 pt-4"
     >
       <div style={{ position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none', overflow: 'hidden' }}>
@@ -79,7 +79,7 @@ export function WhyMomo() {
         <GlowCard glowColor="blue" className="flex flex-col gap-0" width="100%">
 
           {/* Intro */}
-          <p className="text-sm leading-relaxed" style={{ color: '#444', marginBottom: '28px' }}>
+          <p className="text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.7)', marginBottom: '28px' }}>
             At Momo Air Care, we believe clean air isn't a luxury — it's a right. We bring
             professional-grade duct and vent cleaning directly to your door, with the care and precision your home deserves. Here's what sets us apart:
           </p>
@@ -103,10 +103,10 @@ export function WhyMomo() {
                     {b.tag}
                   </div>
                   <div className="flex flex-col gap-1">
-                    <h3 className="text-base font-black leading-snug" style={{ color: '#1a1a1a' }}>
+                    <h3 className="text-base font-black leading-snug" style={{ color: '#ffffff' }}>
                       {b.title}
                     </h3>
-                    <p className="text-sm leading-relaxed font-light" style={{ color: '#555' }}>
+                    <p className="text-sm leading-relaxed font-light" style={{ color: 'rgba(255,255,255,0.62)' }}>
                       {b.description}
                     </p>
                   </div>
@@ -136,7 +136,7 @@ export function WhyMomo() {
                 >
                   {s.number}
                 </span>
-                <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: '#888' }}>
+                <span className="text-xs font-semibold tracking-widest uppercase" style={{ color: 'rgba(255,255,255,0.55)' }}>
                   {s.label}
                 </span>
               </div>

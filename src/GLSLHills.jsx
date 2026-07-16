@@ -196,7 +196,7 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
   }, [cameraZ, planeSize, speed]);
 
   return (
-    <div ref={containerRef} style={{ position: 'relative', width, height: isMobile ? 'auto' : height, minHeight: isMobile ? '100vh' : undefined, background: '#F9A800' }}>
+    <div ref={containerRef} style={{ position: 'relative', width, height: isMobile ? 'auto' : height, minHeight: isMobile ? '100vh' : undefined, background: 'radial-gradient(ellipse 90% 65% at 50% 0%, #241a04 0%, #131313 62%)' }}>
       <canvas ref={canvasRef} style={{ position: 'absolute', top: 0, right: 0, bottom: 0, left: 0, zIndex: 1 }} />
 
       {/* Sparkles layer */}
@@ -349,9 +349,9 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
               display: 'inline-flex', alignItems: 'center', gap: '8px', textDecoration: 'none',
               fontFamily: "'Oswald', sans-serif", fontWeight: 600, fontSize: '1rem',
               letterSpacing: '0.1em', textTransform: 'uppercase',
-              background: '#1a1a1a', color: '#F9A800',
+              background: '#F9A800', color: '#111',
               padding: '15px 28px', borderRadius: '10px',
-              boxShadow: '0 6px 24px rgba(0,0,0,0.35)',
+              boxShadow: '0 6px 28px rgba(249,168,0,0.35)',
               transition: 'transform 0.15s, box-shadow 0.15s', whiteSpace: 'nowrap',
             }}
               onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-3px)'; e.currentTarget.style.boxShadow = '0 12px 32px rgba(0,0,0,0.45)'; }}
@@ -381,7 +381,7 @@ const GLSLHills = ({ width = '100vw', height = '100vh', cameraZ = 125, planeSize
             {['✓ Same-Day Service', '✓ 100% Satisfaction', '✓ No Hidden Fees'].map(t => (
               <div key={t} style={{
                 padding: '6px 12px',
-                background: 'rgba(0,0,0,0.18)', backdropFilter: 'blur(8px)',
+                background: 'rgba(255,255,255,0.07)', backdropFilter: 'blur(8px)',
                 border: '1px solid rgba(255,255,255,0.15)', borderRadius: '999px',
                 fontFamily: "'Inter', sans-serif", fontSize: '0.63rem', fontWeight: 700,
                 letterSpacing: '0.06em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.75)',

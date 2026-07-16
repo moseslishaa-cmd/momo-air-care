@@ -21,12 +21,11 @@ function App() {
   const contactRef = useRef(null);
 
   return (
-    <div style={{ position: 'relative', minHeight: '100vh', width: '100%', background: '#F9A800' }}>
-      {/* Soft yellow radial glow overlay */}
+    <div style={{ position: 'relative', minHeight: '100vh', width: '100%', background: '#131313' }}>
+      {/* Soft golden radial glow overlay */}
       <div style={{
         position: 'fixed', inset: 0, zIndex: 0, pointerEvents: 'none',
-        backgroundImage: 'radial-gradient(circle at center, #FFF991 0%, transparent 70%)',
-        opacity: 0.6, mixBlendMode: 'multiply',
+        backgroundImage: 'radial-gradient(circle at 50% 20%, rgba(249,168,0,0.10) 0%, transparent 65%)',
       }} />
       {/* Global sparkles layer */}
       <div style={{ position: 'fixed', inset: 0, zIndex: 0, pointerEvents: 'none' }}>

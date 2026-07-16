@@ -130,7 +130,7 @@ function ServiceCard({ icon, title, subtitle, bullets }) {
 export function Gallery() {
   return (
     <section
-      style={{ background: '#F9A800', fontFamily: "'Inter', sans-serif", position: 'relative' }}
+      style={{ background: '#131313', fontFamily: "'Inter', sans-serif", position: 'relative' }}
       className="px-6 pb-24 pt-4"
     >
       <div style={{ position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none', overflow: 'hidden' }}>
