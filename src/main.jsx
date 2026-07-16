@@ -34,10 +34,10 @@ function App() {
       </div>
       <div style={{ position: 'relative', zIndex: 1 }}>
         <GLSLHills />
+        <DryerDanger />
         <div id="services" ref={servicesRef}>
           <Services />
         </div>
-        <DryerDanger />
         <div id="testimonials" ref={testimonialsRef}>
           <Testimonials />
         </div>
