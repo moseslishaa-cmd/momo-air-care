@@ -101,21 +101,13 @@ export function NavBar() {
           transition: 'padding 0.25s',
         }}>
           {/* Logo */}
-          <Link href="/" aria-label="MOMO Air Care — home" style={{ display: 'flex', alignItems: 'center', gap: '9px', textDecoration: 'none', flexShrink: 0 }}>
-            <span style={{
-              width: '32px', height: '32px', borderRadius: '9px', background: YELLOW,
-              display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-              boxShadow: '0 3px 10px rgba(255,212,0,0.45)',
-            }}>
-              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="2.4" strokeLinecap="round" aria-hidden="true">
-                <path d="M3 8h11a3 3 0 1 0-3-3" />
-                <path d="M3 13h15a3 3 0 1 1-3 3" />
-                <path d="M3 18h7" />
-              </svg>
-            </span>
-            <span style={{ fontFamily: 'var(--font-oswald), sans-serif', fontWeight: 700, fontSize: isMobile ? '0.9rem' : '1.1rem', letterSpacing: isMobile ? '0.05em' : '0.1em', color: '#111', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>
-              MOMO <span style={{ color: '#B08D00' }}>Air Care</span>
-            </span>
+          <Link href="/" aria-label="MOMO Air Care — home" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', flexShrink: 0 }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/logo-nav.png"
+              alt="MOMO Air Care"
+              style={{ height: isMobile ? (scrolled ? '28px' : '32px') : (scrolled ? '34px' : '40px'), width: 'auto', display: 'block', transition: 'height 0.25s' }}
+            />
           </Link>
 
           {/* Desktop links */}

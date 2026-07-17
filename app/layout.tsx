@@ -70,6 +70,7 @@ function GlobalSchema() {
     telephone: SITE.phoneIntl,
     email: SITE.email,
     image: `${SITE.url}/brand-hero.jpg`,
+    logo: `${SITE.url}/logo.png`,
     priceRange: '$$',
     address: { '@type': 'PostalAddress', addressRegion: 'WA', addressCountry: 'US' },
     openingHoursSpecification: {
