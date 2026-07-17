@@ -207,27 +207,6 @@ export function ServicePage({ svc, otherServices }: { svc: ServiceContent; other
         </section>
 
         {/* Before / After */}
-        {svc.before && svc.after && (
-          <section style={{ maxWidth: '1160px', margin: '0 auto', padding: isMobile ? '44px 20px' : '64px 24px' }}>
-            <Reveal>
-              <h2 style={{ fontFamily: 'var(--font-fraunces), serif', fontWeight: 900, fontSize: isMobile ? '1.5rem' : '2rem', color: '#111', margin: '0 0 6px', textAlign: 'center' }}>
-                Real Results From Real Homes
-              </h2>
-              <p style={{ textAlign: 'center', fontFamily: 'var(--font-inter), sans-serif', fontSize: '0.88rem', color: '#777', margin: '0 0 22px' }}>
-                Actual before/after photos from MOMO Air Care jobs in the {SITE.region} area.
-              </p>
-            </Reveal>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: isMobile ? '10px' : '18px', maxWidth: '860px', margin: '0 auto' }}>
-              {[{ img: svc.before, tag: 'BEFORE', bg: '#111', fg: YELLOW }, { img: svc.after, tag: 'AFTER', bg: '#1e6b2e', fg: '#fff' }].map((x) => (
-                <div key={x.tag} style={{ position: 'relative', borderRadius: '16px', overflow: 'hidden', aspectRatio: '4/3', border: '1px solid #e8e8e4', boxShadow: '0 10px 28px rgba(0,0,0,0.12)' }}>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={x.img} alt={`${svc.nav} ${x.tag.toLowerCase()} photo`} width={800} height={600} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
-                  <span style={{ position: 'absolute', top: '10px', left: '10px', background: x.bg, color: x.fg, fontFamily: 'var(--font-oswald), sans-serif', fontWeight: 700, fontSize: '0.68rem', letterSpacing: '0.14em', padding: '4px 12px', borderRadius: '999px' }}>{x.tag}</span>
-                </div>
-              ))}
-            </div>
-          </section>
-        )}
 
         {/* Why MOMO strip */}
         <section style={{ background: '#FAFAF7', borderTop: '1px solid #f0f0ec', borderBottom: '1px solid #f0f0ec', padding: isMobile ? '40px 20px' : '52px 24px' }}>

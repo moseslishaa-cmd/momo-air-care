@@ -18,8 +18,6 @@ export interface ServiceContent {
   process: { title: string; desc: string }[];
   equipment: string[];
   media: { type: 'video' | 'image'; src: string };
-  before?: string;
-  after?: string;
   faqs: ServiceFaq[];
 }
 
@@ -69,8 +67,6 @@ export const SERVICES_CONTENT: ServiceContent[] = [
       'Inspection cameras for before/after proof',
     ],
     media: { type: 'image', src: '/service-airduct.jpg' },
-    before: '/gallery-before-1.jpg',
-    after: '/gallery-after-1.jpg',
     faqs: [
       { q: 'How long does a full air duct cleaning take?', a: 'Most homes take 2–4 hours depending on size and the number of vents. We work carefully — every line gets the same attention.' },
       { q: 'Will it make a mess in my house?', a: 'No. The system stays under negative pressure the entire time, so dislodged dust is pulled into our equipment instead of your rooms. We also protect floors and corners.' },
@@ -124,8 +120,6 @@ export const SERVICES_CONTENT: ServiceContent[] = [
       'Anemometer airflow verification',
     ],
     media: { type: 'image', src: '/service-dryer.jpg' },
-    before: '/gallery-before-2.jpg',
-    after: '/gallery-after-2.jpg',
     faqs: [
       { q: 'How often should the dryer vent be cleaned?', a: 'Once a year for most homes — every 6–9 months for large families, pet owners, or long/roof-terminating vent runs.' },
       { q: 'How long does it take?', a: 'Usually 30–60 minutes depending on the length and route of the vent line.' },
@@ -179,8 +173,6 @@ export const SERVICES_CONTENT: ServiceContent[] = [
       'Inspection cameras for tight cabinet corners',
     ],
     media: { type: 'image', src: '/service-furnace.jpg' },
-    before: '/gallery-before-3.jpg',
-    after: '/gallery-after-3.jpg',
     faqs: [
       { q: 'Is this the same as an HVAC tune-up?', a: 'No. This is a deep cleaning service for the blower and cabinet. We do not perform licensed repair, gas, or refrigerant work — and we will never pretend a cleaning replaces a needed repair.' },
       { q: 'How often should the blower be cleaned?', a: 'Every 2–3 years for most systems, or sooner if you can see buildup on the blades or airflow has dropped.' },

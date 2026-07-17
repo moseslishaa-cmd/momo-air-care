@@ -24,7 +24,7 @@ export async function generateMetadata(
       title: `${svc.metaTitle} | MOMO Air Care`,
       description: svc.metaDescription,
       url: `${SITE.url}/${svc.slug}`,
-      images: [{ url: svc.before || '/momo-giraffe.png' }],
+      images: [{ url: svc.media.type === 'image' ? svc.media.src : '/brand-hero.jpg' }],
     },
   };
 }

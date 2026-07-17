@@ -4,8 +4,8 @@ import { useRef } from 'react';
 import { NavBar } from './NavBar';
 import { Hero } from './Hero';
 import { TrustStrip } from './TrustStrip';
+import { CompanyStory } from './CompanyStory';
 import { ServicesGrid } from './ServicesGrid';
-import { ServiceDetailsAll } from './ServiceDetails';
 import { DryerDanger } from './DryerDanger';
 import { Process } from './Process';
 import { WhyChoose } from './WhyChoose';
@@ -32,18 +32,17 @@ export function HomeSections() {
 
       <main>
         <Hero />
+        <CompanyStory />
         <TrustStrip />
+        <Stats />
         <ServicesGrid />
-
-        <ServiceDetailsAll />
 
         <div id="dryer-vent" ref={dryerRef}>
           <DryerDanger />
         </div>
 
-        <Process />
         <WhyChoose />
-        <Stats />
+        <Process />
 
         <VanStrip />
 

@@ -203,40 +203,6 @@ export function DryerDanger() {
           </div>
         </div>
 
-        {/* Before / After */}
-        <div style={{ marginBottom: isMobile ? '40px' : '56px' }}>
-          <h3 style={{
-            textAlign: 'center', fontFamily: "var(--font-inter), sans-serif", fontWeight: 900,
-            fontSize: isMobile ? '1.4rem' : '1.9rem', color: '#111111', margin: '0 0 6px',
-          }}>
-            See the Difference
-          </h3>
-          <p style={{ textAlign: 'center', fontSize: '0.9rem', color: '#777777', margin: '0 0 24px' }}>
-            Real results from homes just like yours.
-          </p>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: isMobile ? '10px' : '20px' }}>
-            {[
-              { img: '/gallery-before-1.jpg', tag: 'BEFORE', color: '#1a1a1a', accent: '#FFD400' },
-              { img: '/gallery-after-1.jpg', tag: 'AFTER', color: '#1e6b2e', accent: '#fff' },
-            ].map(item => (
-              <div key={item.tag} style={{
-                position: 'relative', borderRadius: '16px', overflow: 'hidden',
-                aspectRatio: '3/4', boxShadow: '0 10px 30px rgba(0,0,0,0.22)',
-                border: '1px solid #e5e5e2',
-              }}>
-                <img src={item.img} alt={`Dryer vent ${item.tag}`} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
-                <span style={{
-                  position: 'absolute', top: '12px', left: '12px',
-                  background: item.color, color: item.accent,
-                  fontFamily: "var(--font-oswald), sans-serif", fontWeight: 700,
-                  fontSize: isMobile ? '0.7rem' : '0.82rem', letterSpacing: '0.14em',
-                  padding: '5px 14px', borderRadius: '999px',
-                }}>{item.tag}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Warning signs */}
         <div style={{ marginBottom: isMobile ? '40px' : '56px' }}>
           <h3 style={{
