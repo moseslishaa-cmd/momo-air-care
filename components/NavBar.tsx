@@ -27,13 +27,7 @@ export function NavBar() {
   const isMobile = useIsMobile(1024);
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const [banner, setBanner] = useState(0);
   const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const iv = setInterval(() => setBanner((b) => (b + 1) % SITE.banners.length), 4000);
-    return () => clearInterval(iv);
-  }, []);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -48,38 +42,6 @@ export function NavBar() {
 
   return (
     <header id="top" style={{ position: 'sticky', top: 0, zIndex: 5000 }}>
-
-      {/* Announcement bar */}
-      <div style={{ background: '#0c0c0c', overflow: 'hidden' }}>
-        <div style={{
-          maxWidth: '1200px', margin: '0 auto',
-          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-          padding: '8px 18px', gap: '12px',
-        }}>
-          <AnimatePresence mode="wait">
-            <motion.span
-              key={banner}
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -8 }}
-              transition={{ duration: 0.3 }}
-              style={{
-                fontFamily: 'var(--font-inter), sans-serif', fontWeight: 700,
-                fontSize: '0.7rem', letterSpacing: '0.08em',
-                color: '#fff', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis',
-              }}
-            >
-              {SITE.banners[banner]}
-            </motion.span>
-          </AnimatePresence>
-          <a href={SITE.phoneHref} style={{
-            fontFamily: 'var(--font-oswald), sans-serif', fontWeight: 700, fontSize: '0.8rem',
-            letterSpacing: '0.08em', color: YELLOW, textDecoration: 'none', whiteSpace: 'nowrap',
-          }}>
-            {SITE.phoneDisplay}
-          </a>
-        </div>
-      </div>
 
       {/* Main nav — shrinks slightly when scrolled */}
       <nav style={{
