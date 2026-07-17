@@ -53,8 +53,8 @@ export function CompanyStory() {
               boxShadow: '0 18px 48px rgba(0,0,0,0.24)', transform: 'rotate(2deg)',
             }}>
               <img
-                src="/fleet.jpg"
-                alt="The MOMO Air Care fleet today — a row of branded yellow service vans"
+                src="/fleet-today.jpg"
+                alt="A MOMO Air Care van today — bright yellow with the Momo script logo and giraffe mascot, parked at a customer's home"
                 loading="lazy"
                 style={{ width: '100%', display: 'block', borderRadius: '3px', aspectRatio: '16/10', objectFit: 'cover' }}
               />
