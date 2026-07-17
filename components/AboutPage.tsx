@@ -71,6 +71,42 @@ export function AboutPage() {
           </Reveal>
         </section>
 
+        {/* Team & fleet photos */}
+        <section style={{ maxWidth: '1060px', margin: '0 auto', padding: isMobile ? '4px 20px 40px' : '8px 24px 60px' }}>
+          <Reveal>
+            <div style={{ borderRadius: '20px', overflow: 'hidden', border: '1px solid #ebebe7', boxShadow: '0 22px 54px rgba(0,0,0,0.13)' }}>
+              <img
+                src="/team.jpg"
+                alt="The MOMO Air Care technician team standing in front of a branded yellow service van"
+                loading="lazy"
+                style={{ width: '100%', display: 'block', aspectRatio: '16/9', objectFit: 'cover' }}
+              />
+            </div>
+          </Reveal>
+          <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: isMobile ? '14px' : '20px', marginTop: isMobile ? '14px' : '20px' }}>
+            <Reveal delay={0.06}>
+              <div style={{ borderRadius: '18px', overflow: 'hidden', border: '1px solid #ebebe7', boxShadow: '0 14px 36px rgba(0,0,0,0.10)' }}>
+                <img
+                  src="/fleet.jpg"
+                  alt="A row of yellow MOMO Air Care service vans at golden hour"
+                  loading="lazy"
+                  style={{ width: '100%', display: 'block', aspectRatio: '16/10', objectFit: 'cover' }}
+                />
+              </div>
+            </Reveal>
+            <Reveal delay={0.12}>
+              <div style={{ borderRadius: '18px', overflow: 'hidden', border: '1px solid #ebebe7', boxShadow: '0 14px 36px rgba(0,0,0,0.10)' }}>
+                <img
+                  src="/family-home.jpg"
+                  alt="A relaxed family with their dog enjoying a bright, clean living room"
+                  loading="lazy"
+                  style={{ width: '100%', display: 'block', aspectRatio: '16/10', objectFit: 'cover' }}
+                />
+              </div>
+            </Reveal>
+          </div>
+        </section>
+
         {/* Values */}
         <section style={{ background: '#FAFAF7', borderTop: '1px solid #f0f0ec', borderBottom: '1px solid #f0f0ec', padding: isMobile ? '40px 20px' : '56px 24px' }}>
           <div style={{ maxWidth: '900px', margin: '0 auto' }}>

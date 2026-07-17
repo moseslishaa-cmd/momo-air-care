@@ -68,7 +68,7 @@ export const SERVICES_CONTENT: ServiceContent[] = [
       'Rotary brush & air-whip agitation tools',
       'Inspection cameras for before/after proof',
     ],
-    media: { type: 'image', src: '/gallery-before-1.jpg' },
+    media: { type: 'image', src: '/service-airduct.jpg' },
     before: '/gallery-before-1.jpg',
     after: '/gallery-after-1.jpg',
     faqs: [
@@ -123,7 +123,7 @@ export const SERVICES_CONTENT: ServiceContent[] = [
       'HEPA-filtered vacuum capture',
       'Anemometer airflow verification',
     ],
-    media: { type: 'video', src: '/dryer-spin.mp4' },
+    media: { type: 'image', src: '/service-dryer.jpg' },
     before: '/gallery-before-2.jpg',
     after: '/gallery-after-2.jpg',
     faqs: [
@@ -178,7 +178,7 @@ export const SERVICES_CONTENT: ServiceContent[] = [
       'HEPA-filtered vacuums',
       'Inspection cameras for tight cabinet corners',
     ],
-    media: { type: 'image', src: '/gallery-before-3.jpg' },
+    media: { type: 'image', src: '/service-furnace.jpg' },
     before: '/gallery-before-3.jpg',
     after: '/gallery-after-3.jpg',
     faqs: [
