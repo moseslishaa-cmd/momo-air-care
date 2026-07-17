@@ -88,9 +88,10 @@ export async function POST(req: NextRequest) {
       headers: {
         'Content-Type': 'application/json',
         Accept: 'application/json',
-        // FormSubmit requires a web origin; identify the real site.
-        Origin: 'https://www.momoaircare.com',
-        Referer: 'https://www.momoaircare.com/',
+        // FormSubmit requires a web origin. NOTE: activation is per email+domain
+        // pair — the activated pair for this inbox is the apex domain.
+        Origin: 'https://momoaircare.com',
+        Referer: 'https://momoaircare.com/',
         'User-Agent':
           'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36',
       },
