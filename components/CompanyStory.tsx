@@ -31,7 +31,7 @@ export function CompanyStory() {
           <div style={
             isMobile
               ? { display: 'flex', flexDirection: 'column', gap: '18px' }
-              : { position: 'relative', paddingBottom: '64px' }
+              : { position: 'relative', paddingBottom: '88px' }
           }>
             {/* Then — polaroid-style */}
             <figure style={{
@@ -46,7 +46,7 @@ export function CompanyStory() {
                 loading="lazy"
                 style={{ width: '100%', display: 'block', borderRadius: '3px' }}
               />
-              <figcaption style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '0.74rem', fontWeight: 600, color: '#777', paddingTop: '9px', textAlign: 'center', width: isMobile ? '100%' : '52%' }}>
+              <figcaption style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '0.74rem', fontWeight: 600, color: '#777', paddingTop: '9px', textAlign: 'center', width: isMobile ? '100%' : '40%' }}>
                 Where it started — one van, one promise.
               </figcaption>
             </figure>
@@ -60,7 +60,7 @@ export function CompanyStory() {
                   }
                 : {
                     margin: 0, position: 'absolute', right: 0, bottom: 0,
-                    width: '56%',
+                    width: '64%',
                     background: '#fff', padding: '8px 8px 10px', borderRadius: '6px',
                     boxShadow: '0 18px 48px rgba(0,0,0,0.24)', transform: 'rotate(2deg)',
                   }
