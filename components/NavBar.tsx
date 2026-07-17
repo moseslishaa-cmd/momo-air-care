@@ -67,7 +67,7 @@ export function NavBar() {
             <img
               src="/logo-nav.png"
               alt="MOMO Air Care"
-              style={{ height: isMobile ? (scrolled ? '28px' : '32px') : (scrolled ? '34px' : '40px'), width: 'auto', display: 'block', transition: 'height 0.25s' }}
+              style={{ height: isMobile ? (scrolled ? '38px' : '46px') : (scrolled ? '46px' : '58px'), width: 'auto', display: 'block', transition: 'height 0.25s' }}
             />
           </Link>
 
