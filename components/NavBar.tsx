@@ -13,6 +13,7 @@ const SERVICE_LINKS = [
   { label: 'Dryer Vent Cleaning', href: '/dryer-vent-cleaning' },
   { label: 'Furnace Cleaning', href: '/furnace-cleaning' },
   { label: 'Crawl Space Services', href: '/crawl-space-services' },
+  { label: 'Chimney Cleaning', href: '/chimney-cleaning' },
 ];
 
 const MAIN_LINKS = [

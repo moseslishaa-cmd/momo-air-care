@@ -242,6 +242,59 @@ export const SERVICES_CONTENT: ServiceContent[] = [
       { q: 'Do you fix moisture problems?', a: 'We service vapor barriers and flag moisture issues with photos. If a problem needs a specialty contractor (like drainage), we say so plainly instead of selling you the wrong fix.' },
     ],
   },
+  {
+    slug: 'chimney-cleaning',
+    nav: 'Chimney Cleaning',
+    metaTitle: 'Chimney Sweep & Cleaning in Greater Seattle',
+    metaDescription:
+      'Professional chimney sweeping and flue cleaning across Greater Seattle. Creosote removal, camera inspection, HEPA-contained cleanup. Call (425) 200-5790.',
+    eyebrow: 'Chimney Sweep & Cleaning',
+    h1: 'Chimney Sweeping, Done the Clean Way',
+    lead:
+      "Every wood fire leaves a little creosote behind — a tar-like residue that coats the flue and builds up layer by layer. It restricts draft, holds that stale campfire smell, and because creosote is flammable, fire-safety standards recommend having chimneys inspected every year. We sweep the full flue with rotary brushes, keep your living room sealed behind HEPA containment, and show you camera footage of the result.",
+    signsTitle: 'Signs your chimney needs a sweep',
+    signs: [
+      'Smoke drifting back into the room when you light a fire',
+      'A campfire smell from the fireplace, even when unused',
+      'Black soot flakes dropping into the firebox',
+      'Fires that start slowly or burn weakly',
+      'Shiny, tar-like glaze visible inside the flue',
+      'Nesting debris or animals around the chimney cap',
+    ],
+    benefits: [
+      'Removes flammable creosote buildup from the flue',
+      'Restores strong, clean draft for easier fires',
+      'Cuts lingering smoke odors in the living room',
+      'Camera-verified results — see the flue yourself',
+    ],
+    included: [
+      'Firebox and smoke chamber sweeping',
+      'Full-length flue brush cleaning',
+      'Damper operation check',
+      'Chimney cap and exterior check',
+      'HEPA-sealed containment — no soot in your home',
+      'Before/after camera footage',
+    ],
+    process: [
+      { title: 'Camera Inspection', desc: 'We scope the flue first, show you the condition, and confirm the price before touching anything.' },
+      { title: 'Seal & Protect', desc: 'The fireplace opening is sealed and HEPA vacuums run the entire time — your room stays spotless.' },
+      { title: 'Full Sweep', desc: 'Rotary rods and brushes scrub the flue top to bottom, breaking creosote loose into containment.' },
+      { title: 'Final Review', desc: 'We re-scope the flue on camera, check the damper and cap, and walk you through the footage.' },
+    ],
+    equipment: [
+      'Rotary rod and brush sweeping system',
+      'HEPA-filtered dust containment',
+      'Flue inspection camera',
+    ],
+    media: { type: 'image', src: '/chimney-art.svg' },
+    faqs: [
+      { q: 'How often should a chimney be swept?', a: 'Fire-safety standards recommend an inspection every year, with sweeping whenever creosote has meaningfully built up — typically after every cord or two of wood burned.' },
+      { q: 'Will sweeping make a mess in my living room?', a: 'No. We seal the fireplace opening and run HEPA vacuums throughout the sweep, so soot goes into our equipment — not onto your floors or furniture.' },
+      { q: 'How long does a chimney sweep take?', a: 'Most sweeps take about an hour, including the camera inspection before and after.' },
+      { q: 'I have a gas fireplace. Do I still need this?', a: 'Gas flues collect far less residue than wood, but they still need periodic inspection for blockages, corrosion, and nesting debris. We check gas flues too.' },
+      { q: 'When is the best time to book?', a: 'Late spring through early fall — you get the best availability and your chimney is ready before the first cold night. We sweep year-round though.' },
+    ],
+  },
 ];
 
 export function getService(slug: string): ServiceContent | undefined {

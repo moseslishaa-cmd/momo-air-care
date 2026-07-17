@@ -62,6 +62,12 @@ const SERVICES = [
     href: '/crawl-space-services',
     icon: (<><path d="M3 8h18M3 13h18M3 18h12" /><path d="M20 15v6M17 18h6" /></>),
   },
+  {
+    title: 'Chimney Cleaning',
+    desc: 'Full-flue chimney sweeping with HEPA containment and camera-verified results — safe, clean fires.',
+    href: '/chimney-cleaning',
+    icon: (<><path d="M4 12l8-7 8 7" /><path d="M6 10.5V20h12v-9.5" /><rect x="13.5" y="4" width="3.4" height="5" /><path d="M15.2 2c.8-.9-.6-1.4 0-2" opacity="0" /><path d="M12 20v-4a2 2 0 0 1 4 0v4" /></>),
+  },
 ];
 
 export function ServicesGrid() {

@@ -77,6 +77,7 @@ export function Footer() {
           <Link href="/furnace-cleaning" style={COL_LINK}>Furnace & Blower</Link>
           <Link href="/crawl-space-services" style={COL_LINK}>Crawl Space</Link>
           <Link href="/crawl-space-services" style={COL_LINK}>Insulation</Link>
+          <Link href="/chimney-cleaning" style={COL_LINK}>Chimney Cleaning</Link>
           <Link href="/contact" style={COL_LINK}>HVAC Sanitizing</Link>
         </nav>
 
