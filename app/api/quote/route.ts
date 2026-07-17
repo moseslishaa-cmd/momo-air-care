@@ -89,8 +89,10 @@ export async function POST(req: NextRequest) {
         'Content-Type': 'application/json',
         Accept: 'application/json',
         // FormSubmit requires a web origin; identify the real site.
-        Origin: 'https://momoaircare.com',
-        Referer: 'https://momoaircare.com/',
+        Origin: 'https://www.momoaircare.com',
+        Referer: 'https://www.momoaircare.com/',
+        'User-Agent':
+          'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36',
       },
       body: JSON.stringify(payload),
     });
@@ -98,7 +100,7 @@ export async function POST(req: NextRequest) {
     const success = !!json && (json.success === true || json.success === 'true');
 
     if (!success) {
-      console.error('[quote] delivery failed', { status: res.status });
+      console.error('[quote] delivery failed', { status: res.status, body: JSON.stringify(json)?.slice(0, 300) });
       return NextResponse.json(
         { ok: false, error: 'Something went wrong. Please call us at (425) 200-5790.' },
         { status: 502 },
