@@ -3,3 +3,8 @@ dist/
 .vite/
 .DS_Store
 *.local
+.next/
+out/
+next-env.d.ts
+.env*.local
+*.tsbuildinfo
