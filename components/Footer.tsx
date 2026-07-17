@@ -63,9 +63,7 @@ export function Footer() {
           <div style={COL_TITLE}>Quick Links</div>
           <Link href="/" style={COL_LINK}>Home</Link>
           <Link href="/#services" style={COL_LINK}>All Services</Link>
-          <Link href="/#reviews" style={COL_LINK}>Reviews</Link>
           <Link href="/about" style={COL_LINK}>About Us</Link>
-          <Link href="/#faq" style={COL_LINK}>FAQ</Link>
           <Link href="/contact" style={COL_LINK}>Get a Free Quote</Link>
         </nav>
 

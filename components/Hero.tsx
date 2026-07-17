@@ -66,7 +66,7 @@ function ZipChecker({ isMobile }: { isMobile: boolean }) {
       </div>
       {state === 'yes' && (
         <p style={{ margin: '10px 2px 0', fontFamily: 'var(--font-inter), sans-serif', fontSize: '0.85rem', fontWeight: 700, color: '#1e6b2e' }}>
-          ✓ Great news — we serve your area! <a href="#contact" style={{ color: '#1e6b2e', textDecoration: 'underline' }}>Book below</a> or call {SITE.phoneDisplay}.
+          ✓ Great news — we serve your area! <a href="/contact" style={{ color: '#1e6b2e', textDecoration: 'underline' }}>Book below</a> or call {SITE.phoneDisplay}.
         </p>
       )}
       {state === 'maybe' && (
@@ -140,7 +140,7 @@ export function Hero() {
 
           <Reveal delay={0.18}>
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginBottom: '20px' }}>
-              <a href="#contact" className="btn-ripple" style={{
+              <a href="/contact" className="btn-ripple" style={{
                 fontFamily: 'var(--font-oswald), sans-serif', fontWeight: 700, fontSize: '1rem',
                 letterSpacing: '0.08em', textTransform: 'uppercase',
                 background: YELLOW, color: '#111', textDecoration: 'none',
@@ -150,7 +150,7 @@ export function Hero() {
               }}>
                 Schedule Now
               </a>
-              <a href="#contact" className="btn-ripple" style={{
+              <a href="/contact" className="btn-ripple" style={{
                 fontFamily: 'var(--font-oswald), sans-serif', fontWeight: 700, fontSize: '1rem',
                 letterSpacing: '0.08em', textTransform: 'uppercase',
                 background: '#111', color: '#fff', textDecoration: 'none',

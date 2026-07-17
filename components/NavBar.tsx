@@ -19,7 +19,6 @@ const SERVICE_LINKS = [
 const MAIN_LINKS = [
   { label: 'Home', href: '/' },
   { label: 'Service Areas', href: '/service-areas' },
-  { label: 'Reviews', href: '/#reviews' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
 ];
