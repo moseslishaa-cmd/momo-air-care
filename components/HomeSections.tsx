@@ -11,6 +11,7 @@ import { Process } from './Process';
 import { WhyChoose } from './WhyChoose';
 import { Stats } from './Stats';
 import { TestimonialsCarousel } from './TestimonialsCarousel';
+import { VanStrip } from './VanStrip';
 import { FAQ } from './FAQ';
 import { ServiceArea } from './ServiceArea';
 import { Contact } from './Contact';
@@ -43,6 +44,8 @@ export function HomeSections() {
         <Process />
         <WhyChoose />
         <Stats />
+
+        <VanStrip />
 
         <div ref={reviewsRef}>
           <TestimonialsCarousel />
