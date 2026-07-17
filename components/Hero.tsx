@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 import { Reveal } from './Reveal';
 import { useIsMobile } from './useIsMobile';
 import { SITE } from '@/lib/site';
@@ -103,20 +102,6 @@ export function Hero() {
         padding: isMobile ? '44px 20px 210px' : '96px 24px 110px',
       }}>
         <div style={{ maxWidth: isMobile ? '100%' : '540px' }}>
-          <Reveal>
-            <Link href="/dryer-vent-cleaning" style={{
-              display: 'inline-flex', alignItems: 'center', gap: '8px',
-              background: '#111', borderRadius: '999px', textDecoration: 'none',
-              padding: '8px 18px', marginBottom: '18px',
-              border: `1.5px solid ${YELLOW}80`,
-            }}>
-              <span style={{ fontSize: '0.85rem' }} aria-hidden="true">🔥</span>
-              <span style={{ fontFamily: 'var(--font-oswald), sans-serif', fontWeight: 700, fontSize: '0.72rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: YELLOW }}>
-                $69 Dryer Vent Special
-              </span>
-            </Link>
-          </Reveal>
-
           <Reveal delay={0.06}>
             <h1 style={{
               fontFamily: 'var(--font-fraunces), serif', fontWeight: 900,
