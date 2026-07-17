@@ -71,6 +71,23 @@ export function QuoteForm({ page = 'home' }: { page?: string }) {
         setStatus('success');
         form.reset();
         setService('');
+      } else if (json?.fallback && json?.payload) {
+        // Server validated the lead but upstream delivery was blocked for
+        // datacenter traffic — deliver straight from the browser instead.
+        const direct = await fetch('https://formsubmit.co/ajax/moses.lishaa@gmail.com', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify(json.payload),
+        });
+        const dj = await direct.json().catch(() => null);
+        if (dj && (dj.success === true || dj.success === 'true')) {
+          setStatus('success');
+          form.reset();
+          setService('');
+        } else {
+          setErrorMsg('Something went wrong. Please call us at (425) 200-5790.');
+          setStatus('error');
+        }
       } else {
         setErrorMsg(json?.error || 'Something went wrong. Please call us at (425) 200-5790.');
         setStatus('error');

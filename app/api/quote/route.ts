@@ -101,8 +101,15 @@ export async function POST(req: NextRequest) {
 
     if (!success) {
       console.error('[quote] delivery failed', { status: res.status, body: JSON.stringify(json)?.slice(0, 300) });
+      // Validation passed but upstream delivery failed (e.g. datacenter IP blocked).
+      // Tell the client it may deliver directly from the browser instead.
       return NextResponse.json(
-        { ok: false, error: 'Something went wrong. Please call us at (425) 200-5790.' },
+        {
+          ok: false,
+          fallback: true,
+          payload,
+          error: 'Something went wrong. Please call us at (425) 200-5790.',
+        },
         { status: 502 },
       );
     }
