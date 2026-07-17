@@ -40,14 +40,14 @@ export const metadata: Metadata = {
     description:
       'Air duct & dryer vent cleaning specialists serving Greater Seattle. Licensed, insured, satisfaction guaranteed. Free quotes and fast scheduling.',
     url: SITE.url,
-    images: [{ url: '/momo-giraffe.png', width: 832, height: 1248, alt: 'MOMO Air Care mascot' }],
+    images: [{ url: '/brand-hero.jpg', width: 832, height: 1248, alt: 'MOMO Air Care mascot' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'MOMO Air Care — Healthy Air Starts Here',
     description:
       'Air duct & dryer vent cleaning specialists serving Greater Seattle. Free quotes, fast scheduling, satisfaction guaranteed.',
-    images: ['/momo-giraffe.png'],
+    images: ['/brand-hero.jpg'],
   },
   robots: { index: true, follow: true },
 };
@@ -69,7 +69,7 @@ function GlobalSchema() {
     url: SITE.url,
     telephone: SITE.phoneIntl,
     email: SITE.email,
-    image: `${SITE.url}/momo-giraffe.png`,
+    image: `${SITE.url}/brand-hero.jpg`,
     priceRange: '$$',
     address: { '@type': 'PostalAddress', addressRegion: 'WA', addressCountry: 'US' },
     openingHoursSpecification: {

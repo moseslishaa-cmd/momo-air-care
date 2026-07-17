@@ -137,11 +137,10 @@ export function Hero() {
               aspectRatio: isMobile ? '4/3' : '21/9',
               background: '#111',
             }}>
-              <video
-                src="/dryer-spin.mp4"
-                autoPlay muted loop playsInline preload="metadata"
-                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-                aria-label="Inside a dryer drum spinning — MOMO Air Care keeps the vent line behind it clean"
+              <img
+                src="/brand-hero.jpg"
+                alt="MOMO Air Care technician waving beside the branded yellow van while a happy family watches from their front lawn"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '55% 42%', display: 'block' }}
               />
             </div>
 

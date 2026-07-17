@@ -286,7 +286,7 @@ export const SERVICES_CONTENT: ServiceContent[] = [
       'HEPA-filtered dust containment',
       'Flue inspection camera',
     ],
-    media: { type: 'image', src: '/chimney-art.svg' },
+    media: { type: 'image', src: '/chimney-service.jpg' },
     faqs: [
       { q: 'How often should a chimney be swept?', a: 'Fire-safety standards recommend an inspection every year, with sweeping whenever creosote has meaningfully built up — typically after every cord or two of wood burned.' },
       { q: 'Will sweeping make a mess in my living room?', a: 'No. We seal the fireplace opening and run HEPA vacuums throughout the sweep, so soot goes into our equipment — not onto your floors or furniture.' },
