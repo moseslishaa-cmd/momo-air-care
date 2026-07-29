@@ -104,7 +104,7 @@ function StepBadge({ n, label, state, onClick }: { n: number; label: string; sta
 export function BookingSection() {
   const isMobile = useIsMobile(1024);
   const [step, setStep] = useState(0);
-  const [service, setService] = useState('');
+  const [services, setServices] = useState<string[]>([]);
   const [dayIdx, setDayIdx] = useState(-1);
   const [timeWindow, setTimeWindow] = useState('');
   const [propertyType, setPropertyType] = useState('');
@@ -114,9 +114,10 @@ export function BookingSection() {
 
   const days = useMemo(buildDays, []);
 
-  const pickService = (label: string) => {
-    setService(label);
-    window.setTimeout(() => setStep(1), 220);
+  const toggleService = (label: string) => {
+    setServices((prev) =>
+      prev.includes(label) ? prev.filter((s) => s !== label) : [...prev, label],
+    );
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -125,7 +126,7 @@ export function BookingSection() {
     const form = e.currentTarget;
     const fd = new FormData(form);
     const payload: Record<string, unknown> = Object.fromEntries(fd.entries());
-    payload.service = service;
+    payload.service = services.join(' + ');
     payload.preferred_date = dayIdx >= 0 ? days[dayIdx].human : '';
     payload.time_window = timeWindow;
     if (propertyType) payload.property_type = propertyType;
@@ -242,7 +243,7 @@ export function BookingSection() {
                     Booking Request Sent{sentName ? `, ${sentName}` : ''}!
                   </h3>
                   <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '0.95rem', color: '#555', lineHeight: 1.7, margin: 0, maxWidth: '460px', marginLeft: 'auto', marginRight: 'auto' }}>
-                    {service} · {dayIdx >= 0 ? days[dayIdx].human : ''} · {timeWindow}.<br />
+                    {services.join(' + ')} · {dayIdx >= 0 ? days[dayIdx].human : ''} · {timeWindow}.<br />
                     We&apos;ll call you shortly to confirm your visit. Need it now? Call{' '}
                     <a href={SITE.phoneHref} style={{ color: '#8f7300', fontWeight: 800 }}>{SITE.phoneDisplay}</a>.
                   </p>
@@ -282,21 +283,24 @@ export function BookingSection() {
 
                       {step === 0 && (
                         <div>
-                          <h3 style={{ fontFamily: 'var(--font-inter), sans-serif', fontWeight: 800, fontSize: '1.05rem', color: '#111', margin: '0 0 14px' }}>
+                          <h3 style={{ fontFamily: 'var(--font-inter), sans-serif', fontWeight: 800, fontSize: '1.05rem', color: '#111', margin: '0 0 4px' }}>
                             What do you need cleaned?
                           </h3>
+                          <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '0.82rem', color: '#888', margin: '0 0 14px' }}>
+                            Pick as many as you need — one visit, one team.
+                          </p>
                           <div style={{
                             display: 'grid',
                             gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)',
                             gap: isMobile ? '12px' : '16px',
                           }}>
                             {SERVICES.map((s) => {
-                              const selected = service === s.label;
+                              const selected = services.includes(s.label);
                               return (
                                 <button
                                   key={s.label}
                                   type="button"
-                                  onClick={() => pickService(s.label)}
+                                  onClick={() => toggleService(s.label)}
                                   aria-pressed={selected}
                                   style={{
                                     position: 'relative', padding: 0, textAlign: 'left', cursor: 'pointer',
@@ -338,15 +342,38 @@ export function BookingSection() {
                           </div>
                           <button
                             type="button"
-                            onClick={() => pickService('Not Sure — Need Advice')}
+                            onClick={() => toggleService('Not Sure — Need Advice')}
+                            aria-pressed={services.includes('Not Sure — Need Advice')}
                             style={{
                               marginTop: '14px', width: '100%', cursor: 'pointer',
-                              background: '#FAFAF7', border: '1.5px dashed #d8d8d0', borderRadius: '12px',
+                              background: services.includes('Not Sure — Need Advice') ? '#FFF7CC' : '#FAFAF7',
+                              border: services.includes('Not Sure — Need Advice') ? `1.5px solid ${YELLOW}` : '1.5px dashed #d8d8d0',
+                              borderRadius: '12px',
                               padding: '13px 16px',
-                              fontFamily: 'var(--font-inter), sans-serif', fontWeight: 700, fontSize: '0.85rem', color: '#555',
+                              fontFamily: 'var(--font-inter), sans-serif', fontWeight: 700, fontSize: '0.85rem',
+                              color: services.includes('Not Sure — Need Advice') ? '#111' : '#555',
                             }}
                           >
                             Not sure what you need? Get free advice — we&apos;ll figure it out together.
+                          </button>
+                          <button
+                            type="button"
+                            disabled={services.length === 0}
+                            onClick={() => setStep(1)}
+                            className="btn-ripple"
+                            style={{
+                              marginTop: '16px', width: '100%',
+                              fontFamily: 'var(--font-oswald), sans-serif', fontWeight: 700, fontSize: '0.95rem',
+                              letterSpacing: '0.1em', textTransform: 'uppercase',
+                              background: services.length > 0 ? YELLOW : '#eeeee9',
+                              color: services.length > 0 ? '#111' : '#999',
+                              border: 'none', borderRadius: '10px', padding: '15px 20px',
+                              cursor: services.length > 0 ? 'pointer' : 'not-allowed',
+                              boxShadow: services.length > 0 ? '0 8px 22px rgba(255,212,0,0.45)' : 'none',
+                              transition: 'background 0.2s, box-shadow 0.2s',
+                            }}
+                          >
+                            {services.length > 1 ? `Continue with ${services.length} services →` : 'Continue →'}
                           </button>
                         </div>
                       )}
@@ -354,7 +381,7 @@ export function BookingSection() {
                       {step === 1 && (
                         <div>
                           <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '18px' }}>
-                            {summaryChip(service, 0)}
+                            {summaryChip(services.join(' + '), 0)}
                           </div>
                           <h3 style={{ fontFamily: 'var(--font-inter), sans-serif', fontWeight: 800, fontSize: '1.05rem', color: '#111', margin: '0 0 14px' }}>
                             Pick a day
@@ -454,7 +481,7 @@ export function BookingSection() {
                       {step === 2 && (
                         <form onSubmit={handleSubmit}>
                           <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '18px' }}>
-                            {summaryChip(service, 0)}
+                            {summaryChip(services.join(' + '), 0)}
                             {dayIdx >= 0 && summaryChip(`${days[dayIdx].top === 'Today' || days[dayIdx].top === 'Tomorrow' ? days[dayIdx].top : days[dayIdx].human.split(',')[0]} · ${days[dayIdx].sub}`, 1)}
                             {timeWindow && summaryChip(timeWindow, 1)}
                           </div>

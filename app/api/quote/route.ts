@@ -72,7 +72,7 @@ export async function POST(req: NextRequest) {
 
     const optional: Array<[string, number]> = [
       ['email', 160], ['address', 200], ['city', 80], ['zip', 20],
-      ['service', 80], ['property_type', 60],
+      ['service', 200], ['property_type', 60],
       ['preferred_date', 40], ['time_window', 40],
       ['vents', 20], ['returns', 20], ['furnace_location', 80], ['property_size', 40],
       ['dryer_location', 80], ['exterior_vent_location', 80], ['vent_length', 40], ['dryer_problem', 200],
