@@ -5,6 +5,7 @@ import { Hero } from './Hero';
 import { TrustStrip } from './TrustStrip';
 import { CompanyStory } from './CompanyStory';
 import { ServicesGrid } from './ServicesGrid';
+import { BookingSection } from './BookingSection';
 import { Stats } from './Stats';
 import { Footer } from './Footer';
 import { StickyBar } from './StickyBar';
@@ -22,7 +23,7 @@ export function HomeSections() {
         <TrustStrip />
         <Stats />
         <ServicesGrid />
-
+        <BookingSection />
       </main>
 
       <Footer />

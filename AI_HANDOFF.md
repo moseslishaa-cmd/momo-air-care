@@ -67,12 +67,17 @@ user request.
 - Compress via `sips -s format jpeg -s formatOptions 82` into public/.
 
 ## Site Structure (as deployed)
-- Home: Hero (full-bleed hero-family.jpg, headline, Schedule Now/Get Estimate, ZIP checker,
-  trust badges) → CompanyStory (heritage-van.jpg 2010 polaroid + fleet-today.jpg script-logo
-  van collage; stacked on mobile) → TrustStrip → Stats counters → ServicesGrid (6 photo
-  catalog cards). Homepage intentionally ENDS at the services grid — the dryer-safety block,
-  lower sections, and ALL popups (exit-intent, discount coupon, did-you-know) were removed
-  at owner request. Footer + mobile StickyBar (Call/Get Quote) remain.
+- Home: Hero (full-bleed hero-family.jpg, headline, Schedule Now/Get Estimate → both scroll
+  to #quote, ZIP checker, trust badges) → CompanyStory (heritage-van.jpg 2010 polaroid +
+  fleet-today.jpg script-logo van collage; stacked on mobile) → TrustStrip → Stats counters →
+  ServicesGrid (6 photo catalog cards) → BookingSection (added 2026-07-28 at owner request).
+  The dryer-safety block and ALL popups (exit-intent, discount coupon, did-you-know) remain
+  removed. Footer + mobile StickyBar (Call/Get Quote → #quote) remain.
+- BookingSection (components/BookingSection.tsx, id="quote"): 3-step booking wizard —
+  photo-tile service picker (auto-advances) → 14-day chip picker + time-window pills →
+  contact/address details with summary-edit chips. Same field names + honeypot as the
+  contact-page QuoteForm; delivery via lib/submitLead.ts (same /api/quote → browser-fallback
+  path). Mascot beside the card like the /contact layout. Payload page='home-booking'.
 - Pages: /air-duct-cleaning, /dryer-vent-cleaning, /furnace-cleaning, /crawl-space-services,
   /chimney-cleaning (all from lib/services.ts via app/[service]/page.tsx + ServicePage.tsx),
   /service-areas + /service-areas/{seattle,bellevue,tacoma,renton}, /about, /contact.
