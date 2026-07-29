@@ -61,7 +61,7 @@ export default async function Page({ params }: { params: Promise<{ service: stri
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE.url}/#services` },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE.url}/#quote` },
       { '@type': 'ListItem', position: 3, name: svc.nav, item: `${SITE.url}/${svc.slug}` },
     ],
   };

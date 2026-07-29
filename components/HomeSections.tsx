@@ -4,7 +4,6 @@ import { NavBar } from './NavBar';
 import { Hero } from './Hero';
 import { TrustStrip } from './TrustStrip';
 import { CompanyStory } from './CompanyStory';
-import { ServicesGrid } from './ServicesGrid';
 import { BookingSection } from './BookingSection';
 import { Stats } from './Stats';
 import { Footer } from './Footer';
@@ -22,7 +21,6 @@ export function HomeSections() {
         <CompanyStory />
         <TrustStrip />
         <Stats />
-        <ServicesGrid />
         <BookingSection />
       </main>
 

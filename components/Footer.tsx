@@ -62,7 +62,7 @@ export function Footer() {
         <nav aria-label="Quick links">
           <div style={COL_TITLE}>Quick Links</div>
           <Link href="/" style={COL_LINK}>Home</Link>
-          <Link href="/#services" style={COL_LINK}>All Services</Link>
+          <Link href="/#quote" style={COL_LINK}>All Services</Link>
           <Link href="/about" style={COL_LINK}>About Us</Link>
           <Link href="/contact" style={COL_LINK}>Get a Free Quote</Link>
         </nav>

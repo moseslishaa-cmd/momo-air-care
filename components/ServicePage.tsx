@@ -73,7 +73,7 @@ export function ServicePage({ svc, otherServices }: { svc: ServiceContent; other
           <ol style={{ display: 'flex', gap: '8px', listStyle: 'none', margin: 0, padding: 0, fontFamily: 'var(--font-inter), sans-serif', fontSize: '0.76rem', color: '#999', flexWrap: 'wrap' }}>
             <li><Link href="/" style={{ color: '#999', textDecoration: 'none' }}>Home</Link></li>
             <li aria-hidden="true">›</li>
-            <li><Link href="/#services" style={{ color: '#999', textDecoration: 'none' }}>Services</Link></li>
+            <li><Link href="/#quote" style={{ color: '#999', textDecoration: 'none' }}>Services</Link></li>
             <li aria-hidden="true">›</li>
             <li style={{ color: '#333', fontWeight: 600 }} aria-current="page">{svc.nav}</li>
           </ol>
