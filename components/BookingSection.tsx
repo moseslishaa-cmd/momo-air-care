@@ -180,21 +180,9 @@ export function BookingSection() {
 
         <Reveal>
           <div style={{ textAlign: 'center', marginBottom: isMobile ? '30px' : '44px' }}>
-            <div style={{
-              display: 'inline-flex', alignItems: 'center', gap: '8px',
-              background: '#111', borderRadius: '999px', padding: '7px 18px', marginBottom: '16px',
-            }}>
-              <span style={{ fontFamily: 'var(--font-oswald), sans-serif', fontWeight: 700, fontSize: '0.72rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: YELLOW }}>
-                Book Online
-              </span>
-            </div>
-            <h2 style={{ fontFamily: 'var(--font-fraunces), serif', fontWeight: 900, fontSize: isMobile ? '1.9rem' : '2.7rem', color: '#0e0e0e', margin: '0 0 12px', lineHeight: 1.1 }}>
+            <h2 style={{ fontFamily: 'var(--font-fraunces), serif', fontWeight: 900, fontSize: isMobile ? '1.9rem' : '2.7rem', color: '#0e0e0e', margin: 0, lineHeight: 1.1 }}>
               Schedule Your Service<span style={{ color: YELLOW }}>.</span>
             </h2>
-            <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '0.95rem', color: '#666', maxWidth: '520px', margin: '0 auto', lineHeight: 1.7 }}>
-              Choose a service, pick a day and time window, and tell us where to come —
-              it takes under a minute.
-            </p>
           </div>
         </Reveal>
 
