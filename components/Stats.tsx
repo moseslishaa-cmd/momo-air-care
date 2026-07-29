@@ -9,7 +9,7 @@ export function Stats() {
   const isMobile = useIsMobile();
 
   const items = [
-    { render: <CountUp end={10000} suffix="+" />, label: 'Homes Served' },
+    { render: <CountUp end={5498} />, label: 'Homes Served' },
     { render: <CountUp end={4.9} decimals={1} suffix="★" />, label: 'Average Rating' },
     { render: <CountUp end={98} suffix="%" />, label: 'Customer Satisfaction' },
     { render: <CountUp end={15} suffix="+" />, label: 'Years Experience' },
