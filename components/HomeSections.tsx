@@ -8,7 +8,6 @@ import { BookingSection } from './BookingSection';
 import { Stats } from './Stats';
 import { Footer } from './Footer';
 import { StickyBar } from './StickyBar';
-import { FloatingCallButton } from './FloatingCallButton';
 
 export function HomeSections() {
 
@@ -26,7 +25,6 @@ export function HomeSections() {
 
       <Footer />
 
-      <FloatingCallButton />
       <StickyBar />
     </div>
   );

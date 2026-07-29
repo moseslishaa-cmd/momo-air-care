@@ -129,13 +129,47 @@ export function NavBar() {
             </div>
           )}
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexShrink: 0 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexShrink: 0 }}>
             {!isMobile && (
-              <a href={SITE.phoneHref} style={{
-                fontFamily: 'var(--font-oswald), sans-serif', fontWeight: 700, fontSize: '0.9rem',
-                letterSpacing: '0.05em', color: '#111', textDecoration: 'none', whiteSpace: 'nowrap',
-              }}>
-                {SITE.phoneDisplay}
+              <a
+                href={SITE.phoneHref}
+                aria-label={`Call MOMO Air Care at ${SITE.phoneDisplay}`}
+                className="btn-ripple"
+                style={{
+                  display: 'inline-flex', alignItems: 'center', gap: '10px',
+                  background: '#111', borderRadius: '9px', padding: '7px 18px 7px 14px',
+                  textDecoration: 'none', whiteSpace: 'nowrap', cursor: 'pointer',
+                  boxShadow: '0 3px 10px rgba(0,0,0,0.12)',
+                  transition: 'background 0.2s, box-shadow 0.2s, transform 0.2s',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = '#000';
+                  e.currentTarget.style.transform = 'translateY(-1px)';
+                  e.currentTarget.style.boxShadow = '0 6px 20px rgba(0,0,0,0.28)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = '#111';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = '0 3px 10px rgba(0,0,0,0.12)';
+                }}
+              >
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke={YELLOW} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+                <span style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', lineHeight: 1 }}>
+                  <span style={{
+                    fontFamily: 'var(--font-oswald), sans-serif', fontWeight: 600, fontSize: '0.55rem',
+                    letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.72)', marginBottom: '3px',
+                  }}>
+                    Call Us
+                  </span>
+                  <span style={{
+                    fontFamily: 'var(--font-oswald), sans-serif', fontWeight: 700, fontSize: '1.02rem',
+                    letterSpacing: '0.05em', color: YELLOW,
+                  }}>
+                    {SITE.phoneDisplay}
+                  </span>
+                </span>
               </a>
             )}
             <Link href="/contact" className="btn-ripple" style={{

@@ -3,7 +3,6 @@
 import { NavBar } from './NavBar';
 import { Footer } from './Footer';
 import { StickyBar } from './StickyBar';
-import { FloatingCallButton } from './FloatingCallButton';
 import { QuoteForm } from './Contact';
 import { Reveal } from './Reveal';
 import { useIsMobile } from './useIsMobile';
@@ -115,7 +114,6 @@ export function ContactPageBody() {
       </main>
 
       <Footer />
-      <FloatingCallButton />
       <StickyBar />
     </div>
   );

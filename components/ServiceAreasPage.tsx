@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { NavBar } from './NavBar';
 import { Footer } from './Footer';
 import { StickyBar } from './StickyBar';
-import { FloatingCallButton } from './FloatingCallButton';
 import { ServiceArea } from './ServiceArea';
 import { Reveal } from './Reveal';
 import { useIsMobile } from './useIsMobile';
@@ -60,7 +59,6 @@ export function ServiceAreasPage() {
       </main>
 
       <Footer />
-      <FloatingCallButton />
       <StickyBar />
     </div>
   );

@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { NavBar } from './NavBar';
 import { Footer } from './Footer';
 import { StickyBar } from './StickyBar';
-import { FloatingCallButton } from './FloatingCallButton';
 import { Reveal } from './Reveal';
 import { useIsMobile } from './useIsMobile';
 import { SITE } from '@/lib/site';
@@ -164,7 +163,6 @@ export function AboutPage() {
       </main>
 
       <Footer />
-      <FloatingCallButton />
       <StickyBar />
     </div>
   );
