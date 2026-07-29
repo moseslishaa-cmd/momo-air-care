@@ -29,7 +29,6 @@ export function AboutPage() {
           <Reveal>
             <div style={{ textAlign: 'center', marginBottom: '22px' }}>
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#111', borderRadius: '999px', padding: '6px 16px', marginBottom: '14px' }}>
-                <span style={{ fontSize: '0.85rem' }}>🦒</span>
                 <span style={{ fontFamily: 'var(--font-oswald), sans-serif', fontWeight: 700, fontSize: '0.68rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: YELLOW }}>
                   About MOMO Air Care
                 </span>
@@ -152,7 +151,7 @@ export function AboutPage() {
                 letterSpacing: '0.08em', textTransform: 'uppercase',
                 background: YELLOW, color: '#111', textDecoration: 'none',
                 padding: '15px 28px', borderRadius: '11px', boxShadow: '0 8px 26px rgba(255,212,0,0.45)',
-              }}>📞 {SITE.phoneDisplay}</a>
+              }}>{SITE.phoneDisplay}</a>
               <Link href="/contact" style={{
                 fontFamily: 'var(--font-oswald), sans-serif', fontWeight: 700, fontSize: '0.95rem',
                 letterSpacing: '0.08em', textTransform: 'uppercase',

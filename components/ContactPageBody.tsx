@@ -11,11 +11,31 @@ import { SITE } from '@/lib/site';
 
 const YELLOW = '#FFD400';
 
+function InfoIcon({ children }: { children: React.ReactNode }) {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ display: 'inline-block' }}>
+      {children}
+    </svg>
+  );
+}
+
 const INFO = [
-  { t: 'Phone', v: SITE.phoneDisplay, href: SITE.phoneHref, icon: '📞' },
-  { t: 'Email', v: SITE.email, href: `mailto:${SITE.email}`, icon: '✉️' },
-  { t: 'Hours', v: SITE.hours, icon: '🕒' },
-  { t: 'Service Area', v: SITE.region, icon: '📍' },
+  {
+    t: 'Phone', v: SITE.phoneDisplay, href: SITE.phoneHref,
+    icon: <InfoIcon><path d="M7.2 3.5H5c-.8 0-1.5.7-1.5 1.5C3.5 13.8 10.2 20.5 19 20.5c.8 0 1.5-.7 1.5-1.5v-2.2c0-.6-.4-1.2-1-1.4l-2.9-1c-.5-.2-1.1 0-1.5.4l-.9.9a13.4 13.4 0 0 1-5-5l.9-.9c.4-.4.6-1 .4-1.5l-1-2.9c-.2-.6-.8-1-1.4-1z" /></InfoIcon>,
+  },
+  {
+    t: 'Email', v: SITE.email, href: `mailto:${SITE.email}`,
+    icon: <InfoIcon><rect x="3.5" y="5.5" width="17" height="13" rx="2" /><path d="M4.5 7.5l7.5 5.5 7.5-5.5" /></InfoIcon>,
+  },
+  {
+    t: 'Hours', v: SITE.hours,
+    icon: <InfoIcon><circle cx="12" cy="12" r="8.5" /><path d="M12 7.5V12l3 2" /></InfoIcon>,
+  },
+  {
+    t: 'Service Area', v: SITE.region,
+    icon: <InfoIcon><path d="M12 21c-4.3-3.9-6.5-7.2-6.5-10A6.5 6.5 0 0 1 12 4.5 6.5 6.5 0 0 1 18.5 11c0 2.8-2.2 6.1-6.5 10z" /><circle cx="12" cy="11" r="2.3" /></InfoIcon>,
+  },
 ];
 
 export function ContactPageBody() {

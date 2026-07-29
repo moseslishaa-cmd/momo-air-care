@@ -36,7 +36,7 @@ export function StickyBar() {
         background: YELLOW, color: '#111', borderRadius: '11px', padding: '14px 8px',
         boxShadow: '0 6px 20px rgba(255,212,0,0.4)',
       }}>
-        📞 Call Now
+        Call Now
       </a>
       <a href="#quote" className="btn-ripple" style={{
         flex: 1, textAlign: 'center', textDecoration: 'none',

@@ -104,7 +104,7 @@ export function ServicePage({ svc, otherServices }: { svc: ServiceContent; other
                   letterSpacing: '0.08em', textTransform: 'uppercase',
                   color: '#111', textDecoration: 'none', padding: '15px 24px', borderRadius: '11px',
                   border: '1.5px solid #1a1a1a',
-                }}>📞 {SITE.phoneDisplay}</a>
+                }}>{SITE.phoneDisplay}</a>
               </div>
             </Reveal>
           </div>

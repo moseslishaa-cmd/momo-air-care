@@ -102,7 +102,13 @@ export function QuoteForm({ page = 'home' }: { page?: string }) {
     return (
       <GlowCard glowColor="blue" className="flex flex-col gap-6" width="100%">
         <div style={{ textAlign: 'center', padding: '24px 8px' }} role="status">
-          <div style={{ fontSize: '2.6rem', marginBottom: '10px' }}>✅</div>
+          <div aria-hidden="true" style={{
+            width: '58px', height: '58px', margin: '0 auto 14px', borderRadius: '50%',
+            background: '#FFD400', color: '#111',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            fontSize: '1.9rem', fontWeight: 900,
+            boxShadow: '0 8px 22px rgba(255,212,0,0.45)',
+          }}>✓</div>
           <h4 style={{ fontFamily: 'var(--font-oswald), sans-serif', fontWeight: 700, fontSize: '1.4rem', color: '#111111', margin: '0 0 8px', letterSpacing: '0.04em' }}>
             Thank You!
           </h4>
@@ -315,7 +321,6 @@ export function Contact({ page = 'home' }: { page?: string }) {
             background: '#1a1a1a', borderRadius: '999px',
             padding: '7px 18px', marginBottom: '16px',
           }}>
-            <span style={{ fontSize: '0.9rem' }}>📞</span>
             <span style={{ fontFamily: 'var(--font-oswald), sans-serif', fontWeight: 700, fontSize: '0.72rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#FFD400' }}>
               Let&apos;s Get Started
             </span>

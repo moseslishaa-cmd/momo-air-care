@@ -45,7 +45,7 @@ export function Footer() {
             Air duct, dryer vent, furnace, and crawl space specialists serving {SITE.region}.
             Licensed, insured, and backed by a 100% satisfaction guarantee.
           </p>
-          <a href={SITE.phoneHref} style={{ ...COL_LINK, color: '#fff', fontWeight: 800, fontSize: '1.05rem' }}>📞 {SITE.phoneDisplay}</a>
+          <a href={SITE.phoneHref} style={{ ...COL_LINK, color: '#fff', fontWeight: 800, fontSize: '1.05rem' }}>{SITE.phoneDisplay}</a>
           <a href={`mailto:${SITE.email}`} style={COL_LINK}>{SITE.email}</a>
           <span style={{ ...COL_LINK, cursor: 'default' }}>{SITE.hours}</span>
           <a href={SITE.googleReviewsUrl} target="_blank" rel="noopener noreferrer" style={{

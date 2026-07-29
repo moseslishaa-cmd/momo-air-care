@@ -12,9 +12,9 @@ export const SITE = {
 
   // Announcement bar messages (rotating). Keep honest and low-key.
   banners: [
-    '🗓️ Same-week appointments available',
-    '🔥 $69 dryer vent cleaning special',
-    '📋 Free estimates on every service',
+    'Same-week appointments available',
+    '$69 dryer vent cleaning special',
+    'Free estimates on every service',
   ],
 
   // Real service area (from the existing site's service map).

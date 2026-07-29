@@ -258,7 +258,6 @@ export function ServiceArea() {
             background: '#1a1a1a', borderRadius: '999px',
             padding: '7px 18px', marginBottom: '16px',
           }}>
-            <span style={{ fontSize: '0.9rem' }}>📍</span>
             <span style={{ fontFamily: "var(--font-oswald), sans-serif", fontWeight: 700, fontSize: '0.72rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#FFD400' }}>
               Where We Work
             </span>

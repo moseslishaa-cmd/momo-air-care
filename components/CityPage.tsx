@@ -43,7 +43,6 @@ export function CityPage({ city }: { city: CityContent }) {
         <section style={{ maxWidth: '900px', margin: '0 auto', padding: isMobile ? '26px 20px 36px' : '44px 24px 52px', textAlign: 'center' }}>
           <Reveal>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#111', borderRadius: '999px', padding: '6px 16px', marginBottom: '14px' }}>
-              <span style={{ fontSize: '0.85rem' }}>📍</span>
               <span style={{ fontFamily: 'var(--font-oswald), sans-serif', fontWeight: 700, fontSize: '0.68rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: YELLOW }}>
                 Serving {city.name}, WA
               </span>
@@ -66,7 +65,7 @@ export function CityPage({ city }: { city: CityContent }) {
                 letterSpacing: '0.08em', textTransform: 'uppercase',
                 color: '#111', textDecoration: 'none', padding: '15px 24px', borderRadius: '11px',
                 border: '1.5px solid #1a1a1a',
-              }}>📞 {SITE.phoneDisplay}</a>
+              }}>{SITE.phoneDisplay}</a>
             </div>
           </Reveal>
         </section>

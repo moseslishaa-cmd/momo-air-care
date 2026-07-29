@@ -10,8 +10,8 @@ const YELLOW = '#FFD400';
 const BADGES = [
   { icon: '★', text: '5-Star Rated' },
   { icon: '✓', text: 'Licensed & Insured' },
-  { icon: '♥', text: 'Satisfaction Guaranteed' },
-  { icon: '⚡', text: 'Same Day Service' },
+  { icon: '✓', text: 'Satisfaction Guaranteed' },
+  { icon: '✓', text: 'Same Day Service' },
 ];
 
 // Puget Sound ZIP prefixes MOMO serves (Olympia → Arlington corridor).

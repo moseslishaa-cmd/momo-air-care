@@ -99,7 +99,7 @@ export function TestimonialsCarousel() {
               display: 'inline-flex', alignItems: 'center', gap: '8px',
               background: YELLOW, borderRadius: '999px', padding: '7px 18px', marginBottom: '16px',
             }}>
-              <span style={{ fontSize: '0.85rem' }}>⭐</span>
+              <span style={{ fontSize: '0.8rem', color: '#111' }} aria-hidden="true">★</span>
               <span style={{ fontFamily: "var(--font-oswald), sans-serif", fontWeight: 700, fontSize: '0.72rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#111' }}>
                 Customer Reviews
               </span>

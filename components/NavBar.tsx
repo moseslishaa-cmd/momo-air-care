@@ -198,7 +198,7 @@ export function NavBar() {
                   background: '#111', color: YELLOW, textDecoration: 'none',
                   padding: '14px', borderRadius: '12px',
                 }}>
-                  📞 {SITE.phoneDisplay}
+                  {SITE.phoneDisplay}
                 </a>
               </div>
             </motion.div>

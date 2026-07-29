@@ -16,12 +16,7 @@ const SERVICES = [
   { label: 'HVAC Sanitizing', img: '/family-home.jpg' },
 ];
 
-const TIME_WINDOWS = [
-  { icon: '🌅', label: 'Morning (8–12)' },
-  { icon: '☀️', label: 'Afternoon (12–4)' },
-  { icon: '🌆', label: 'Evening (4–8)' },
-  { icon: '⚡', label: 'Flexible / ASAP' },
-];
+const TIME_WINDOWS = ['Morning (8–12)', 'Afternoon (12–4)', 'Evening (4–8)', 'Flexible / ASAP'];
 
 const PROPERTY_TYPES = ['House', 'Townhome', 'Condo / Apartment', 'Commercial'];
 
@@ -29,14 +24,15 @@ const STEPS = ['Service', 'Day & Time', 'Your Details'];
 
 type Day = { human: string; top: string; sub: string };
 
-// Next 14 days, starting today, labeled for the picker.
+// Next 14 bookable days, starting TOMORROW (same-day booking is not offered —
+// owner request 2026-07-28), labeled for the picker.
 function buildDays(): Day[] {
   const days: Day[] = [];
-  for (let i = 0; i < 14; i++) {
+  for (let i = 1; i <= 14; i++) {
     const d = new Date();
     d.setDate(d.getDate() + i);
     const top =
-      i === 0 ? 'Today' : i === 1 ? 'Tomorrow' : d.toLocaleDateString('en-US', { weekday: 'short' });
+      i === 1 ? 'Tomorrow' : d.toLocaleDateString('en-US', { weekday: 'short' });
     const sub = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
     const human = d.toLocaleDateString('en-US', {
       weekday: 'long', month: 'short', day: 'numeric', year: 'numeric',
@@ -158,7 +154,7 @@ export function BookingSection() {
       }}
     >
       {text}
-      <span aria-hidden="true" style={{ color: '#8f7300', fontSize: '0.7rem' }}>✎</span>
+      <span style={{ color: '#8f7300', fontSize: '0.68rem', fontWeight: 800, letterSpacing: '0.06em', textTransform: 'uppercase' }}>Edit</span>
     </button>
   );
 
@@ -187,7 +183,6 @@ export function BookingSection() {
               display: 'inline-flex', alignItems: 'center', gap: '8px',
               background: '#111', borderRadius: '999px', padding: '7px 18px', marginBottom: '16px',
             }}>
-              <span style={{ fontSize: '0.9rem' }} aria-hidden="true">🗓️</span>
               <span style={{ fontFamily: 'var(--font-oswald), sans-serif', fontWeight: 700, fontSize: '0.72rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: YELLOW }}>
                 Book Online
               </span>
@@ -236,7 +231,13 @@ export function BookingSection() {
 
               {status === 'success' ? (
                 <div style={{ textAlign: 'center', padding: '28px 8px' }} role="status">
-                  <div style={{ fontSize: '2.6rem', marginBottom: '10px' }}>✅</div>
+                  <div aria-hidden="true" style={{
+                    width: '58px', height: '58px', margin: '0 auto 14px', borderRadius: '50%',
+                    background: YELLOW, color: '#111',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    fontSize: '1.9rem', fontWeight: 900,
+                    boxShadow: '0 8px 22px rgba(255,212,0,0.45)',
+                  }}>✓</div>
                   <h3 style={{ fontFamily: 'var(--font-oswald), sans-serif', fontWeight: 700, fontSize: '1.4rem', color: '#111', margin: '0 0 10px', letterSpacing: '0.04em' }}>
                     Booking Request Sent{sentName ? `, ${sentName}` : ''}!
                   </h3>
@@ -345,7 +346,7 @@ export function BookingSection() {
                               fontFamily: 'var(--font-inter), sans-serif', fontWeight: 700, fontSize: '0.85rem', color: '#555',
                             }}
                           >
-                            🦒 Not sure what you need? Get free advice — we&apos;ll figure it out together.
+                            Not sure what you need? Get free advice — we&apos;ll figure it out together.
                           </button>
                         </div>
                       )}
@@ -399,12 +400,12 @@ export function BookingSection() {
                           </h3>
                           <div style={{ display: 'grid', gridTemplateColumns: isMobile ? 'repeat(2, 1fr)' : 'repeat(4, 1fr)', gap: '10px' }}>
                             {TIME_WINDOWS.map((t) => {
-                              const selected = timeWindow === t.label;
+                              const selected = timeWindow === t;
                               return (
                                 <button
-                                  key={t.label}
+                                  key={t}
                                   type="button"
-                                  onClick={() => setTimeWindow(t.label)}
+                                  onClick={() => setTimeWindow(t)}
                                   aria-pressed={selected}
                                   style={{
                                     padding: '13px 10px', borderRadius: '11px', cursor: 'pointer',
@@ -415,8 +416,7 @@ export function BookingSection() {
                                     fontSize: '0.82rem', color: '#111',
                                   }}
                                 >
-                                  <span aria-hidden="true" style={{ marginRight: '6px' }}>{t.icon}</span>
-                                  {t.label}
+                                  {t}
                                 </button>
                               );
                             })}

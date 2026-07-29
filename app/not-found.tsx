@@ -33,7 +33,7 @@ export default function NotFound() {
           letterSpacing: '0.08em', textTransform: 'uppercase',
           color: '#111', textDecoration: 'none', padding: '15px 24px', borderRadius: '11px',
           border: '1.5px solid #1a1a1a',
-        }}>📞 (425) 200-5790</a>
+        }}>(425) 200-5790</a>
       </div>
     </div>
   );
