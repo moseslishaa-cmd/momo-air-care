@@ -78,6 +78,8 @@ user request.
   contact/address details with summary-edit chips. Same field names + honeypot as the
   contact-page QuoteForm; delivery via lib/submitLead.ts (same /api/quote → browser-fallback
   path). Mascot beside the card like the /contact layout. Payload page='home-booking'.
+  Day picker starts TOMORROW — same-day booking intentionally not offered (owner request
+  2026-07-28); do not add a Today option.
 - Pages: /air-duct-cleaning, /dryer-vent-cleaning, /furnace-cleaning, /crawl-space-services,
   /chimney-cleaning (all from lib/services.ts via app/[service]/page.tsx + ServicePage.tsx),
   /service-areas + /service-areas/{seattle,bellevue,tacoma,renton}, /about, /contact.
@@ -102,6 +104,10 @@ user request.
 ## Conventions
 - All copy/icons/illustrations must be ORIGINAL (no copying from other companies).
   Layout genre inspiration is fine; content copying is not.
+- NO EMOJIS anywhere in site UI (owner request 2026-07-28). Use typographic glyphs
+  (★ rating stars, ✓ checks, › breadcrumbs, ▼ dropdown) or original monochrome inline
+  SVGs (see ContactPageBody info tiles). The one exception: the 🔔 in the lead-email
+  subject (app/api/quote/route.ts) — that's inbox-only, not site UI.
 - Trust claims live in lib/site.ts + Stats (10,000+ homes, 4.9★, 98%, 15+ years) — these
   are the owner's stated figures; don't invent new claims (licenses, certifications, awards).
 - Mascot (giraffe) images must not be altered/redrawn — reuse provided assets.
