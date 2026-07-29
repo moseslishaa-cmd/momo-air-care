@@ -26,56 +26,24 @@ export function CompanyStory() {
         gap: isMobile ? '30px' : '60px', alignItems: 'center',
       }}>
 
-        {/* Then & now photos */}
+        {/* Heritage photo */}
         <Reveal style={{ flex: isMobile ? 'none' : '0 0 46%', width: '100%' }}>
-          <div style={
-            isMobile
-              ? { display: 'flex', flexDirection: 'column', gap: '18px' }
-              : { position: 'relative', paddingBottom: '88px' }
-          }>
-            {/* Then — polaroid-style */}
-            <figure style={{
-              margin: 0, background: '#fff', padding: '10px 10px 14px',
-              borderRadius: '6px', boxShadow: '0 16px 44px rgba(0,0,0,0.18)',
-              transform: isMobile ? 'rotate(-1deg)' : 'rotate(-2.5deg)',
-              width: isMobile ? '100%' : '82%',
-            }}>
-              <img
-                src="/heritage-van.jpg"
-                alt="MOMO Air Care's first van and founder in 2010, outside a Seattle-area home"
-                loading="lazy"
-                style={{ width: '100%', display: 'block', borderRadius: '3px' }}
-              />
-              <figcaption style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '0.74rem', fontWeight: 600, color: '#777', paddingTop: '9px', textAlign: 'center', width: isMobile ? '100%' : '40%' }}>
-                Where it started — one van, one promise.
-              </figcaption>
-            </figure>
-            {/* Now — overlapping collage on desktop, stacked on mobile */}
-            <figure style={
-              isMobile
-                ? {
-                    margin: 0, width: '100%',
-                    background: '#fff', padding: '10px 10px 14px', borderRadius: '6px',
-                    boxShadow: '0 18px 48px rgba(0,0,0,0.24)', transform: 'rotate(1deg)',
-                  }
-                : {
-                    margin: 0, position: 'absolute', right: 0, bottom: 0,
-                    width: '64%',
-                    background: '#fff', padding: '8px 8px 10px', borderRadius: '6px',
-                    boxShadow: '0 18px 48px rgba(0,0,0,0.24)', transform: 'rotate(2deg)',
-                  }
-            }>
-              <img
-                src="/fleet-today.jpg"
-                alt="A MOMO Air Care van today — bright yellow with the Momo script logo and giraffe mascot, parked at a customer's home"
-                loading="lazy"
-                style={{ width: '100%', display: 'block', borderRadius: '3px', aspectRatio: '16/10', objectFit: 'cover' }}
-              />
-              <figcaption style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '0.72rem', fontWeight: 600, color: '#777', paddingTop: '7px', textAlign: 'center' }}>
-                Today — the yellow fleet.
-              </figcaption>
-            </figure>
-          </div>
+          <figure style={{
+            margin: 0, background: '#fff', padding: '10px 10px 14px',
+            borderRadius: '6px', boxShadow: '0 16px 44px rgba(0,0,0,0.18)',
+            transform: isMobile ? 'rotate(-1deg)' : 'rotate(-2deg)',
+            width: '100%',
+          }}>
+            <img
+              src="/heritage-van.jpg"
+              alt="MOMO Air Care's first van and founder in 2010, outside a Seattle-area home"
+              loading="lazy"
+              style={{ width: '100%', display: 'block', borderRadius: '3px' }}
+            />
+            <figcaption style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '0.74rem', fontWeight: 600, color: '#777', paddingTop: '9px', textAlign: 'center' }}>
+              Where it started — one van, one promise.
+            </figcaption>
+          </figure>
         </Reveal>
 
         {/* Story copy */}

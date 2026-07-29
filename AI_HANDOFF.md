@@ -68,8 +68,9 @@ user request.
 
 ## Site Structure (as deployed)
 - Home: Hero (full-bleed hero-family.jpg, headline, Schedule Now/Get Estimate → both scroll
-  to #quote, ZIP checker, trust badges) → CompanyStory (heritage-van.jpg 2010 polaroid +
-  fleet-today.jpg script-logo van collage; stacked on mobile) → TrustStrip → Stats counters →
+  to #quote, ZIP checker, trust badges) → CompanyStory (heritage-van.jpg 2010 polaroid ONLY —
+  the fleet-today.jpg "yellow fleet" photo was removed at owner request 2026-07-28 and the
+  file deleted; do not re-add) → TrustStrip → Stats counters →
   ServicesGrid (6 photo catalog cards) → BookingSection (added 2026-07-28 at owner request).
   The dryer-safety block and ALL popups (exit-intent, discount coupon, did-you-know) remain
   removed. Footer + mobile StickyBar (Call/Get Quote → #quote) remain.
