@@ -6,6 +6,7 @@ import { TrustStrip } from './TrustStrip';
 import { CompanyStory } from './CompanyStory';
 import { BookingSection } from './BookingSection';
 import { Stats } from './Stats';
+import { ReviewsSection } from './ReviewsSection';
 import { Footer } from './Footer';
 import { StickyBar } from './StickyBar';
 
@@ -20,6 +21,7 @@ export function HomeSections() {
         <CompanyStory />
         <TrustStrip />
         <Stats />
+        <ReviewsSection />
         <BookingSection />
       </main>
 

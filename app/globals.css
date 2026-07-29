@@ -10,7 +10,8 @@ html,
 body {
   background: #ffffff;
   font-family: var(--font-inter), sans-serif;
-  overflow-x: hidden;
+  /* clip (not hidden): hidden creates a scroll container that breaks position:sticky */
+  overflow-x: clip;
   max-width: 100%;
 }
 img,
