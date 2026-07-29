@@ -10,10 +10,9 @@ import { submitLead } from '@/lib/submitLead';
 const SERVICES = [
   { label: 'Air Duct Cleaning', img: '/service-airduct.jpg' },
   { label: 'Dryer Vent Cleaning', img: '/service-dryer.jpg' },
-  { label: 'Chimney Cleaning', img: '/chimney-service.jpg' },
+  { label: 'Chimney Sweep or Repair', img: '/chimney-service.jpg' },
   { label: 'Furnace & Blower Cleaning', img: '/service-furnace.jpg' },
-  { label: 'Crawl Space & Insulation', img: '/service-crawl.jpg' },
-  { label: 'HVAC Sanitizing', img: '/family-home.jpg' },
+  { label: 'HVAC Repair', img: '/family-home.jpg' },
 ];
 
 const TIME_WINDOWS = ['Morning (8–12)', 'Afternoon (12–4)', 'Evening (4–8)', 'Flexible / ASAP'];
