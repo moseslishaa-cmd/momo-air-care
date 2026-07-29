@@ -1,6 +1,6 @@
 # AI_HANDOFF — MOMO Air Care Website
 
-Last updated: 2026-07-28. This file is the session-to-session handoff. Read it fully
+Last updated: 2026-07-29. This file is the session-to-session handoff. Read it fully
 before changing anything. Do not undo or redesign completed work without an explicit
 user request.
 
@@ -67,22 +67,38 @@ user request.
 - Compress via `sips -s format jpeg -s formatOptions 82` into public/.
 
 ## Site Structure (as deployed)
-- Home: Hero (full-bleed hero-family.jpg, headline, Schedule Now/Get Estimate → both scroll
-  to #quote, ZIP checker, trust badges) → CompanyStory (heritage-van.jpg 2010 polaroid ONLY —
-  the fleet-today.jpg "yellow fleet" photo was removed at owner request 2026-07-28 and the
-  file deleted; do not re-add) → TrustStrip → Stats counters →
-  ServicesGrid (6 photo catalog cards) → BookingSection (added 2026-07-28 at owner request).
-  The dryer-safety block and ALL popups (exit-intent, discount coupon, did-you-know) remain
-  removed. Footer + mobile StickyBar (Call/Get Quote → #quote) remain.
-- BookingSection (components/BookingSection.tsx, id="quote"): 3-step booking wizard —
-  MULTI-SELECT photo-tile service picker (toggles + continue button, owner request
-  2026-07-28) → 14-day chip picker + time-window pills → contact/address details with
-  summary-edit chips. Selected services join with ' + ' into the single `service`
-  payload field (server cap 200 chars). Same field names + honeypot as the contact-page
-  QuoteForm; delivery via lib/submitLead.ts (same /api/quote → browser-fallback path).
-  Mascot beside the card like the /contact layout. Payload page='home-booking'.
-  Day picker starts TOMORROW — same-day booking intentionally not offered (owner request
-  2026-07-28); do not add a Today option.
+- Home: Hero (headline "The MOMO Standard.", bold services bullet line
+  "Air Ducts • HVAC • …", support copy, Schedule Now → #quote + black CALL button (tel:),
+  ZIP checker, trust badges) → CompanyStory (heritage-van.jpg 2010 polaroid ONLY —
+  fleet-today.jpg removed at owner request 2026-07-28, file deleted; do not re-add) →
+  TrustStrip → Stats counters → BookingSection (id="quote").
+  ServicesGrid was REMOVED from the homepage at owner request 2026-07-29 (component file
+  deleted; old /#services links retargeted to /#quote). The dryer-safety block and ALL
+  popups remain removed (ExitIntent + DiscountPopup files deleted 2026-07-29).
+  Footer + mobile StickyBar (Call/Get Quote → #quote) remain.
+- NO EMOJIS anywhere on the site (owner request 2026-07-29) — sweep removed them all.
+  Allowed: monochrome text glyphs (★ rating stars, ✓ checks, › breadcrumbs, ▼) and
+  ORIGINAL inline stroke SVG icons (contact tiles + nav phone). Don't reintroduce emojis.
+- Desktop phone CTA (2026-07-29, judge-panel design): NavBar right side carries a black
+  call chip — stroke phone SVG, "Call Us" microlabel, number in brand yellow — beside the
+  yellow quote CTA. Always visible (header is sticky). FloatingCallButton DELETED
+  (the old glowing mid-right floater); glow-pulse/shine-sweep keyframes removed from
+  globals.css. Mobile unchanged (StickyBar). Chip is client-rendered same as before;
+  curl checks may need a real browser / fresh CDN copy.
+- BookingSection (components/BookingSection.tsx, id="quote"): header is just the H2
+  ("Schedule Your Service." — chip + subtitle removed at owner request). 3-step wizard —
+  MULTI-SELECT photo-tile service picker: Air Duct Cleaning, Dryer Vent Cleaning,
+  Chimney Sweep or Repair, HVAC Repair & Inspection (tile names per owner 2026-07-29;
+  Crawl Space and HVAC Sanitizing tiles removed) + "Not sure" full-width toggle →
+  14-day chip picker + time-window pills → contact/address details with summary-edit
+  chips. Selected services join with ' + ' into the single `service` payload field
+  (server cap 200 chars). Same field names + honeypot as the contact-page QuoteForm;
+  delivery via lib/submitLead.ts (same /api/quote → browser-fallback path).
+  Mascot beside the card. Payload page='home-booking'. Day picker starts TOMORROW —
+  same-day intentionally not offered; do not add a Today option.
+- Owner-supplied photos (2026-07-29) replaced service-dryer.jpg (exterior vent shot) and
+  service-airduct.jpg (ceiling duct shot) — each used by its booking tile AND its service
+  page hero. Process: crop 16:10 top-biased with PIL, JPEG quality=82.
 - Pages: /air-duct-cleaning, /dryer-vent-cleaning, /furnace-cleaning, /crawl-space-services,
   /chimney-cleaning (all from lib/services.ts via app/[service]/page.tsx + ServicePage.tsx),
   /service-areas + /service-areas/{seattle,bellevue,tacoma,renton}, /about, /contact.
