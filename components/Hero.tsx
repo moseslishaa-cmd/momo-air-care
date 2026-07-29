@@ -108,7 +108,7 @@ export function Hero() {
               fontSize: isMobile ? 'clamp(2.3rem, 10vw, 3rem)' : 'clamp(3rem, 4.6vw, 4.1rem)',
               lineHeight: 1.05, color: '#0e0e0e', margin: '0 0 16px',
             }}>
-              You Enjoy Your Home.<br />We&apos;ll Take Care of the Rest<span style={{ color: YELLOW }}>.</span>
+              The MOMO Standard<span style={{ color: YELLOW }}>.</span>
             </h1>
           </Reveal>
 
