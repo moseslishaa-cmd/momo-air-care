@@ -74,10 +74,12 @@ user request.
   The dryer-safety block and ALL popups (exit-intent, discount coupon, did-you-know) remain
   removed. Footer + mobile StickyBar (Call/Get Quote → #quote) remain.
 - BookingSection (components/BookingSection.tsx, id="quote"): 3-step booking wizard —
-  photo-tile service picker (auto-advances) → 14-day chip picker + time-window pills →
-  contact/address details with summary-edit chips. Same field names + honeypot as the
-  contact-page QuoteForm; delivery via lib/submitLead.ts (same /api/quote → browser-fallback
-  path). Mascot beside the card like the /contact layout. Payload page='home-booking'.
+  MULTI-SELECT photo-tile service picker (toggles + continue button, owner request
+  2026-07-28) → 14-day chip picker + time-window pills → contact/address details with
+  summary-edit chips. Selected services join with ' + ' into the single `service`
+  payload field (server cap 200 chars). Same field names + honeypot as the contact-page
+  QuoteForm; delivery via lib/submitLead.ts (same /api/quote → browser-fallback path).
+  Mascot beside the card like the /contact layout. Payload page='home-booking'.
   Day picker starts TOMORROW — same-day booking intentionally not offered (owner request
   2026-07-28); do not add a Today option.
 - Pages: /air-duct-cleaning, /dryer-vent-cleaning, /furnace-cleaning, /crawl-space-services,
