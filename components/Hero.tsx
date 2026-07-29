@@ -140,14 +140,14 @@ export function Hero() {
               }}>
                 Schedule Now
               </a>
-              <a href="#quote" className="btn-ripple" style={{
+              <a href={SITE.phoneHref} className="btn-ripple" style={{
                 fontFamily: 'var(--font-oswald), sans-serif', fontWeight: 700, fontSize: '1rem',
                 letterSpacing: '0.08em', textTransform: 'uppercase',
                 background: '#111', color: '#fff', textDecoration: 'none',
                 padding: '16px 30px', borderRadius: '12px',
                 flex: isMobile ? '1 1 100%' : 'none', textAlign: 'center',
               }}>
-                Get Estimate
+                Call {SITE.phoneDisplay}
               </a>
             </div>
           </Reveal>
