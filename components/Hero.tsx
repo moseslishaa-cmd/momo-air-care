@@ -114,12 +114,17 @@ export function Hero() {
 
           <Reveal delay={0.12}>
             <p style={{
+              fontFamily: 'var(--font-inter), sans-serif', fontSize: isMobile ? '0.85rem' : '0.92rem',
+              color: '#111', lineHeight: 1.7, maxWidth: '470px', margin: '0 0 10px', fontWeight: 700,
+            }}>
+              Air Ducts • HVAC • Furnaces • Dryer Vents • Chimneys • Repairs • Installations
+            </p>
+            <p style={{
               fontFamily: 'var(--font-inter), sans-serif', fontSize: isMobile ? '0.97rem' : '1.05rem',
               color: '#3d3d3a', lineHeight: 1.75, maxWidth: '470px', margin: '0 0 22px', fontWeight: 500,
             }}>
-              Air ducts, dryer vents, chimneys, and furnaces — deep-cleaned by licensed local
-              technicians who treat your home like family lives there. Serving {SITE.region} with
-              photo-documented results.
+              Professional cleaning, repairs, replacements, and installations backed by licensed
+              technicians, commercial grade equipment, and exceptional customer service.
             </p>
           </Reveal>
 
