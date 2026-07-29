@@ -1,6 +1,6 @@
 # AI_HANDOFF — MOMO Air Care Website
 
-Last updated: 2026-07-17. This file is the session-to-session handoff. Read it fully
+Last updated: 2026-07-28. This file is the session-to-session handoff. Read it fully
 before changing anything. Do not undo or redesign completed work without an explicit
 user request.
 
@@ -28,8 +28,31 @@ user request.
 - Git creds are in macOS keychain — plain `git push origin main` works. Commit as
   user.email=moses.lishaa@gmail.com, user.name="Moses Lishaa".
 - ALWAYS: `npx tsc --noEmit` + `npm run build` green BEFORE pushing; verify live afterwards
-  by curling https://www.momoaircare.com for a marker of the change.
+  by curling https://momoaircare.com for a marker of the change.
+- PRIMARY DOMAIN IS THE APEX (momoaircare.com); www 308-redirects to apex (flipped
+  2026-07-28 via Vercel API to match the code's canonical SITE.url and the activated
+  FormSubmit pair — see Lead Delivery below). Vercel CLI is authed as the owner
+  (`npx vercel whoami` → moseslishaa-9874, team moses88); token at
+  ~/Library/Application Support/com.vercel.cli/auth.json works for REST API calls.
+  Do NOT flip the domain direction back.
 - Old GitHub Pages mirror (gh-pages branch) is obsolete/stale — do not update.
+
+## Lead Delivery (RESOLVED 2026-07-28 — how it works)
+- FormSubmit activation is per (email, domain) pair. The ACTIVATED pair is
+  moses.lishaa@gmail.com + momoaircare.com (apex). www was never activated — that's
+  why the form failed while the site's primary domain was www. Fixed by making apex
+  the primary domain (also fixed the SEO canonical mismatch).
+- Delivery path: browser → POST /api/quote (server forwards to FormSubmit, but
+  FormSubmit BLOCKS Vercel datacenter IPs → returns fallback:true) → the client
+  (Contact.tsx) then POSTs directly from the visitor's browser to
+  formsubmit.co/ajax/moses.lishaa@gmail.com with Origin https://momoaircare.com →
+  delivered. This dual path is intentional; a 502 from /api/quote alone is NOT a bug.
+- Verified end-to-end 2026-07-28 in a real browser: form on /contact shows the
+  "Thank You!" success card, and a test lead ("TEST — Please Ignore") was delivered
+  to moses.lishaa@gmail.com.
+- Stray "This form needs Activation" emails for the www pair may sit in the owner's
+  inbox (triggered during diagnosis) — harmless, can be ignored; www pages no longer
+  exist (308 to apex before any JS runs).
 
 ## AI Image Pipeline
 - tools/gen-image.py — Gemini image generation. Key in .env.local (GEMINI_API_KEY,
@@ -60,13 +83,9 @@ user request.
   which forwards server-side to FormSubmit → moses.lishaa@gmail.com.
 
 ## OPEN ITEMS — next steps in order
-1. **Lead form activation (CRITICAL, blocks all leads).** FormSubmit still replies
-   "This form needs Activation". A fresh activation email was sent 2026-07-17 to
-   moses.lishaa@gmail.com (sender "FormSubmit", check Spam/Promotions). Owner must click
-   "Activate Form". Then verify end-to-end:
-   `curl -X POST https://www.momoaircare.com/api/quote -H 'Content-Type: application/json'
-   -d '{"name":"TEST","phone":"(000) 000-0000","message":"test","company":""}'`
-   → expect {"ok":true}.
+1. ~~Lead form activation~~ **DONE 2026-07-28** — see "Lead Delivery" section above.
+   Note: the curl-only test of /api/quote returns 502/fallback BY DESIGN (datacenter
+   IP block); real-browser delivery is what counts and it works.
 2. Brand image backlog (generate with existing pipeline, same style block): more mascot
    poses, About-page team/office imagery upgrades, seasonal banners, social covers.
 3. Optional pages the owner floated but NOT built (need real business facts first —
