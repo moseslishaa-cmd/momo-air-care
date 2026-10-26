@@ -99,3 +99,63 @@ These need the owner's Google account — the assistant can guide on-screen:
   North Bend, Lacey, Tumwater, DuPont (next batch, same quality bar).
 - City-x-service combo pages (e.g., dryer-vent-cleaning in {city}) — unclaimed by all
   competitors; only with genuinely distinct content per page, never name-swaps.
+
+
+---
+
+## PHASE 2 — 2026-10-26 (continuation session)
+
+### Implemented
+- **Homeowner Guides hub** (/guides + 7 articles) — the topical-authority layer competitors
+  lack. Each has Article/FAQPage/BreadcrumbList JSON-LD, related-service links, QuoteForm.
+  Facts policy enforced: the rebates guide cites ONLY officially verified figures
+  (seattle.gov, Oct 2026) with an on-page verification note; federal 25C credit expiry
+  (Dec 31, 2025, OBBBA §70505) stated plainly; PSE amounts deliberately not printed
+  (volatile, third-party-only sources) — installer-network requirement flagged instead.
+  A USFA dryer-fire stat was fact-checked and corrected before publish (agent draft said
+  31%/2018-20; the verifiable report figure is ~a third, 2008-10 NFIRS — phrased accordingly).
+- **Core Web Vitals**: hero image recompressed 312KB→140KB (identical pixels at display
+  size). Lighthouse mobile (lab, live site): Performance 84→91, LCP 4.5s→3.4s, CLS 0.046,
+  TBT 0ms. Visual regression vs. pre-change baseline: identical.
+- **Crawl audit (live)**: http→https, www→apex, trailing-slash all single 308s; every
+  sitemap URL returns 200; sitemap/robots valid; no orphan pages (all pages reachable
+  via nav/footer/index pages).
+
+### Competitor additions (BelRed, Aire Serv — researched 2026-10-26)
+- **BelRed**: ~59 city hubs + ~49 city×service combo pages + ~428-post blog — volume
+  proves content works in this market, but their city pages are name-swappable with no
+  real localization, headings are messy, and there's no real-time booking. They merchandise
+  offers hard (discount stack, financing partners, referral program) and show a license
+  number + 6,000+ reviews claim.
+- **Aire Serv**: national franchise platform with ZIP-gated lead routing and a paid
+  maintenance membership (Advantage Plan) as a conversion asset; actual Seattle-area
+  coverage is thin (no Bellevue/Tacoma/Eastside franchise), template leftovers abound.
+- Takeaways for MOMO: (1) our genuinely-local city pages and honest guides out-localize
+  both; (2) a maintenance membership is their strongest idea worth copying — OWNER
+  DECISION, needs real pricing; (3) city×service combo pages are proven here (BelRed/Fox)
+  and still unclaimed for duct/dryer/chimney terms; (4) license number display is table
+  stakes — still waiting on owner's number.
+
+### Keyword tiers (intent-classified; volumes unavailable — no data tool connected)
+- **Tier 1 immediate service** → /furnace-repair, /air-conditioning, /heat-pump-services,
+  /hvac-repair-inspection. NOT targeted: "emergency/24-7" terms — business hours are
+  7:00–20:00; do not claim emergency service unless the owner adds it.
+- **Tier 2 installation** → /furnace-installation (install+replacement cluster),
+  /heat-pump-services (install incl. mini-splits), /air-conditioning (install).
+- **Tier 3 maintenance** → /furnace-cleaning, /hvac-repair-inspection. "Maintenance plan"
+  terms blocked until a real membership exists (owner decision).
+- **Tier 4 educational** → the 7 guides; each links to its money page.
+
+### Monitoring plan (once GSC/GA4 are connected by owner)
+Weekly: clicks, impressions, CTR, coverage/indexing errors; query-level trends for
+service and city pages; high-impression/low-CTR pages → title/description iteration.
+Conversions: quote-form submissions (payload `page` field already identifies source
+page) + call-button clicks (add GA4 event once property exists).
+
+### Phase-3 backlog
+1. Remaining 8 city pages (Marysville, Arlington, Monroe, Duvall, North Bend, Lacey,
+   Tumwater, DuPont) — same quality bar.
+2. City×service combo pages for dryer-vent/chimney/duct terms in top cities — only with
+   genuinely distinct content.
+3. More guides: AC sizing, mini-split vs central, crawl space moisture, wildfire smoke IAQ.
+4. Owner-gated: maintenance membership page, license number, GBP/GSC/GA4, financing (if any).
