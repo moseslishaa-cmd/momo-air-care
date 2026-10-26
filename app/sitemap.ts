@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { SERVICES_CONTENT } from '@/lib/services';
 import { CITIES_CONTENT } from '@/lib/cities';
+import { GUIDES_CONTENT } from '@/lib/guides';
 import { SITE } from '@/lib/site';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -20,6 +21,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
+  const guidePages: MetadataRoute.Sitemap = [
+    { url: `${SITE.url}/guides`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.6 },
+    ...GUIDES_CONTENT.map((g) => ({
+      url: `${SITE.url}/guides/${g.slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+    })),
+  ];
+
   const cityPages: MetadataRoute.Sitemap = CITIES_CONTENT.map((c) => ({
     url: `${SITE.url}/service-areas/${c.slug}`,
     lastModified: now,
@@ -27,5 +38,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...servicePages, ...cityPages];
+  return [...staticPages, ...servicePages, ...cityPages, ...guidePages];
 }

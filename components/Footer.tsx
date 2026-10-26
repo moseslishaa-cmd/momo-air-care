@@ -64,6 +64,7 @@ export function Footer() {
           <Link href="/" style={COL_LINK}>Home</Link>
           <Link href="/#quote" style={COL_LINK}>All Services</Link>
           <Link href="/about" style={COL_LINK}>About Us</Link>
+          <Link href="/guides" style={COL_LINK}>Homeowner Guides</Link>
           <Link href="/contact" style={COL_LINK}>Get a Free Quote</Link>
         </nav>
 
