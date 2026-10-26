@@ -19,6 +19,8 @@ const SERVICE_LINKS = [
   { label: 'Chimney Cleaning', href: '/chimney-cleaning', desc: 'Full-flue sweep with HEPA containment' },
   { label: 'Crawl Space & Insulation', href: '/crawl-space-services', desc: 'Cleanup, removal, and fresh installation' },
   { label: 'HVAC Repair & Inspection', href: '/hvac-repair-inspection', desc: 'Airflow diagnostics and honest findings' },
+  { label: 'Furnace Repair', href: '/furnace-repair', desc: 'Diagnostic-first fixes, tested under load' },
+  { label: 'Heat Pumps & AC', href: '/heat-pump-services', desc: 'Heating and cooling in one efficient system' },
 ];
 
 export function CityPage({ city }: { city: CityContent }) {

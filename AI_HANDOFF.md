@@ -5,7 +5,7 @@ competitor findings, owner checklist, and what is pending. Key additions: 12 new
 pages (16 total, lib/cities.ts now has a `blurb` field; /service-areas index and footer
 are data-driven), new /hvac-repair-inspection service page (+ service-hvac.jpg),
 landscape /og.jpg (1200×630) in metadata, keyword-led homepage title, react-dom
-preload for the hero LCP image. Build = 33 pages. This file is the session-to-session handoff. Read it fully
+preload for the hero LCP image. Owner then confirmed (2026-10-26) furnace repair/install and AC/heat-pump services are offered → 4 more service pages: /furnace-repair, /furnace-installation, /heat-pump-services, /air-conditioning (+ matching service-*.jpg photos). Build = 37 pages. This file is the session-to-session handoff. Read it fully
 before changing anything. Do not undo or redesign completed work without an explicit
 user request.
 

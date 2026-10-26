@@ -41,10 +41,11 @@ onehourheatandair.com. Full agent findings in the session transcript; synthesis:
 Cannibalization rule: one geo page per city; service pages target the service head
 terms with "Greater Seattle"; the homepage carries the umbrella title.
 
-**NOT targeted (not verified as offered): furnace repair/installation/replacement, AC
-repair/installation, heat pump anything, ductless mini-splits.** These are the market's
-biggest head terms, but publishing pages for them without owner confirmation would
-violate the no-invented-services rule. OWNER DECISION PENDING — see §5.
+**UPDATE 2026-10-26: owner confirmed furnace repair, furnace installation/replacement,
+and AC/heat pump/mini-split services ARE offered.** Pages built the same day:
+/furnace-repair, /furnace-installation, /heat-pump-services, /air-conditioning —
+all linked from nav, footer, and city pages. Rebate specifics intentionally omitted
+(unverifiable); pages say programs vary and are confirmed during assessment.
 
 ## 3. Implemented 2026-10-26
 
@@ -85,9 +86,6 @@ These need the owner's Google account — the assistant can guide on-screen:
 
 ## 5. Blocked / pending owner decisions
 
-- **HVAC scope**: does MOMO perform furnace repair/installation, AC, heat pumps,
-  mini-splits? If yes → the biggest keyword clusters open up (new service pages).
-  If no → current inspection-first positioning stands (honest and differentiated).
 - **WA contractor license number** for footer/schema/GBP.
 - **Real GBP review link** for lib/site.ts googleReviewsUrl.
 - **Keyword volumes/rankings**: need ahrefs (or similar) connected via /mcp to add data.

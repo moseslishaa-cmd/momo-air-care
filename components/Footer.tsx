@@ -77,6 +77,10 @@ export function Footer() {
           <Link href="/crawl-space-services" style={COL_LINK}>Insulation</Link>
           <Link href="/chimney-cleaning" style={COL_LINK}>Chimney Cleaning</Link>
           <Link href="/hvac-repair-inspection" style={COL_LINK}>HVAC Repair & Inspection</Link>
+          <Link href="/furnace-repair" style={COL_LINK}>Furnace Repair</Link>
+          <Link href="/furnace-installation" style={COL_LINK}>Furnace Installation</Link>
+          <Link href="/heat-pump-services" style={COL_LINK}>Heat Pumps</Link>
+          <Link href="/air-conditioning" style={COL_LINK}>Air Conditioning</Link>
         </nav>
 
         {/* Cities */}
