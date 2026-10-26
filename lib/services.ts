@@ -287,6 +287,59 @@ export const SERVICES_CONTENT: ServiceContent[] = [
       { q: 'When is the best time to book?', a: 'Late spring through early fall — you get the best availability and your chimney is ready before the first cold night. We sweep year-round though.' },
     ],
   },
+  {
+    slug: 'hvac-repair-inspection',
+    nav: 'HVAC Repair & Inspection',
+    metaTitle: 'HVAC Inspection & Repair in Greater Seattle',
+    metaDescription:
+      'HVAC system inspection, airflow diagnostics, tune-ups and honest repair guidance for Greater Seattle homes. Camera-documented findings. Call (425) 200-5790.',
+    eyebrow: 'HVAC Repair & Inspection',
+    h1: 'Know Exactly What Your HVAC Needs',
+    lead:
+      "Weak airflow, rooms that never reach temperature, a system that runs louder every winter — most HVAC problems start small and get expensive when ignored. Our inspection puts eyes (and cameras) on the whole air side of your system: ducts, blower, filter housing, coils, and vents. You get a photo-documented picture of what's actually going on, a fix for what we can repair on the spot, and straight answers about anything bigger — no scare tactics, no upsell scripts.",
+    signsTitle: 'Signs your system needs a professional look',
+    signs: [
+      'Some rooms are always hotter or colder than the rest',
+      'Airflow from vents feels weaker than it used to',
+      'The system is louder than before, or rattles when starting',
+      'Energy bills creeping up without a change in habits',
+      'The system short-cycles — turns on and off rapidly',
+      "It's been years since anyone inspected the system",
+    ],
+    benefits: [
+      'A clear, photo-documented picture of your system\'s condition',
+      'Airflow and performance issues caught before they grow',
+      'On-the-spot fixes for what can be repaired same visit',
+      'Honest guidance when a problem needs an HVAC contractor — we tell you exactly what to ask for',
+    ],
+    included: [
+      'Full visual inspection of the air handler and blower',
+      'Airflow check at supply and return vents',
+      'Filter housing and filter condition check',
+      'Duct connection and leak inspection',
+      'Camera documentation of findings',
+      'Written summary of what we found and what we recommend',
+    ],
+    process: [
+      { title: 'Listen First', desc: 'You tell us the symptoms — cold rooms, noise, weak flow — so we know where to focus.' },
+      { title: 'Inspect & Measure', desc: 'We open the system up, check airflow room by room, and camera-document what we find.' },
+      { title: 'Fix What We Can', desc: 'Cleaning, airflow restoration, and minor repairs happen on the spot whenever possible.' },
+      { title: 'Straight Answers', desc: "You get photos, a plain-English summary, and honest advice — including when the right answer is 'this doesn't need fixing.'" },
+    ],
+    equipment: [
+      'Digital airflow measurement tools',
+      'Duct and air-handler inspection cameras',
+      'HEPA-filtered cleaning equipment',
+    ],
+    media: { type: 'image', src: '/service-hvac.jpg' },
+    faqs: [
+      { q: 'Is this the same as a furnace tune-up?', a: 'It covers more. A tune-up focuses on the furnace itself; our inspection covers the full air side — ducts, blower, filter, vents, and airflow — plus cleaning and minor repairs where needed.' },
+      { q: 'Do you repair furnaces and air conditioners?', a: 'We handle the air side: blower cleaning, airflow restoration, duct repairs, and minor component fixes. For major mechanical or refrigerant work, we document the issue and tell you exactly what to ask a specialist for.' },
+      { q: 'How long does an inspection take?', a: 'Usually 60–90 minutes for a full system check, including the written summary and photos.' },
+      { q: 'What if you find nothing wrong?', a: "Then you'll know that — with photos to prove it. We'd rather tell you your system is fine than invent work." },
+      { q: 'Can you do the inspection and a duct cleaning in one visit?', a: 'Yes, and most customers combine them. The inspection confirms whether a cleaning is actually needed before any work starts.' },
+    ],
+  },
 ];
 
 export function getService(slug: string): ServiceContent | undefined {

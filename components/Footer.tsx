@@ -76,7 +76,7 @@ export function Footer() {
           <Link href="/crawl-space-services" style={COL_LINK}>Crawl Space</Link>
           <Link href="/crawl-space-services" style={COL_LINK}>Insulation</Link>
           <Link href="/chimney-cleaning" style={COL_LINK}>Chimney Cleaning</Link>
-          <Link href="/contact" style={COL_LINK}>HVAC Sanitizing</Link>
+          <Link href="/hvac-repair-inspection" style={COL_LINK}>HVAC Repair & Inspection</Link>
         </nav>
 
         {/* Cities */}
@@ -86,6 +86,10 @@ export function Footer() {
           <Link href="/service-areas/bellevue" style={COL_LINK}>Bellevue</Link>
           <Link href="/service-areas/tacoma" style={COL_LINK}>Tacoma</Link>
           <Link href="/service-areas/renton" style={COL_LINK}>Renton</Link>
+          <Link href="/service-areas/kirkland" style={COL_LINK}>Kirkland</Link>
+          <Link href="/service-areas/redmond" style={COL_LINK}>Redmond</Link>
+          <Link href="/service-areas/everett" style={COL_LINK}>Everett</Link>
+          <Link href="/service-areas/olympia" style={COL_LINK}>Olympia</Link>
           {['Kent', 'Everett', 'Lynnwood', 'Redmond', 'Issaquah', 'Kirkland'].map((c) => (
             <span key={c} style={{ ...COL_LINK, cursor: 'default' }}>{c}</span>
           ))}

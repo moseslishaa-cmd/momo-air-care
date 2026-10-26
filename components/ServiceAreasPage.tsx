@@ -7,15 +7,10 @@ import { StickyBar } from './StickyBar';
 import { ServiceArea } from './ServiceArea';
 import { Reveal } from './Reveal';
 import { useIsMobile } from './useIsMobile';
+import { CITIES_CONTENT } from '@/lib/cities';
 
 const YELLOW = '#FFD400';
 
-const FEATURED = [
-  { slug: 'seattle', name: 'Seattle', blurb: 'Craftsman classics to new Ballard townhomes' },
-  { slug: 'bellevue', name: 'Bellevue', blurb: 'Eastside homes, condos, and high-rises' },
-  { slug: 'tacoma', name: 'Tacoma', blurb: 'North End character homes and beyond' },
-  { slug: 'renton', name: 'Renton', blurb: 'Highlands, Fairwood, and new developments' },
-];
 
 export function ServiceAreasPage() {
   const isMobile = useIsMobile(1024);
@@ -39,8 +34,8 @@ export function ServiceAreasPage() {
         {/* Featured city pages */}
         <section style={{ maxWidth: '1160px', margin: '0 auto', padding: isMobile ? '26px 20px 8px' : '36px 24px 8px' }}>
           <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr 1fr' : 'repeat(4, 1fr)', gap: '12px' }}>
-            {FEATURED.map((c, i) => (
-              <Reveal key={c.slug} delay={i * 0.05}>
+            {CITIES_CONTENT.map((c, i) => (
+              <Reveal key={c.slug} delay={(i % 4) * 0.05}>
                 <Link href={`/service-areas/${c.slug}`} style={{
                   display: 'block', background: '#111', borderRadius: '16px',
                   padding: '18px 18px', textDecoration: 'none', height: '100%',

@@ -27,11 +27,11 @@ const fraunces = Fraunces({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: 'MOMO Air Care — Air Duct & Dryer Vent Cleaning | Greater Seattle, WA',
+    default: 'Air Duct, Dryer Vent & Chimney Cleaning in Seattle, WA | MOMO Air Care',
     template: '%s | MOMO Air Care',
   },
   description:
-    'Professional air duct cleaning, dryer vent cleaning, furnace & blower cleaning, and crawl space services across Greater Seattle. Licensed & insured, satisfaction guaranteed. Call (425) 200-5790 for a free quote.',
+    'Professional air duct cleaning, dryer vent cleaning, chimney sweeping, furnace & blower cleaning, and crawl space services in Seattle, Bellevue, Tacoma & across Puget Sound. Call (425) 200-5790 for a free quote.',
   alternates: { canonical: '/' },
   openGraph: {
     type: 'website',
@@ -40,14 +40,14 @@ export const metadata: Metadata = {
     description:
       'Air duct & dryer vent cleaning specialists serving Greater Seattle. Licensed, insured, satisfaction guaranteed. Free quotes and fast scheduling.',
     url: SITE.url,
-    images: [{ url: '/brand-hero.jpg', width: 832, height: 1248, alt: 'MOMO Air Care mascot' }],
+    images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'A MOMO Air Care technician with a happy family in a bright Seattle-area living room' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'MOMO Air Care — Healthy Air Starts Here',
     description:
       'Air duct & dryer vent cleaning specialists serving Greater Seattle. Free quotes, fast scheduling, satisfaction guaranteed.',
-    images: ['/brand-hero.jpg'],
+    images: ['/og.jpg'],
   },
   robots: { index: true, follow: true },
 };

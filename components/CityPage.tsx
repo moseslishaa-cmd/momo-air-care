@@ -16,7 +16,9 @@ const SERVICE_LINKS = [
   { label: 'Air Duct Cleaning', href: '/air-duct-cleaning', desc: 'Whole-system deep clean with negative pressure' },
   { label: 'Dryer Vent Cleaning', href: '/dryer-vent-cleaning', desc: 'Full-line lint removal — from $69' },
   { label: 'Furnace & Blower Cleaning', href: '/furnace-cleaning', desc: 'Blower removed and cleaned blade by blade' },
+  { label: 'Chimney Cleaning', href: '/chimney-cleaning', desc: 'Full-flue sweep with HEPA containment' },
   { label: 'Crawl Space & Insulation', href: '/crawl-space-services', desc: 'Cleanup, removal, and fresh installation' },
+  { label: 'HVAC Repair & Inspection', href: '/hvac-repair-inspection', desc: 'Airflow diagnostics and honest findings' },
 ];
 
 export function CityPage({ city }: { city: CityContent }) {

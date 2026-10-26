@@ -14,6 +14,7 @@ const SERVICE_LINKS = [
   { label: 'Furnace Cleaning', href: '/furnace-cleaning' },
   { label: 'Crawl Space Services', href: '/crawl-space-services' },
   { label: 'Chimney Cleaning', href: '/chimney-cleaning' },
+  { label: 'HVAC Repair & Inspection', href: '/hvac-repair-inspection' },
 ];
 
 const MAIN_LINKS = [
