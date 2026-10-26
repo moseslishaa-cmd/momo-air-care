@@ -28,15 +28,7 @@ export function Footer() {
 
         {/* Brand */}
         <div style={{ gridColumn: isMobile ? '1 / -1' : 'auto' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
-            <span style={{
-              width: '34px', height: '34px', borderRadius: '10px', background: YELLOW,
-              display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-            }}>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="2.4" strokeLinecap="round" aria-hidden="true">
-                <path d="M3 8h11a3 3 0 1 0-3-3" /><path d="M3 13h15a3 3 0 1 1-3 3" /><path d="M3 18h7" />
-              </svg>
-            </span>
+          <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
             <span style={{ fontFamily: 'var(--font-oswald), sans-serif', fontWeight: 700, fontSize: '1.1rem', letterSpacing: '0.1em', color: '#fff', textTransform: 'uppercase' }}>
               MOMO <span style={{ color: YELLOW }}>Air Care</span>
             </span>
@@ -95,9 +87,9 @@ export function Footer() {
           <Link href="/service-areas/redmond" style={COL_LINK}>Redmond</Link>
           <Link href="/service-areas/everett" style={COL_LINK}>Everett</Link>
           <Link href="/service-areas/olympia" style={COL_LINK}>Olympia</Link>
-          {['Kent', 'Everett', 'Lynnwood', 'Redmond', 'Issaquah', 'Kirkland'].map((c) => (
-            <span key={c} style={{ ...COL_LINK, cursor: 'default' }}>{c}</span>
-          ))}
+          <Link href="/service-areas/kent" style={COL_LINK}>Kent</Link>
+          <Link href="/service-areas/lynnwood" style={COL_LINK}>Lynnwood</Link>
+          <Link href="/service-areas/issaquah" style={COL_LINK}>Issaquah</Link>
           <Link href="/service-areas" style={{ ...COL_LINK, color: YELLOW, fontWeight: 700 }}>All service areas →</Link>
         </nav>
       </div>
