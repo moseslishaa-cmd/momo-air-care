@@ -213,7 +213,7 @@ export function NavBar() {
               transition={{ duration: 0.26 }}
               style={{ overflow: 'hidden', background: '#fff', borderTop: '1px solid #f0f0ee' }}
             >
-              <div style={{ padding: '8px 18px 18px', display: 'flex', flexDirection: 'column' }}>
+              <div className="mobile-menu-scroll" style={{ padding: '8px 18px 18px', display: 'flex', flexDirection: 'column' }}>
                 <span style={{ fontFamily: 'var(--font-oswald), sans-serif', fontWeight: 700, fontSize: '0.66rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#999', padding: '12px 4px 4px' }}>Services</span>
                 {SERVICE_LINKS.map((l) => (
                   <Link key={l.href} href={l.href} onClick={() => setOpen(false)} style={{
