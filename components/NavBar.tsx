@@ -213,32 +213,53 @@ export function NavBar() {
               transition={{ duration: 0.26 }}
               style={{ overflow: 'hidden', background: '#fff', borderTop: '1px solid #f0f0ee' }}
             >
-              <div className="mobile-menu-scroll" style={{ padding: '8px 18px 18px', display: 'flex', flexDirection: 'column' }}>
-                <span style={{ fontFamily: 'var(--font-oswald), sans-serif', fontWeight: 700, fontSize: '0.66rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#999', padding: '12px 4px 4px' }}>Services</span>
-                {SERVICE_LINKS.map((l) => (
-                  <Link key={l.href} href={l.href} onClick={() => setOpen(false)} style={{
-                    fontFamily: 'var(--font-inter), sans-serif', fontWeight: 700, fontSize: '0.95rem',
-                    color: '#222', textDecoration: 'none', padding: '12px 4px',
-                    borderBottom: '1px solid #f4f4f2',
-                  }}>{l.label}</Link>
-                ))}
-                <span style={{ fontFamily: 'var(--font-oswald), sans-serif', fontWeight: 700, fontSize: '0.66rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#999', padding: '14px 4px 4px' }}>Company</span>
-                {MAIN_LINKS.map((l) => (
-                  <Link key={l.label} href={l.href} onClick={() => setOpen(false)} style={{
-                    fontFamily: 'var(--font-inter), sans-serif', fontWeight: 700, fontSize: '0.95rem',
-                    color: '#222', textDecoration: 'none', padding: '12px 4px',
-                    borderBottom: '1px solid #f4f4f2',
-                  }}>{l.label}</Link>
-                ))}
-                <a href={SITE.phoneHref} onClick={() => setOpen(false)} className="btn-ripple" style={{
-                  marginTop: '14px', textAlign: 'center',
-                  fontFamily: 'var(--font-oswald), sans-serif', fontWeight: 700, fontSize: '1rem',
-                  letterSpacing: '0.08em', textTransform: 'uppercase',
-                  background: '#111', color: YELLOW, textDecoration: 'none',
-                  padding: '14px', borderRadius: '12px',
-                }}>
-                  {SITE.phoneDisplay}
-                </a>
+              <div className="mobile-menu-scroll" style={{ padding: '10px 18px 20px', display: 'flex', flexDirection: 'column' }}>
+                <span style={{ fontFamily: 'var(--font-oswald), sans-serif', fontWeight: 700, fontSize: '0.66rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#999', padding: '10px 2px 10px' }}>Services</span>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '9px' }}>
+                  {SERVICE_LINKS.map((l) => (
+                    <Link key={l.href} href={l.href} onClick={() => setOpen(false)} style={{
+                      fontFamily: 'var(--font-inter), sans-serif', fontWeight: 700, fontSize: '0.8rem',
+                      color: '#1c1c1c', textDecoration: 'none', lineHeight: 1.3,
+                      background: '#FAFAF7', border: '1px solid #ececea', borderRadius: '12px',
+                      padding: '13px 12px', display: 'flex', alignItems: 'center', gap: '8px',
+                    }}>
+                      <span aria-hidden="true" style={{ width: '6px', height: '6px', borderRadius: '50%', background: YELLOW, flexShrink: 0 }} />
+                      {l.label}
+                    </Link>
+                  ))}
+                </div>
+                <span style={{ fontFamily: 'var(--font-oswald), sans-serif', fontWeight: 700, fontSize: '0.66rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: '#999', padding: '18px 2px 10px' }}>Company</span>
+                <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                  {MAIN_LINKS.map((l) => (
+                    <Link key={l.label} href={l.href} onClick={() => setOpen(false)} style={{
+                      fontFamily: 'var(--font-inter), sans-serif', fontWeight: 700, fontSize: '0.82rem',
+                      color: '#222', textDecoration: 'none',
+                      background: '#fff', border: '1.5px solid #e2e2de', borderRadius: '999px',
+                      padding: '9px 16px',
+                    }}>{l.label}</Link>
+                  ))}
+                </div>
+                <div style={{ display: 'flex', gap: '10px', marginTop: '18px' }}>
+                  <a href={SITE.phoneHref} onClick={() => setOpen(false)} className="btn-ripple" style={{
+                    flex: 1, textAlign: 'center',
+                    fontFamily: 'var(--font-oswald), sans-serif', fontWeight: 700, fontSize: '0.95rem',
+                    letterSpacing: '0.07em', textTransform: 'uppercase',
+                    background: '#111', color: YELLOW, textDecoration: 'none',
+                    padding: '14px 10px', borderRadius: '12px', whiteSpace: 'nowrap',
+                  }}>
+                    {SITE.phoneDisplay}
+                  </a>
+                  <Link href="/contact" onClick={() => setOpen(false)} className="btn-ripple" style={{
+                    flex: 1, textAlign: 'center',
+                    fontFamily: 'var(--font-oswald), sans-serif', fontWeight: 700, fontSize: '0.95rem',
+                    letterSpacing: '0.07em', textTransform: 'uppercase',
+                    background: YELLOW, color: '#111', textDecoration: 'none',
+                    padding: '14px 10px', borderRadius: '12px', whiteSpace: 'nowrap',
+                    boxShadow: '0 6px 18px rgba(255,212,0,0.4)',
+                  }}>
+                    Free Quote
+                  </Link>
+                </div>
               </div>
             </motion.div>
           )}
