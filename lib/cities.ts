@@ -4,6 +4,9 @@ export interface CityContent {
   slug: string;
   name: string;
   blurb: string;
+  heroImg: string;
+  variant: 'dark-card' | 'yellow-band' | 'split' | 'bordered';
+  spotlight: { title: string; body: string; points: string[] };
   metaTitle: string;
   metaDescription: string;
   intro: string;
@@ -17,6 +20,13 @@ export const CITIES_CONTENT: CityContent[] = [
     slug: 'seattle',
     name: 'Seattle',
     blurb: "Craftsman classics to new Ballard townhomes",
+    heroImg: '/city-seattle.jpg',
+    variant: "dark-card",
+    spotlight: {
+      title: "Built for Seattle's Mixed Housing Stock",
+      body: "A 1920s Craftsman, a mid-century rambler, and a brand-new townhome can share one Seattle block — and each needs a different approach. Our technicians switch between all three every single day.",
+      points: ["Gravity-furnace conversions in pre-war homes", "Long, bend-heavy vent runs in new townhomes", "Equipment portable enough for dense blocks and apartments"],
+    },
     metaTitle: 'Air Duct & Dryer Vent Cleaning in Seattle, WA',
     metaDescription:
       'MOMO Air Care serves Seattle homes with air duct cleaning, dryer vent cleaning, furnace cleaning and crawl space services. Free quotes — (425) 200-5790.',
@@ -35,6 +45,13 @@ export const CITIES_CONTENT: CityContent[] = [
     slug: 'bellevue',
     name: 'Bellevue',
     blurb: "Eastside homes, condos, and high-rises",
+    heroImg: '/city-bellevue.jpg',
+    variant: "yellow-band",
+    spotlight: {
+      title: "Condo, High-Rise, or View Home — We Fit",
+      body: "Bellevue homes run newer, tighter, and more sealed than most of the region — which means indoor air recirculates more, and clean ducts matter more.",
+      points: ["In-unit dryer vent lines in condos and high-rises", "Compact air-handler systems in new construction", "HOA and building-management coordination handled"],
+    },
     metaTitle: 'Air Duct & Dryer Vent Cleaning in Bellevue, WA',
     metaDescription:
       'Air duct cleaning, dryer vent cleaning and furnace cleaning for Bellevue homes and condos. Licensed & insured, photo-documented work. Call (425) 200-5790.',
@@ -53,6 +70,13 @@ export const CITIES_CONTENT: CityContent[] = [
     slug: 'tacoma',
     name: 'Tacoma',
     blurb: "North End character homes and beyond",
+    heroImg: '/city-tacoma.jpg',
+    variant: "split",
+    spotlight: {
+      title: "Crawl Spaces Are Tacoma's Hidden Story",
+      body: "Many Tacoma crawl spaces haven't been opened in decades. We start with a photo inspection, so you see exactly what's under your floors before anyone talks price.",
+      points: ["Camera-documented crawl space inspections", "Insulation removal, replacement, and vapor barriers", "Gentle, thorough care for original ductwork"],
+    },
     metaTitle: 'Air Duct & Dryer Vent Cleaning in Tacoma, WA',
     metaDescription:
       'Tacoma air duct cleaning, dryer vent cleaning, furnace and crawl space services from MOMO Air Care. Honest pricing, photo proof. Call (425) 200-5790.',
@@ -71,6 +95,13 @@ export const CITIES_CONTENT: CityContent[] = [
     slug: 'renton',
     name: 'Renton',
     blurb: "Highlands, Fairwood, and new developments",
+    heroImg: '/city-renton.jpg',
+    variant: "bordered",
+    spotlight: {
+      title: "Long Vent Runs, Solved",
+      body: "Renton's newer developments often route dryer vents through long runs — sometimes all the way through the roof. Those runs clog sooner, and we service them every week.",
+      points: ["Roof-terminating dryer vent service", "Single-cycle drying usually restored in under an hour", "Renton is minutes from our daily routes"],
+    },
     metaTitle: 'Air Duct & Dryer Vent Cleaning in Renton, WA',
     metaDescription:
       'Air duct cleaning, dryer vent cleaning and furnace blower service for Renton homes. Same-week scheduling, honest quotes. Call MOMO Air Care (425) 200-5790.',
@@ -89,6 +120,13 @@ export const CITIES_CONTENT: CityContent[] = [
     slug: "kent",
     name: "Kent",
     blurb: "Valley-floor and East Hill homes alike",
+    heroImg: '/city-kent.jpg',
+    variant: "split",
+    spotlight: {
+      title: "Valley Floor vs. The Hills",
+      body: "Kent is really two climates: river-valley homes near a high water table, and plateau split-levels on East and West Hill. Each gets a different checklist from us.",
+      points: ["Moisture-prone valley crawl spaces inspected in fall", "Original ductwork in 60s–80s hillside homes", "Full-system cleanings with photo proof"],
+    },
     metaTitle: "Air Duct & Dryer Vent Cleaning in Kent, WA",
     metaDescription:
       "Air duct, dryer vent, chimney and crawl space cleaning for Kent homes, from East Hill to the valley floor. Call MOMO Air Care at (425) 200-5790.",
@@ -107,6 +145,13 @@ export const CITIES_CONTENT: CityContent[] = [
     slug: "kirkland",
     name: "Kirkland",
     blurb: "Remodeled classics and Totem Lake townhomes",
+    heroImg: '/city-kirkland.jpg',
+    variant: "yellow-band",
+    spotlight: {
+      title: "After the Remodel, Before You Settle In",
+      body: "Kirkland keeps remodeling itself — and remodels push drywall dust straight into the returns. One cleaning clears what construction left behind the fresh walls.",
+      points: ["Post-remodel duct cleanouts", "Chimney caps checked under heavy tree cover", "Totem Lake condos and townhomes welcome"],
+    },
     metaTitle: "Air Duct & Dryer Vent Cleaning in Kirkland, WA",
     metaDescription:
       "Duct cleaning, dryer vent cleaning and chimney sweeping for Kirkland homes and condos. Free quotes from MOMO Air Care — (425) 200-5790.",
@@ -125,6 +170,13 @@ export const CITIES_CONTENT: CityContent[] = [
     slug: "redmond",
     name: "Redmond",
     blurb: "Education Hill two-stories to new townhomes",
+    heroImg: '/city-redmond.jpg',
+    variant: "bordered",
+    spotlight: {
+      title: "Newer Doesn't Mean Cleaner",
+      body: "Education Hill and English Hill homes from the 80s and 90s are now on four decades of the same ductwork. 'Newer' Redmond is older than it feels.",
+      points: ["Original 1980s–90s ductwork deep-cleaned", "Bend-heavy townhome dryer runs cleared", "Honest assessments — including 'yours is fine'"],
+    },
     metaTitle: "Air Duct & Dryer Vent Cleaning in Redmond, WA",
     metaDescription:
       "MOMO Air Care cleans air ducts, dryer vents, furnaces and crawl spaces in Redmond, from Education Hill to Overlake. Call (425) 200-5790.",
@@ -143,6 +195,13 @@ export const CITIES_CONTENT: CityContent[] = [
     slug: "everett",
     name: "Everett",
     blurb: "Century-old chimneys and Silver Lake subdivisions",
+    heroImg: '/city-everett.jpg',
+    variant: "dark-card",
+    spotlight: {
+      title: "A Century of Chimneys",
+      body: "Everett's mill-town bungalows carry original masonry chimneys that have weathered a hundred wet winters. Sweeping them right takes patience and cameras — we bring both.",
+      points: ["Original brick flues swept and camera-verified", "Damp marine-air lint cleared from dryer vents", "Honest guidance on aging masonry"],
+    },
     metaTitle: "Chimney & Air Duct Cleaning in Everett, WA",
     metaDescription:
       "Chimney sweeping, air duct and dryer vent cleaning for Everett homes, from historic bungalows to Silver Lake. MOMO Air Care — (425) 200-5790.",
@@ -161,6 +220,13 @@ export const CITIES_CONTENT: CityContent[] = [
     slug: "lynnwood",
     name: "Lynnwood",
     blurb: "Split-levels with original 1970s ductwork",
+    heroImg: '/city-lynnwood.jpg',
+    variant: "dark-card",
+    spotlight: {
+      title: "Split-Level Specialists",
+      body: "Lynnwood's split-levels route dryer vents through the lower level and out long horizontal runs — a layout that traps lint at every bend. We know these houses by heart.",
+      points: ["Lower-level vent paths cleared end to end", "Original furnace blowers deep-cleaned", "Crawl space checks for 60s–80s foundations"],
+    },
     metaTitle: "Air Duct & Dryer Vent Cleaning in Lynnwood, WA",
     metaDescription:
       "Air duct, dryer vent, chimney and furnace cleaning for Lynnwood homes, from Alderwood Manor to Meadowdale. Call MOMO Air Care at (425) 200-5790.",
@@ -179,6 +245,13 @@ export const CITIES_CONTENT: CityContent[] = [
     slug: "issaquah",
     name: "Issaquah",
     blurb: "Highlands townhomes to Squak Mountain lots",
+    heroImg: '/city-issaquah.jpg',
+    variant: "bordered",
+    spotlight: {
+      title: "Under the Tree Canopy",
+      body: "Issaquah's wooded lots stay shaded and damp most of the year — chimneys work harder, caps catch needles, and moss finds every vent. A pre-season check pays for itself.",
+      points: ["Needle-clogged chimney caps cleared", "Pre-season sweeps before the first fall fire", "Three-story Highlands townhome vents reached"],
+    },
     metaTitle: "Air Duct, Dryer Vent & Chimney Cleaning in Issaquah, WA",
     metaDescription:
       "Duct, dryer vent and chimney cleaning for Issaquah homes from Olde Town to the Highlands. MOMO Air Care — free quotes at (425) 200-5790.",
@@ -197,6 +270,13 @@ export const CITIES_CONTENT: CityContent[] = [
     slug: "sammamish",
     name: "Sammamish",
     blurb: "Big plateau homes, hardworking systems",
+    heroImg: '/city-sammamish.jpg',
+    variant: "split",
+    spotlight: {
+      title: "Big Homes, Hardworking Systems",
+      body: "Plateau homes run large — 2,500 square feet and up, often with two furnaces pushing air to distant bedrooms. Big systems move big dust, and they earn a proper cleaning.",
+      points: ["Multi-furnace homes serviced in one visit", "Roof-exit dryer vents safely cleared", "90s-era Klahanie and Trossachs systems refreshed"],
+    },
     metaTitle: "Air Duct & Dryer Vent Cleaning in Sammamish, WA",
     metaDescription:
       "Air duct, dryer vent, chimney and furnace blower cleaning for Sammamish plateau homes. MOMO Air Care, serving the Eastside — (425) 200-5790.",
@@ -215,6 +295,13 @@ export const CITIES_CONTENT: CityContent[] = [
     slug: "bothell",
     name: "Bothell",
     blurb: "Both sides of the county line",
+    heroImg: '/city-bothell.jpg',
+    variant: "yellow-band",
+    spotlight: {
+      title: "Both Sides of the Line",
+      body: "King County or Snohomish County, same Bothell address rules apply: we serve all of it, from Canyon Park to Norway Hill, with no county surcharges.",
+      points: ["Full coverage on both sides of the county line", "North Creek ground-moisture crawl checks", "Downtown townhome parking coordinated"],
+    },
     metaTitle: "Air Duct & Dryer Vent Cleaning in Bothell, WA",
     metaDescription:
       "MOMO Air Care cleans air ducts, dryer vents, chimneys and furnaces across Bothell, in both King and Snohomish counties. Call (425) 200-5790.",
@@ -233,6 +320,13 @@ export const CITIES_CONTENT: CityContent[] = [
     slug: "federal-way",
     name: "Federal Way",
     blurb: "Twin Lakes to Marine Hills split-levels",
+    heroImg: '/city-federal-way.jpg',
+    variant: "dark-card",
+    spotlight: {
+      title: "Original Ductwork, Five Decades On",
+      body: "Most of Federal Way went up in a single generation — which means thousands of homes are hitting fifty years on their original ducts at the same time. That's our specialty.",
+      points: ["60s–80s split-levels and ramblers deep-cleaned", "Long, damp vent runs under upper floors cleared", "Blower deep-cleans restore original airflow"],
+    },
     metaTitle: "Air Duct & Dryer Vent Cleaning in Federal Way, WA",
     metaDescription:
       "Duct, dryer vent, chimney & furnace cleaning for Federal Way homes, Twin Lakes to Dash Point. Free quotes from MOMO Air Care — (425) 200-5790.",
@@ -251,6 +345,13 @@ export const CITIES_CONTENT: CityContent[] = [
     slug: "auburn",
     name: "Auburn",
     blurb: "Valley crawl spaces and hillside homes",
+    heroImg: '/city-auburn.jpg',
+    variant: "yellow-band",
+    spotlight: {
+      title: "Two Housing Stories, One Team",
+      body: "Rail-town originals near Main Street, newer hillside homes on Lea Hill and Lakeland — Auburn spans a century of construction, and we service every decade of it.",
+      points: ["Century-old brick chimneys swept downtown", "Newer hillside systems tuned and cleaned", "Valley-floor crawl spaces dried and insulated"],
+    },
     metaTitle: "Air Duct Cleaning & Crawl Space Services in Auburn, WA",
     metaDescription:
       "MOMO Air Care cleans air ducts, dryer vents, chimneys and crawl spaces across Auburn — valley floor to Lea Hill. Free quotes — (425) 200-5790.",
@@ -269,6 +370,13 @@ export const CITIES_CONTENT: CityContent[] = [
     slug: "puyallup",
     name: "Puyallup",
     blurb: "Downtown originals and South Hill subdivisions",
+    heroImg: '/city-puyallup.jpg',
+    variant: "bordered",
+    spotlight: {
+      title: "Ahead of the Fall Rush",
+      body: "September brings the Fair and the first furnace starts at the same time. Book your duct or chimney work before the rush and you'll pick your slot — not wait for one.",
+      points: ["Pre-season chimney sweeps for downtown originals", "South Hill 2000s systems cleaned and checked", "Same-week scheduling most of the year"],
+    },
     metaTitle: "Air Duct Cleaning & Chimney Sweeping in Puyallup, WA",
     metaDescription:
       "Air duct, dryer vent and chimney cleaning for Puyallup, from downtown's older homes to South Hill. Free quotes from MOMO Air Care — (425) 200-5790.",
@@ -287,6 +395,13 @@ export const CITIES_CONTENT: CityContent[] = [
     slug: "olympia",
     name: "Olympia",
     blurb: "Bungalows, wood stoves, and wet winters",
+    heroImg: '/city-olympia.jpg',
+    variant: "split",
+    spotlight: {
+      title: "Wood Stove Country",
+      body: "In Olympia's older neighborhoods, wood stoves still carry real heating duty through winters that out-rain Seattle. Annual flue care here isn't a luxury — it's the habit that keeps homes safe.",
+      points: ["Wood stove flues swept, not just fireplaces", "Bungalow crawl spaces insulated against the damp", "An annual sweep before burning season"],
+    },
     metaTitle: "Air Duct & Dryer Vent Cleaning in Olympia, WA",
     metaDescription:
       "Air duct, dryer vent, chimney and crawl space cleaning for Olympia homes, Eastside to Cooper Point. MOMO Air Care — free quotes at (425) 200-5790.",
