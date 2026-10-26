@@ -1,6 +1,11 @@
 # AI_HANDOFF — MOMO Air Care Website
 
-Last updated: 2026-07-29. This file is the session-to-session handoff. Read it fully
+Last updated: 2026-10-26. SEO expansion: see SEO_PLAN.md for the audit, keyword map,
+competitor findings, owner checklist, and what is pending. Key additions: 12 new city
+pages (16 total, lib/cities.ts now has a `blurb` field; /service-areas index and footer
+are data-driven), new /hvac-repair-inspection service page (+ service-hvac.jpg),
+landscape /og.jpg (1200×630) in metadata, keyword-led homepage title, react-dom
+preload for the hero LCP image. Build = 33 pages. This file is the session-to-session handoff. Read it fully
 before changing anything. Do not undo or redesign completed work without an explicit
 user request.
 
@@ -112,11 +117,15 @@ user request.
 1. ~~Lead form activation~~ **DONE 2026-07-28** — see "Lead Delivery" section above.
    Note: the curl-only test of /api/quote returns 502/fallback BY DESIGN (datacenter
    IP block); real-browser delivery is what counts and it works.
-2. Brand image backlog (generate with existing pipeline, same style block): more mascot
+2. **SEO (see SEO_PLAN.md §4–6):** owner must answer the HVAC-scope question (furnace/AC/
+   heat-pump repair+install offered or not?) before any such pages are built; owner
+   checklist: GBP setup, GSC verification, GA4, real review link, WA license number.
+   Next content batches: educational guides hub, remaining 8 SITE.cities pages.
+3. Brand image backlog (generate with existing pipeline, same style block): more mascot
    poses, About-page team/office imagery upgrades, seasonal banners, social covers.
-3. Optional pages the owner floated but NOT built (need real business facts first —
+4. Optional pages the owner floated but NOT built (need real business facts first —
    do not invent): membership plans, financing details, careers, blog.
-4. public/ contains some now-unused legacy media (gallery-before/after-*.jpg, momo-faq*.png,
+5. public/ contains some now-unused legacy media (gallery-before/after-*.jpg, momo-faq*.png,
    stats-image*, laundromat-dryers.jpg, dryer-load.mp4…) — safe to prune for repo size,
    low priority.
 
