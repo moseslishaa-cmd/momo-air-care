@@ -32,7 +32,11 @@ user request.
 - `git push origin main` → Vercel auto-builds → live at https://momoaircare.com in ~1 min.
 - Git creds are in macOS keychain — plain `git push origin main` works. Commit as
   user.email=moses.lishaa@gmail.com, user.name="Moses Lishaa".
-- ALWAYS: `npx tsc --noEmit` + `npm run build` green BEFORE pushing; verify live afterwards
+- ALWAYS: `npx tsc --noEmit` + `npm run build` green BEFORE pushing. Two gotchas:
+  (1) never pipe the build through grep without `set -o pipefail` — the pipe hides a failed
+  build's exit code; (2) `next build` while the dev server runs can fail spuriously
+  (shared .next, font module-not-found errors) — stop the preview server or `rm -rf .next`
+  and rebuild before trusting a failure; verify live afterwards
   by curling https://momoaircare.com for a marker of the change.
 - PRIMARY DOMAIN IS THE APEX (momoaircare.com); www 308-redirects to apex (flipped
   2026-07-28 via Vercel API to match the code's canonical SITE.url and the activated
