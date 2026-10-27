@@ -25,7 +25,7 @@ export function ServiceAreasPage() {
               Our Service Areas
             </h1>
             <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '0.95rem', color: '#555', lineHeight: 1.75, maxWidth: '620px', margin: '0 auto' }}>
-              MOMO Air Care serves the full I-5 corridor of Greater Puget Sound — from Olympia in the
+              MOMO Air Care serves the full I-5 corridor of Greater Puget Sound, from Olympia in the
               south to Arlington in the north. Find your city below, or call and we&apos;ll confirm coverage in seconds.
             </p>
           </Reveal>

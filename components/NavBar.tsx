@@ -48,7 +48,7 @@ export function NavBar() {
   return (
     <header id="top" style={{ position: 'sticky', top: 0, zIndex: 5000 }}>
 
-      {/* Main nav — shrinks slightly when scrolled */}
+      {/* Main nav, shrinks slightly when scrolled */}
       <nav style={{
         background: 'rgba(255,255,255,0.92)',
         backdropFilter: 'blur(14px)',
@@ -67,7 +67,7 @@ export function NavBar() {
           transition: 'padding 0.25s',
         }}>
           {/* Logo */}
-          <Link href="/" aria-label="MOMO Air Care — home" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', flexShrink: 0 }}>
+          <Link href="/" aria-label="MOMO Air Care, home" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', flexShrink: 0 }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/logo-nav.png"

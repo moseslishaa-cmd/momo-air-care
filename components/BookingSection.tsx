@@ -22,8 +22,7 @@ const STEPS = ['Service', 'Day & Time', 'Your Details'];
 
 type Day = { human: string; top: string; sub: string };
 
-// Next 14 bookable days, starting TOMORROW (same-day booking is not offered —
-// owner request 2026-07-28), labeled for the picker.
+// Next 14 bookable days, starting TOMORROW (same-day booking is not offered. // owner request 2026-07-28), labeled for the picker.
 function buildDays(): Day[] {
   const days: Day[] = [];
   for (let i = 1; i <= 14; i++) {
@@ -273,7 +272,7 @@ export function BookingSection() {
                             What do you need cleaned?
                           </h3>
                           <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '0.82rem', color: '#888', margin: '0 0 14px' }}>
-                            Pick as many as you need — one visit, one team.
+                            Pick as many as you need, one visit, one team.
                           </p>
                           <div style={{
                             display: 'grid',
@@ -328,19 +327,19 @@ export function BookingSection() {
                           </div>
                           <button
                             type="button"
-                            onClick={() => toggleService('Not Sure — Need Advice')}
-                            aria-pressed={services.includes('Not Sure — Need Advice')}
+                            onClick={() => toggleService('Not Sure. Need Advice')}
+                            aria-pressed={services.includes('Not Sure. Need Advice')}
                             style={{
                               marginTop: '14px', width: '100%', cursor: 'pointer',
-                              background: services.includes('Not Sure — Need Advice') ? '#FFF7CC' : '#FAFAF7',
-                              border: services.includes('Not Sure — Need Advice') ? `1.5px solid ${YELLOW}` : '1.5px dashed #d8d8d0',
+                              background: services.includes('Not Sure. Need Advice') ? '#FFF7CC' : '#FAFAF7',
+                              border: services.includes('Not Sure. Need Advice') ? `1.5px solid ${YELLOW}` : '1.5px dashed #d8d8d0',
                               borderRadius: '12px',
                               padding: '13px 16px',
                               fontFamily: 'var(--font-inter), sans-serif', fontWeight: 700, fontSize: '0.85rem',
-                              color: services.includes('Not Sure — Need Advice') ? '#111' : '#555',
+                              color: services.includes('Not Sure. Need Advice') ? '#111' : '#555',
                             }}
                           >
-                            Not sure what you need? Get free advice — we&apos;ll figure it out together.
+                            Not sure what you need? Get free advice, we&apos;ll figure it out together.
                           </button>
                           <button
                             type="button"
@@ -476,7 +475,7 @@ export function BookingSection() {
                             Where do we send the team?
                           </h3>
 
-                          {/* Honeypot — hidden from real users */}
+                          {/* Honeypot, hidden from real users */}
                           <div style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }} aria-hidden="true">
                             <label>
                               Company

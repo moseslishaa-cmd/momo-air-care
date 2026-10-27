@@ -114,7 +114,7 @@ export function ServicePage({ svc, otherServices }: { svc: ServiceContent; other
                 <video src={svc.media.src} autoPlay muted loop playsInline preload="metadata" style={{ width: '100%', display: 'block', aspectRatio: '16/10', objectFit: 'cover' }} aria-label={`${svc.nav} in progress`} />
               ) : (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src={svc.media.src} alt={`${svc.nav} — real job photo by MOMO Air Care`} width={1200} height={750} loading="eager" style={{ width: '100%', height: 'auto', display: 'block', aspectRatio: '16/10', objectFit: 'cover' }} />
+                <img src={svc.media.src} alt={`${svc.nav}, real job photo by MOMO Air Care`} width={1200} height={750} loading="eager" style={{ width: '100%', height: 'auto', display: 'block', aspectRatio: '16/10', objectFit: 'cover' }} />
               )}
             </div>
           </Reveal>
@@ -211,7 +211,7 @@ export function ServicePage({ svc, otherServices }: { svc: ServiceContent; other
         <section style={{ background: '#FAFAF7', borderTop: '1px solid #f0f0ec', borderBottom: '1px solid #f0f0ec', padding: isMobile ? '40px 20px' : '52px 24px' }}>
           <div style={{ maxWidth: '1160px', margin: '0 auto', display: 'grid', gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)', gap: '14px' }}>
             {[
-              { t: 'Photo Proof, Every Job', d: 'Before/after photos are standard — you see exactly what we did.' },
+              { t: 'Photo Proof, Every Job', d: 'Before/after photos are standard, you see exactly what we did.' },
               { t: 'Upfront Pricing', d: 'The price we quote is the price you pay. No door-step upsells.' },
               { t: 'Satisfaction Guaranteed', d: "If anything isn't right, we come back and fix it free." },
             ].map((x, i) => (
@@ -229,7 +229,7 @@ export function ServicePage({ svc, otherServices }: { svc: ServiceContent; other
         <section style={{ maxWidth: '860px', margin: '0 auto', padding: isMobile ? '44px 20px' : '64px 24px' }}>
           <Reveal>
             <h2 style={{ fontFamily: 'var(--font-fraunces), serif', fontWeight: 900, fontSize: isMobile ? '1.5rem' : '2rem', color: '#111', margin: '0 0 22px', textAlign: 'center' }}>
-              {svc.nav} — Common Questions
+              {svc.nav}. Common Questions
             </h2>
           </Reveal>
           <MiniFaq faqs={svc.faqs} />
@@ -238,7 +238,7 @@ export function ServicePage({ svc, otherServices }: { svc: ServiceContent; other
         {/* Service area + internal links */}
         <section style={{ maxWidth: '1160px', margin: '0 auto', padding: isMobile ? '0 20px 40px' : '0 24px 56px', textAlign: 'center' }}>
           <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '0.9rem', color: '#666', lineHeight: 1.7, maxWidth: '640px', margin: '0 auto 18px' }}>
-            {svc.nav} is available across {SITE.region} — including{' '}
+            {svc.nav} is available across {SITE.region}, including{' '}
             <Link href="/service-areas/seattle" style={{ color: '#8f7300', fontWeight: 700 }}>Seattle</Link>,{' '}
             <Link href="/service-areas/bellevue" style={{ color: '#8f7300', fontWeight: 700 }}>Bellevue</Link>,{' '}
             <Link href="/service-areas/tacoma" style={{ color: '#8f7300', fontWeight: 700 }}>Tacoma</Link> and{' '}
@@ -266,7 +266,7 @@ export function ServicePage({ svc, otherServices }: { svc: ServiceContent; other
                 Get Your Free {svc.nav} Quote
               </h2>
               <p style={{ textAlign: 'center', fontFamily: 'var(--font-inter), sans-serif', fontSize: '0.9rem', color: '#777', margin: '0 0 24px' }}>
-                Tell us about your home — we&apos;ll reply fast with a clear, honest price.
+                Tell us about your home, we&apos;ll reply fast with a clear, honest price.
               </p>
             </Reveal>
             <div id="quote">

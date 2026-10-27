@@ -35,7 +35,7 @@ const I5_ROUTE = [
   [47.03, -122.90],
 ];
 
-// Service area boundary — wraps around every city marker with padding
+// Service area boundary, wraps around every city marker with padding
 const SERVICE_AREA = [
   [48.36, -122.22],   // top, N of Arlington
   [48.22, -121.82],   // NE
@@ -145,13 +145,13 @@ function LeafletMap() {
       tap: !isTouch,
     });
 
-    // OpenStreetMap standard — vibrant blue water, green terrain
+    // OpenStreetMap standard, vibrant blue water, green terrain
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       maxZoom: 19,
     }).addTo(map);
 
-    // Service area polygon — vibrant gold fill
+    // Service area polygon, vibrant gold fill
     L.polygon(SERVICE_AREA, {
       color: '#FFD400',
       weight: 2.5,
@@ -269,7 +269,7 @@ export function ServiceArea() {
             Proudly Serving Greater Puget Sound, Washington
           </p>
           <p style={{ fontSize: '0.9rem', color: '#666', maxWidth: '580px', margin: '0 auto', lineHeight: 1.8 }}>
-            From Olympia in the south to Arlington in the north — we provide professional air duct cleaning, dryer vent cleaning, duct insulation and HVAC services throughout the region.
+            From Olympia in the south to Arlington in the north, we provide professional air duct cleaning, dryer vent cleaning, duct insulation and HVAC services throughout the region.
           </p>
         </div>
 
@@ -338,7 +338,7 @@ export function ServiceArea() {
                 border: '1px solid rgba(255,212,0,0.3)',
               }}>
                 <p style={{ margin: '0 0 8px', fontSize: '0.8rem', color: 'rgba(255,255,255,0.7)', lineHeight: 1.7 }}>
-                  Not sure if we cover your area? Call us — we&apos;ll let you know right away.
+                  Not sure if we cover your area? Call us, we&apos;ll let you know right away.
                 </p>
                 <a href="tel:+14252005790" style={{
                   fontFamily: "var(--font-oswald), sans-serif", fontWeight: 700,

@@ -14,7 +14,7 @@ const YELLOW = '#FFD400';
 
 const SERVICE_LINKS = [
   { label: 'Air Duct Cleaning', href: '/air-duct-cleaning', desc: 'Whole-system deep clean with negative pressure' },
-  { label: 'Dryer Vent Cleaning', href: '/dryer-vent-cleaning', desc: 'Full-line lint removal — from $69' },
+  { label: 'Dryer Vent Cleaning', href: '/dryer-vent-cleaning', desc: 'Full-line lint removal, from $69' },
   { label: 'Furnace & Blower Cleaning', href: '/furnace-cleaning', desc: 'Blower removed and cleaned blade by blade' },
   { label: 'Chimney Cleaning', href: '/chimney-cleaning', desc: 'Full-flue sweep with HEPA containment' },
   { label: 'Crawl Space & Insulation', href: '/crawl-space-services', desc: 'Cleanup, removal, and fresh installation' },
@@ -157,13 +157,13 @@ export function CityPage({ city }: { city: CityContent }) {
           </ol>
         </nav>
 
-        {/* City banner — each city gets its own scene */}
+        {/* City banner, each city gets its own scene */}
         <section style={{ maxWidth: '1160px', margin: '0 auto', padding: isMobile ? '14px 16px 0' : '20px 24px 0' }}>
           <Reveal>
             <div style={{ position: 'relative', borderRadius: isMobile ? '16px' : '22px', overflow: 'hidden', boxShadow: '0 18px 48px rgba(0,0,0,0.16)' }}>
               <img
                 src={city.heroImg}
-                alt={`${city.name}, WA — the homes and streets MOMO Air Care serves`}
+                alt={`${city.name}, WA, the homes and streets MOMO Air Care serves`}
                 style={{ width: '100%', display: 'block', height: isMobile ? '210px' : '350px', objectFit: 'cover' }}
               />
               <div aria-hidden="true" style={{
@@ -210,7 +210,7 @@ export function CityPage({ city }: { city: CityContent }) {
           </Reveal>
         </section>
 
-        {/* City signature spotlight — four visual variants keep every city distinct */}
+        {/* City signature spotlight, four visual variants keep every city distinct */}
         <CitySpotlight city={city} isMobile={isMobile} />
 
         {/* Local note + neighborhoods */}
@@ -266,7 +266,7 @@ export function CityPage({ city }: { city: CityContent }) {
           <div style={{ maxWidth: '760px', margin: '0 auto' }}>
             <Reveal>
               <h2 style={{ fontFamily: 'var(--font-fraunces), serif', fontWeight: 900, fontSize: isMobile ? '1.5rem' : '1.9rem', color: '#111', margin: '0 0 20px', textAlign: 'center' }}>
-                {city.name} — Common Questions
+                {city.name}. Common Questions
               </h2>
             </Reveal>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
@@ -290,7 +290,7 @@ export function CityPage({ city }: { city: CityContent }) {
                 Get Your Free {city.name} Quote
               </h2>
               <p style={{ textAlign: 'center', fontFamily: 'var(--font-inter), sans-serif', fontSize: '0.9rem', color: '#777', margin: '0 0 24px' }}>
-                Fast local scheduling — usually within the same week.
+                Fast local scheduling, usually within the same week.
               </p>
             </Reveal>
             <div id="quote">

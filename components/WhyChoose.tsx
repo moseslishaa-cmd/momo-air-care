@@ -13,7 +13,7 @@ const CARDS = [
   },
   {
     title: 'Advanced Equipment',
-    desc: 'Truck-grade negative-pressure vacuums, rotary brush systems, and camera inspection — not shortcuts.',
+    desc: 'Truck-grade negative-pressure vacuums, rotary brush systems, and camera inspection, not shortcuts.',
     icon: (<><circle cx="12" cy="12" r="3" /><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h.01a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h.01a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v.01a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" /></>),
   },
   {
@@ -23,7 +23,7 @@ const CARDS = [
   },
   {
     title: 'Eco-Friendly Products',
-    desc: 'Our sanitizers are EPA-registered and plant-based where possible — tough on mold, gentle on the planet.',
+    desc: 'Our sanitizers are EPA-registered and plant-based where possible, tough on mold, gentle on the planet.',
     icon: (<><path d="M11 20A7 7 0 0 1 4 13c0-4 3-8 8-10 0 0 8 3 8 10a7 7 0 0 1-7 7z" /><path d="M12 21c0-5 0-8 3-11" /></>),
   },
   {
@@ -38,7 +38,7 @@ const CARDS = [
   },
   {
     title: '100% Satisfaction Guarantee',
-    desc: "If you're not completely happy with the result, we come back and make it right — free. That's the promise.",
+    desc: "If you're not completely happy with the result, we come back and make it right, free. That's the promise.",
     icon: (<><circle cx="12" cy="8" r="6" /><path d="M15.5 13l1.5 8-5-3-5 3 1.5-8" /></>),
   },
 ];

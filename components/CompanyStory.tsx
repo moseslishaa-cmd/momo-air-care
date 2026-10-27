@@ -41,7 +41,7 @@ export function CompanyStory() {
               style={{ width: '100%', display: 'block', borderRadius: '3px' }}
             />
             <figcaption style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '0.74rem', fontWeight: 600, color: '#777', paddingTop: '9px', textAlign: 'center' }}>
-              Where it started — one van, one promise.
+              Where it started, one van, one promise.
             </figcaption>
           </figure>
         </Reveal>
@@ -61,7 +61,7 @@ export function CompanyStory() {
               From One Van to the<br />Name on Your Street
             </h2>
             <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '0.95rem', color: '#444', lineHeight: 1.8, margin: '0 0 14px', maxWidth: '480px' }}>
-              MOMO Air Care started the way the best local companies do — one van, a vacuum,
+              MOMO Air Care started the way the best local companies do, one van, a vacuum,
               and a simple promise: <b>treat every home like family lives there.</b> No shortcuts,
               no surprise fees, and photo proof of every job.
             </p>

@@ -156,7 +156,7 @@ export function GuidePage({ guide }: { guide: GuideContent }) {
           )}
         </article>
 
-        {/* Quote form — same closing section as service pages */}
+        {/* Quote form, same closing section as service pages */}
         <section style={{ background: '#FAFAF7', borderTop: '1px solid #eeeeea', marginTop: isMobile ? '36px' : '52px', padding: isMobile ? '40px 20px 46px' : '56px 24px 64px' }}>
           <div style={{ maxWidth: '640px', margin: '0 auto' }}>
             <Reveal>
@@ -164,7 +164,7 @@ export function GuidePage({ guide }: { guide: GuideContent }) {
                 Talk to a Local Specialist
               </h2>
               <p style={{ textAlign: 'center', fontFamily: 'var(--font-inter), sans-serif', fontSize: '0.9rem', color: '#777', margin: '0 0 22px' }}>
-                Honest answers and free quotes — call <a href={SITE.phoneHref} style={{ color: '#8f7300', fontWeight: 800, textDecoration: 'none' }}>{SITE.phoneDisplay}</a> or send the form.
+                Honest answers and free quotes, call <a href={SITE.phoneHref} style={{ color: '#8f7300', fontWeight: 800, textDecoration: 'none' }}>{SITE.phoneDisplay}</a> or send the form.
               </p>
               <QuoteForm page={`guide-${guide.slug}`} />
             </Reveal>

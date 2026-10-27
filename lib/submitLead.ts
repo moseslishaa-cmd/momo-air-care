@@ -1,7 +1,7 @@
 // Lead delivery used by the homepage booking wizard.
 // Path: try /api/quote (validation + rate limiting on the server). FormSubmit
 // rejects Vercel datacenter IPs, so on fallback the browser posts the
-// server-validated payload directly — see AI_HANDOFF.md "Lead Delivery".
+// server-validated payload directly, see AI_HANDOFF.md "Lead Delivery".
 export async function submitLead(
   payload: Record<string, unknown>,
 ): Promise<{ ok: boolean; error?: string }> {

@@ -65,12 +65,12 @@ function ZipChecker({ isMobile }: { isMobile: boolean }) {
       </div>
       {state === 'yes' && (
         <p style={{ margin: '10px 2px 0', fontFamily: 'var(--font-inter), sans-serif', fontSize: '0.85rem', fontWeight: 700, color: '#1e6b2e' }}>
-          ✓ Great news — we serve your area! <a href="#quote" style={{ color: '#1e6b2e', textDecoration: 'underline' }}>Book below</a> or call {SITE.phoneDisplay}.
+          ✓ Great news, we serve your area! <a href="#quote" style={{ color: '#1e6b2e', textDecoration: 'underline' }}>Book below</a> or call {SITE.phoneDisplay}.
         </p>
       )}
       {state === 'maybe' && (
         <p style={{ margin: '10px 2px 0', fontFamily: 'var(--font-inter), sans-serif', fontSize: '0.85rem', fontWeight: 600, color: '#555' }}>
-          We may still reach you — call <a href={SITE.phoneHref} style={{ color: '#8f7300', fontWeight: 800 }}>{SITE.phoneDisplay}</a> and we&apos;ll check.
+          We may still reach you, call <a href={SITE.phoneHref} style={{ color: '#8f7300', fontWeight: 800 }}>{SITE.phoneDisplay}</a> and we&apos;ll check.
         </p>
       )}
     </div>
@@ -89,7 +89,7 @@ export function Hero() {
         backgroundSize: 'cover',
         backgroundPosition: isMobile ? '72% center' : 'center right',
       }} />
-      {/* Legibility wash — soft white fading to reveal the family on the right */}
+      {/* Legibility wash, soft white fading to reveal the family on the right */}
       <div aria-hidden="true" style={{
         position: 'absolute', inset: 0,
         background: isMobile

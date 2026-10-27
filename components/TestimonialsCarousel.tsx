@@ -9,7 +9,7 @@ const YELLOW = '#FFD400';
 const REVIEWS = [
   {
     name: 'Sarah M.', city: 'Redmond, WA',
-    text: "I couldn't believe how much dust was built up in our ducts. After MOMO came through, the air in our home felt completely different — lighter, cleaner, and my allergies haven't bothered me since. The techs wore shoe covers, laid down mats, and showed me before-and-after photos of every line. Highly recommend.",
+    text: "I couldn't believe how much dust was built up in our ducts. After MOMO came through, the air in our home felt completely different, lighter, cleaner, and my allergies haven't bothered me since. The techs wore shoe covers, laid down mats, and showed me before-and-after photos of every line. Highly recommend.",
   },
   {
     name: 'James R.', city: 'Bellevue, WA',
@@ -17,19 +17,19 @@ const REVIEWS = [
   },
   {
     name: 'Linda K.', city: 'Kirkland, WA',
-    text: "Our HVAC had been running constantly and our energy bills were through the roof. MOMO cleaned the full duct system and the furnace blower, and within two weeks our bill dropped noticeably. The house even smells different — fresher. Wish we had called sooner.",
+    text: "Our HVAC had been running constantly and our energy bills were through the roof. MOMO cleaned the full duct system and the furnace blower, and within two weeks our bill dropped noticeably. The house even smells different, fresher. Wish we had called sooner.",
   },
   {
     name: 'Daniel T.', city: 'Sammamish, WA',
-    text: "Punctual, professional, and thorough. The technician walked me through the entire process, answered every question, and left the house spotless. You can hear the difference in the airflow — the system is quieter and stronger. Six months later it still feels like a new house.",
+    text: "Punctual, professional, and thorough. The technician walked me through the entire process, answered every question, and left the house spotless. You can hear the difference in the airflow, the system is quieter and stronger. Six months later it still feels like a new house.",
   },
   {
     name: 'Maria G.', city: 'Renton, WA',
-    text: "We just bought an older home and the crawl space was a disaster — old insulation, debris everywhere. MOMO removed everything, cleaned it out, and installed fresh insulation in one day. The musty smell upstairs is completely gone. Worth every penny.",
+    text: "We just bought an older home and the crawl space was a disaster, old insulation, debris everywhere. MOMO removed everything, cleaned it out, and installed fresh insulation in one day. The musty smell upstairs is completely gone. Worth every penny.",
   },
   {
     name: 'Kevin H.', city: 'Tacoma, WA',
-    text: "Booked the $69 dryer vent special expecting an upsell ambush — got the opposite. Honest crew, did exactly what was promised, showed me the pile of lint they pulled out, and were gone in 45 minutes. This is how you earn a customer for life.",
+    text: "Booked the $69 dryer vent special expecting an upsell ambush, got the opposite. Honest crew, did exactly what was promised, showed me the pile of lint they pulled out, and were gone in 45 minutes. This is how you earn a customer for life.",
   },
 ];
 

@@ -25,8 +25,7 @@ function initialsOf(name: string): string {
     .join('');
 }
 
-// Homepage reviews carousel. Renders nothing until lib/reviews.ts has entries —
-// only real customer reviews belong there (see the note in that file).
+// Homepage reviews carousel. Renders nothing until lib/reviews.ts has entries. // only real customer reviews belong there (see the note in that file).
 export function ReviewsSection() {
   const isMobile = useIsMobile(1024);
   const trackRef = useRef<HTMLDivElement>(null);

@@ -25,7 +25,7 @@ export function GuidesIndex() {
               Homeowner Guides
             </h1>
             <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '0.95rem', color: '#555', lineHeight: 1.75, maxWidth: '620px', margin: '0 auto' }}>
-              Straight answers about heating, cooling, and the air in your home — written for
+              Straight answers about heating, cooling, and the air in your home, written for
               Puget Sound houses and Puget Sound weather. No scare tactics, no sales scripts.
             </p>
           </Reveal>

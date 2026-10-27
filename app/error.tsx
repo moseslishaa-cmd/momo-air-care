@@ -11,7 +11,7 @@ export default function ErrorPage({ reset }: { error: Error & { digest?: string 
         Something went wrong
       </h1>
       <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '0.95rem', color: '#666', lineHeight: 1.7, maxWidth: '420px', margin: '0 0 24px' }}>
-        Sorry about that. Try again — or just call us and we&apos;ll take care of you directly.
+        Sorry about that. Try again, or just call us and we&apos;ll take care of you directly.
       </p>
       <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', justifyContent: 'center' }}>
         <button onClick={reset} style={{

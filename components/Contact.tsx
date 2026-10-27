@@ -39,10 +39,10 @@ const SERVICES = [
   'Coil Cleaning',
   'Crawl Space Cleaning',
   'Insulation Removal / Installation',
-  'Not Sure — Need Advice',
+  'Not Sure. Need Advice',
 ];
 
-// Reusable quote form — embedded on the homepage, contact page, and service pages.
+// Reusable quote form, embedded on the homepage, contact page, and service pages.
 export function QuoteForm({ page = 'home' }: { page?: string }) {
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
   const [errorMsg, setErrorMsg] = useState('');
@@ -73,7 +73,7 @@ export function QuoteForm({ page = 'home' }: { page?: string }) {
         setService('');
       } else if (json?.fallback && json?.payload) {
         // Server validated the lead but upstream delivery was blocked for
-        // datacenter traffic — deliver straight from the browser instead.
+        // datacenter traffic, deliver straight from the browser instead.
         const direct = await fetch('https://formsubmit.co/ajax/moses.lishaa@gmail.com', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
@@ -125,7 +125,7 @@ export function QuoteForm({ page = 'home' }: { page?: string }) {
     <GlowCard glowColor="blue" className="flex flex-col gap-6" width="100%">
       <form onSubmit={handleSubmit} className="flex flex-col gap-6" noValidate={false}>
 
-        {/* Honeypot — hidden from real users */}
+        {/* Honeypot, hidden from real users */}
         <div style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }} aria-hidden="true">
           <label>
             Company
@@ -192,7 +192,7 @@ export function QuoteForm({ page = 'home' }: { page?: string }) {
           </div>
         </div>
 
-        {/* Progressive disclosure — Air Duct Cleaning */}
+        {/* Progressive disclosure. Air Duct Cleaning */}
         {isDuct && (
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4" style={{ background: '#FAFAF7', border: '1px solid #ececea', borderRadius: '12px', padding: '14px' }}>
             <div>
@@ -214,7 +214,7 @@ export function QuoteForm({ page = 'home' }: { page?: string }) {
           </div>
         )}
 
-        {/* Progressive disclosure — Dryer Vent Cleaning */}
+        {/* Progressive disclosure. Dryer Vent Cleaning */}
         {isDryer && (
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4" style={{ background: '#FAFAF7', border: '1px solid #ececea', borderRadius: '12px', padding: '14px' }}>
             <div>
@@ -329,7 +329,7 @@ export function Contact({ page = 'home' }: { page?: string }) {
             Ready to Breathe<br />Cleaner Air?
           </h2>
           <p className="text-xs font-semibold tracking-[0.25em] uppercase" style={{ color: '#888' }}>
-            Get your free quote today — same-week appointments available
+            Get your free quote today, same-week appointments available
           </p>
         </div>
 

@@ -50,7 +50,7 @@ export function ContactPageBody() {
               Contact MOMO Air Care
             </h1>
             <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '0.95rem', color: '#555', lineHeight: 1.75, maxWidth: '560px', margin: '0 auto' }}>
-              Call, email, or send the form — we reply fast with clear answers and honest pricing.
+              Call, email, or send the form, we reply fast with clear answers and honest pricing.
             </p>
           </Reveal>
         </section>
@@ -103,7 +103,7 @@ export function ContactPageBody() {
                 Request Your Free Quote
               </h2>
               <p style={{ textAlign: 'center', fontFamily: 'var(--font-inter), sans-serif', fontSize: '0.9rem', color: '#777', margin: '0 0 24px' }}>
-                Tell us what&apos;s going on — we&apos;ll reply with a clear price and the earliest available slot.
+                Tell us what&apos;s going on, we&apos;ll reply with a clear price and the earliest available slot.
               </p>
             </Reveal>
             <div id="quote">

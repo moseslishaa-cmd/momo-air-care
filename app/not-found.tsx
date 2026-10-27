@@ -19,7 +19,7 @@ export default function NotFound() {
         Page Not Found
       </h1>
       <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '0.95rem', color: '#666', lineHeight: 1.7, maxWidth: '420px', margin: '0 0 24px' }}>
-        Even MOMO can&apos;t find this one. The page may have moved — but clean air is always one click away.
+        Even MOMO can&apos;t find this one. The page may have moved, but clean air is always one click away.
       </p>
       <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', justifyContent: 'center' }}>
         <Link href="/" style={{

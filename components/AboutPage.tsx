@@ -13,7 +13,7 @@ const YELLOW = '#FFD400';
 const VALUES = [
   { t: 'Show, don’t tell', d: 'Every job ends with before/after photos of your actual system. Proof is part of the service, not an extra.' },
   { t: 'One honest price', d: 'We quote after inspecting, and the number doesn’t change at the door. No surprise add-ons, ever.' },
-  { t: 'Respect for your home', d: 'Shoe covers, floor protection, careful equipment handling — we leave your home the way we found it, just cleaner.' },
+  { t: 'Respect for your home', d: 'Shoe covers, floor protection, careful equipment handling, we leave your home the way we found it, just cleaner.' },
   { t: 'Straight answers', d: 'If something doesn’t need cleaning, we say so. If a problem needs a different specialist, we tell you plainly.' },
 ];
 
@@ -42,23 +42,23 @@ export function AboutPage() {
             <div style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '0.95rem', color: '#444', lineHeight: 1.85 }}>
               <p style={{ margin: '0 0 16px' }}>
                 MOMO Air Care started with a simple observation: homeowners around the Sound kept telling us
-                the same two stories. Either they had never had their ducts or dryer vent cleaned — because nobody
-                had ever explained why it matters — or they had paid someone who rushed the job, skipped the returns,
+                the same two stories. Either they had never had their ducts or dryer vent cleaned, because nobody
+                had ever explained why it matters, or they had paid someone who rushed the job, skipped the returns,
                 and left without showing a shred of proof.
               </p>
               <p style={{ margin: '0 0 16px' }}>
                 We built MOMO to be the company we would want at our own homes. That means truck-grade
-                negative-pressure equipment instead of a shop vac. It means cleaning every line — supplies,
-                returns, trunk, and blower — not just the vents you can see. And it means photographing everything,
+                negative-pressure equipment instead of a shop vac. It means cleaning every line, supplies,
+                returns, trunk, and blower, not just the vents you can see. And it means photographing everything,
                 because you should never have to take a contractor&apos;s word for what happened inside your walls.
               </p>
               <p style={{ margin: '0 0 16px' }}>
-                The giraffe? That&apos;s MOMO — our mascot and our standard. Giraffes see what others can&apos;t reach,
+                The giraffe? That&apos;s MOMO, our mascot and our standard. Giraffes see what others can&apos;t reach,
                 and that&apos;s the job: getting to the parts of your home&apos;s air system nobody else looks at,
                 and leaving them genuinely clean.
               </p>
               <p style={{ margin: 0 }}>
-                We&apos;re local, licensed, and insured, and we serve the whole I-5 corridor —{' '}
+                We&apos;re local, licensed, and insured, and we serve the whole I-5 corridor. {' '}
                 <Link href="/service-areas/seattle" style={{ color: '#8f7300', fontWeight: 700 }}>Seattle</Link>,{' '}
                 <Link href="/service-areas/bellevue" style={{ color: '#8f7300', fontWeight: 700 }}>Bellevue</Link>,{' '}
                 <Link href="/service-areas/tacoma" style={{ color: '#8f7300', fontWeight: 700 }}>Tacoma</Link>,{' '}
@@ -142,7 +142,7 @@ export function AboutPage() {
               Have a question about your home&apos;s air?
             </h2>
             <p style={{ fontFamily: 'var(--font-inter), sans-serif', fontSize: '0.92rem', color: '#666', lineHeight: 1.7, margin: '0 0 20px' }}>
-              Call us — you&apos;ll get a straight answer, not a sales pitch.
+              Call us, you&apos;ll get a straight answer, not a sales pitch.
             </p>
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', justifyContent: 'center' }}>
               <a href={SITE.phoneHref} className="btn-ripple" style={{

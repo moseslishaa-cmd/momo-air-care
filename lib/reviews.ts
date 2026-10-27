@@ -1,8 +1,7 @@
 // Customer reviews shown in the homepage ReviewsSection carousel.
 //
 // IMPORTANT: only REAL reviews from REAL customers go here. Publishing invented
-// testimonials is prohibited (FTC fake-review rule) and against Google's policies —
-// it can get the business fined and delisted. When the owner supplies real reviews
+// testimonials is prohibited (FTC fake-review rule) and against Google's policies. // it can get the business fined and delisted. When the owner supplies real reviews
 // (screenshots or text from their Google Business Profile / Yelp / etc.), transcribe
 // them here verbatim. While this list is empty the section renders nothing.
 //

@@ -1,4 +1,4 @@
-// Central site configuration — edit business facts in ONE place.
+// Central site configuration, edit business facts in ONE place.
 export const SITE = {
   name: 'MOMO Air Care',
   url: 'https://momoaircare.com',

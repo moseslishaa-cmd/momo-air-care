@@ -14,7 +14,7 @@ const STEPS = [
   },
   {
     n: '2', title: 'Deep Cleaning',
-    desc: 'Negative-pressure vacuums and rotary brushes scrub every line from vent to trunk — nothing is skipped.',
+    desc: 'Negative-pressure vacuums and rotary brushes scrub every line from vent to trunk, nothing is skipped.',
     art: (<><rect x="3" y="9" width="18" height="6" rx="3" /><path d="M6 12h.01M10 12h.01M14 12h.01M18 12h.01" /><path d="M7 5l2 2.5M12 4v3M17 5l-2 2.5" /></>),
   },
   {

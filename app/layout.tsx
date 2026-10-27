@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'MOMO Air Care',
-    title: 'MOMO Air Care — Healthy Air Starts Here',
+    title: 'MOMO Air Care | Healthy Air Starts Here',
     description:
       'Air duct & dryer vent cleaning specialists serving Greater Seattle. Licensed, insured, satisfaction guaranteed. Free quotes and fast scheduling.',
     url: SITE.url,
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'MOMO Air Care — Healthy Air Starts Here',
+    title: 'MOMO Air Care | Healthy Air Starts Here',
     description:
       'Air duct & dryer vent cleaning specialists serving Greater Seattle. Free quotes, fast scheduling, satisfaction guaranteed.',
     images: ['/og.jpg'],
